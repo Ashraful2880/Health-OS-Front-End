@@ -7,7 +7,6 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-
 SwiperCore.use([Autoplay,Navigation]);
 
 const Bannar = () => {

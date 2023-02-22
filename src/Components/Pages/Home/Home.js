@@ -2,6 +2,7 @@ import React from "react";
 import Bannar from "./Bannar/Bannar";
 import BestSellar from "./BestSellar/BestSellar";
 import CategoryFeature from "./CategoryFeature/CategoryFeature";
+import DealOfTheDay from "./DealOfTheDay/DealOfTheDay";
 import FeaturedProducts from "./FeaturedProducts/Featured Products";
 import PromoBannar from "./PromoBannar/PromoBannar";
 import PromoOffer from "./PromoOffer/PromoOffer";
@@ -15,8 +16,9 @@ const Home = () => {
       <ShopByCategory />
       <CategoryFeature />
       <FeaturedProducts />
-      <PromoOffer />
+      <DealOfTheDay />
       <TopTrending />
+      <PromoOffer />
       <BestSellar />
       <PromoBannar />
     </>

@@ -1,0 +1,34 @@
+.linespinner {
+  animation: linespinner 1s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+.linespinner:after,
+.linespinner:before {
+  border-radius: 8px;
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  background: #74a4ff;
+  animation: linespinner 1s ease-in-out infinite;
+}
+.linespinner:before {
+  right: 18px;
+  animation-delay: 0.15s;
+}
+.linespinner:after {
+  left: 18px;
+  animation-delay: 0.6s;
+}
+
+@keyframes linespinner {
+  0%,
+  100% {
+    background-color: #74a4ff;
+    box-shadow: 0 0 0 #74a4ff, 0 0 0 #74a4ff;
+  }
+  50% {
+    background-color: #2563eb;
+    box-shadow: 0 -15px 0 #2563eb, 0 15px 0 #2563eb;
+  }
+}
