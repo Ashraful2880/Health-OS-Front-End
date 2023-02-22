@@ -1,0 +1,43 @@
+
+.App {
+  text-align: center;
+}
+
+/* Mega Menu Open Animation */
+.megaMenuAnimation {
+  animation: openMegaMenu 1s ease-in-out;
+}
+@keyframes openMegaMenu {
+  0% {
+    margin-top: -50%;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+/* Slider Background */
+
+.slider-bg {
+  background-image: url("./Assets/Images/Slider/slider-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 80vh;
+}
+
+.slider-bg2 {
+  background-image: url("./Assets/Images/Slider/slider-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 80vh;
+}
+
+.slider-bg3 {
+  background-image: url("./Assets/Images/Slider/Slider-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 80vh;
+}
