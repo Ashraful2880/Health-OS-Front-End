@@ -141,6 +141,18 @@ const BestSellar = () => {
                     </p>
                   </div>
                 </div>
+                {/* percentage Notification */}
+
+                {sellar?.offerPrice && (
+                  <div className="pb-3 z-50">
+                    <div className="absolute left-2 top-2 text-2xl text-white bg-red-500 w-10 p-1 flex justify-center items-center rounded-full z-50">
+                      <p className="text-xs font-semibold">
+                        -<span>15%</span>
+                      </p>
+                    </div>
+                  </div>
+                )}
+
                 {/* Add To Wishlist Button*/}
                 <div className="pb-3 z-50">
                   <div className="absolute right-2 top-2 -translate-x-0 -translate-y-0 text-2xl text-[#2563eb] group-hover:text-white bg-transparent group-hover:bg-[#2563eb] h-10 w-10 p-1 flex justify-center items-center rounded-full duration-700 z-50">

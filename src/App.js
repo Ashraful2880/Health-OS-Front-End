@@ -1,9 +1,10 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Header from './Components/Shared/Navbar/Header';
-import Footer from './Components/Shared/Footer/Footer';
-import Home from './Components/Pages/Home/Home';
-import NotFound from './Components/Pages/NotFound/NotFound';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Header from "./Components/Shared/Navbar/Header";
+import Footer from "./Components/Shared/Footer/Footer";
+import Home from "./Components/Pages/Home/Home";
+import NotFound from "./Components/Pages/NotFound/NotFound";
+import Blogs from "./Components/Pages/Blogs/Blogs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/blogs" element={<Blogs />} />
           {/* <Route path="/students" element={<Students />} />
             <Route path="/foods" element={<Foods />} />
             <Route path="/about" element={<About />} />
