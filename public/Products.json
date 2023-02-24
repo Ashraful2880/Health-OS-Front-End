@@ -1,0 +1,1055 @@
+[
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677170006/Health-OS/Medical%20Equipments/medical-micriscope_z8pq3u.jpg",
+    "rating": "5",
+    "name": "High Quality Microscope",
+    "price": "250",
+    "category": "medicalEquip All",
+    "slug": "featured",
+    "SKU": "N/A-266"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677170006/Health-OS/Medical%20Equipments/pluster-machine_cw8z29.webp",
+    "rating": "4",
+    "name": "Pluster Machine",
+    "price": "197",
+    "category": "medicalEquip All",
+    "slug": "featured",
+    "SKU": "N/A-267"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677170005/Health-OS/Medical%20Equipments/lens-case-kit_dmbjgy.webp",
+    "rating": "5",
+    "name": "Lens Case Kit",
+    "price": "15",
+    "category": "medicalEquip All",
+    "slug": "featured",
+    "SKU": "N/A-268"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677170005/Health-OS/Medical%20Equipments/ear_thermometer_f7iifl.webp",
+    "rating": "4.8",
+    "name": "Ear Thermometer",
+    "price": "95",
+    "category": "medicalEquip All",
+    "slug": "featured",
+    "SKU": "N/A-269"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677170004/Health-OS/Medical%20Equipments/digital_thermometer_zt0oho.jpg",
+    "rating": "5",
+    "name": "Digital Thermometer",
+    "price": "98",
+    "category": "medicalEquip All",
+    "slug": "trending",
+    "SKU": "N/A-270"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677170004/Health-OS/Medical%20Equipments/Surgery_Formula_Chewable_upgxnu.jpg",
+    "rating": "4.5",
+    "name": "Surgery Formula Chewable",
+    "price": "208",
+    "category": "medicalEquip All",
+    "slug": "trending",
+    "SKU": "N/A-271"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677181786/Health-OS/Medical%20Equipments/doctor-tools_hli62q.png",
+    "rating": "4",
+    "name": "Doctors Tool",
+    "price": "85",
+    "category": "medicalEquip All",
+    "slug": "trending",
+    "SKU": "N/A-272"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677170004/Health-OS/Medical%20Equipments/trip-oxyzen_ol5k5n.jpg",
+    "rating": "5",
+    "name": "Online Trip Oxyzen",
+    "price": "195",
+    "category": "medicalEquip All",
+    "slug": "trending",
+    "SKU": "N/A-273"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995732/Health-OS/Medical%20Equipments/Medical_Thermometer_eguuyj.jpg",
+    "rating": "5",
+    "name": "Medical Thermometer",
+    "price": "56",
+    "category": "medicalEquip All",
+    "slug": "newArrival",
+    "SKU": "N/A-274"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995732/Health-OS/Medical%20Equipments/Medical_Microscope_elgd3l.jpg",
+    "rating": "4.1",
+    "name": "Medical Microscope",
+    "price": "319",
+    "category": "medicalEquip All",
+    "slug": "newArrival",
+    "SKU": "N/A-275"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995732/Health-OS/Medical%20Equipments/Safety_Goggles_hvoxat.webp",
+    "rating": "5",
+    "name": "Safety Googles",
+    "price": "12",
+    "category": "medicalEquip All",
+    "slug": "newArrival",
+    "SKU": "N/A-276"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995732/Health-OS/Medical%20Equipments/Meter_u7y3da.webp",
+    "rating": "4.1",
+    "name": "Thermometer",
+    "price": "20",
+    "category": "medicalEquip All",
+    "slug": "bestSellar",
+    "SKU": "N/A-277"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995732/Health-OS/Medical%20Equipments/Inhaler_Pressure_Meter_nigahg.jpg",
+    "rating": "4.9",
+    "name": "Inhaler Pressure Meter",
+    "price": "90",
+    "category": "medicalEquip All",
+    "slug": "bestSellar",
+    "SKU": "N/A-278"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677170004/Health-OS/Medical%20Equipments/telescope_l9jpna.webp",
+    "rating": "4.1",
+    "name": "Large Telescope",
+    "price": "386",
+    "category": "medicalEquip All",
+    "slug": "bestSellar",
+    "SKU": "N/A-279"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995700/Health-OS/Medicine/Vitamin_fzixgl.jpg",
+    "rating": "5",
+    "name": "Vitamin Pack",
+    "price": "70",
+    "category": "medicine All",
+    "slug": "featured",
+    "SKU": "N/A-280"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995694/Health-OS/Medicine/Organim_vitamin-2_vtddco.jpg",
+    "rating": "4.9",
+    "name": "Organic Vitamin Capsule",
+    "price": "45",
+    "category": "medicine All",
+    "slug": "featured",
+    "SKU": "N/A-281"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995693/Health-OS/Medicine/Multivitamin_gwqktr.jpg",
+    "rating": "5",
+    "name": "Multi Vitamine",
+    "price": "90",
+    "category": "medicine All",
+    "slug": "featured",
+    "SKU": "N/A-282"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995693/Health-OS/Medicine/Vitamin-2_kj25z9.jpg",
+    "rating": "4.5",
+    "name": "Herbal Vitamin",
+    "price": "59",
+    "category": "medicine All",
+    "slug": "featured",
+    "SKU": "N/A-283"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995693/Health-OS/Medicine/Organic_vitamin-3_vmrhpe.jpg",
+    "rating": "4.2",
+    "name": "Serum Pack",
+    "price": "48",
+    "category": "medicine All",
+    "slug": "trending",
+    "SKU": "N/A-284"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995692/Health-OS/Medicine/Organic_Vitamin_nn9aco.jpg",
+    "rating": "4.9",
+    "name": "Calsium Capsule",
+    "price": "99",
+    "category": "medicine All",
+    "slug": "trending",
+    "SKU": "N/A-285"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995692/Health-OS/Medicine/Supplement_fofq1m.jpg",
+    "rating": "5",
+    "name": "Supplement Calcium",
+    "price": "85",
+    "category": "medicine All",
+    "slug": "trending",
+    "SKU": "N/A-286"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995692/Health-OS/Medicine/Iron_iab1yp.jpg",
+    "rating": "4.9",
+    "name": "Iron Tablet",
+    "price": "75",
+    "category": "medicine All",
+    "slug": "trending",
+    "SKU": "N/A-287"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995691/Health-OS/Medicine/Iron-2_eyg7iy.jpg",
+    "rating": "4.2",
+    "name": "Iron Pack",
+    "price": "78",
+    "category": "medicine All",
+    "slug": "newArrival",
+    "SKU": "N/A-288"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677186474/Health-OS/Medicine/health-medicine_lxlmba.jpg",
+    "rating": "5",
+    "name": "Calcium Serum",
+    "price": "75",
+    "category": "medicine All",
+    "slug": "newArrival",
+    "SKU": "N/A-289"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995689/Health-OS/Medicine/Calcium-2_nttygp.jpg",
+    "rating": "5",
+    "name": "Calcium Suppliment",
+    "price": "89",
+    "category": "medicine All",
+    "slug": "newArrival",
+    "SKU": "N/A-290"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995689/Health-OS/Medicine/Eye-drop-2_mx5pt8.jpg",
+    "rating": "5",
+    "name": "Eye Drop",
+    "price": "42",
+    "category": "medicine All",
+    "slug": "bestSellar",
+    "SKU": "N/A-291"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995689/Health-OS/Medicine/Eye_Drop_zpjjqf.jpg",
+    "rating": "5",
+    "name": "Dust Eye Drop",
+    "price": "37",
+    "category": "medicine All",
+    "slug": "bestSellar",
+    "SKU": "N/A-292"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995689/Health-OS/Medicine/Calcium_dwohoj.jpg",
+    "rating": "4.8",
+    "name": "Calcium Capsule",
+    "price": "47",
+    "category": "medicine All",
+    "slug": "bestSellar",
+    "SKU": "N/A-293"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995757/Health-OS/Emergency%20Kits/Plaster_Machine_elizm6.webp",
+    "rating": "4.8",
+    "name": "Plaster Machine",
+    "price": "209",
+    "category": "emergencyKits All",
+    "slug": "featured",
+    "SKU": "N/A-294"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995757/Health-OS/Emergency%20Kits/Tempereture_Gun_v0ttx0.jpg",
+    "rating": "5",
+    "name": "Temparature Gun",
+    "price": "86",
+    "category": "emergencyKits All",
+    "slug": "featured",
+    "SKU": "N/A-295"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995758/Health-OS/Emergency%20Kits/Scissor-box_qc9ceg.webp",
+    "rating": "5",
+    "name": "Scissor Box",
+    "price": "39",
+    "category": "emergencyKits All",
+    "slug": "featured",
+    "SKU": "N/A-296"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995758/Health-OS/Emergency%20Kits/Inheler_Pressure_Drop_yzkncj.png",
+    "rating": "3.9",
+    "name": "Pressure Drop",
+    "price": "48",
+    "category": "emergencyKits All",
+    "slug": "featured",
+    "SKU": "N/A-297"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995758/Health-OS/Emergency%20Kits/Kidney-tray_hqv5dc.webp",
+    "rating": "4.9",
+    "name": "Kidney Tray",
+    "price": "44",
+    "category": " emergencyKits All",
+    "slug": "trending",
+    "SKU": "N/A-298"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995758/Health-OS/Emergency%20Kits/Surgical_Kit_krc2ls.webp",
+    "rating": "5",
+    "name": "Surgical Kit",
+    "price": "22",
+    "category": "emergencyKits All",
+    "slug": "trending",
+    "SKU": "N/A-299"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995758/Health-OS/Emergency%20Kits/tripple_oxyzen_oo6nsf.jpg",
+    "rating": "4.9",
+    "name": "Tripple Oxyzen",
+    "price": "209",
+    "category": "emergencyKits All",
+    "slug": "trending",
+    "SKU": "N/A-300"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677172172/Health-OS/Emergency%20Kits/minarel-suppliment_fsbdgy.jpg",
+    "rating": "5",
+    "name": "Emergency Pressure Supplyment",
+    "price": "79",
+    "category": "emergencyKits All",
+    "slug": "newArrival",
+    "SKU": "N/A-301"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677172183/Health-OS/Emergency%20Kits/best_butter_qtgszf.jpg",
+    "rating": "4.3",
+    "name": "Patient Butter",
+    "price": "47",
+    "category": "emergencyKits All",
+    "slug": "newArrival",
+    "SKU": "N/A-302"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677172191/Health-OS/Emergency%20Kits/protine-pack_we5p8k.jpg",
+    "rating": "4.9",
+    "name": "Emergency Protine Pack",
+    "price": "105",
+    "category": "emergencyKits All",
+    "slug": "newArrival",
+    "SKU": "N/A-303"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677172215/Health-OS/Emergency%20Kits/vitamin_tablets_ktch9y.jpg",
+    "rating": "4.7",
+    "name": "Women Vitamin Pack",
+    "price": "65",
+    "category": "emergencyKits All",
+    "slug": "newArrival",
+    "SKU": "N/A-304"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995758/Health-OS/Emergency%20Kits/Surgical_Kit_krc2ls.webp",
+    "rating": "5",
+    "name": "Surgical Kits",
+    "price": "46",
+    "category": "emergencyKits All",
+    "slug": "bestSellar",
+    "SKU": "N/A-305"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995758/Health-OS/Emergency%20Kits/Kidney-tray_hqv5dc.webp",
+    "rating": "4.8",
+    "name": "Kideney Tray",
+    "price": "39",
+    "category": "emergencyKits All",
+    "slug": "bestSellar",
+    "SKU": "N/A-306"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995758/Health-OS/Emergency%20Kits/Scissor-box_qc9ceg.webp",
+    "rating": "5",
+    "name": "Scissor Box",
+    "price": "16",
+    "category": "emergencyKits All",
+    "slug": "bestSellar",
+    "SKU": "N/A-307"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677173575/Health-OS/Mask/Dust_Protect_Musk_onlbxe.png",
+    "rating": "5",
+    "name": "Dust Protect Mask",
+    "price": "9",
+    "category": "mask All",
+    "slug": "featured",
+    "SKU": "N/A-308"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677173575/Health-OS/Mask/white_N95_Mask_kr5r6w.png",
+    "rating": "5",
+    "name": "N-95 Mask White",
+    "price": "26",
+    "category": "mask All",
+    "slug": "featured",
+    "SKU": "N/A-309"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677173576/Health-OS/Mask/doctors_mask_m46slc.png",
+    "rating": "5",
+    "name": "KN-95 Doctors Mask",
+    "price": "46",
+    "category": "mask All",
+    "slug": "featured",
+    "SKU": "N/A-310"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677173575/Health-OS/Mask/Fabric_Mask_hat9ze.png",
+    "rating": "3.4",
+    "name": "Cotton Fabric Mask",
+    "price": "7",
+    "category": "mask All",
+    "slug": "trending",
+    "SKU": "N/A-311"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677173575/Health-OS/Mask/white_mask_ruxud4.png",
+    "rating": "4.4",
+    "name": "One Time Mask",
+    "price": "2",
+    "category": "mask All",
+    "slug": "trending",
+    "SKU": "N/A-312"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677173574/Health-OS/Mask/n-95_mask_xfihze.png",
+    "rating": "4.9",
+    "name": "KN-95 Mask",
+    "price": "11",
+    "category": "mask All",
+    "slug": "trending",
+    "SKU": "N/A-313"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677173574/Health-OS/Mask/printed-cotton-mask_gtekpa.png",
+    "rating": "4.8",
+    "name": "Cotton Printed Mask",
+    "price": "4",
+    "category": "mask All",
+    "slug": "newArrival",
+    "SKU": "N/A-314"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677173574/Health-OS/Mask/mask_with_dust_control_zimbkl.png",
+    "rating": "4.3",
+    "name": "Beath Controller Mask",
+    "price": "9",
+    "category": "mask All",
+    "slug": "newArrival",
+    "SKU": "N/A-315"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677173574/Health-OS/Mask/printed_mask_j23kyw.png",
+    "rating": "4.9",
+    "name": "Printed Mask",
+    "price": "8",
+    "category": "mask All",
+    "slug": "newArrival",
+    "SKU": "N/A-316"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677173574/Health-OS/Mask/gray-fabric-mask_jyl4fp.png",
+    "rating": "4.3",
+    "name": "Gray Fabric Mask",
+    "price": "8",
+    "category": "mask All",
+    "slug": "newArrival",
+    "SKU": "N/A-317"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677173574/Health-OS/Mask/ladies-mask_mshyas.png",
+    "rating": "5",
+    "name": "Ladies Mask Ashys",
+    "price": "14",
+    "category": "mask All",
+    "slug": "bestSellar",
+    "SKU": "N/A-318"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677173575/Health-OS/Mask/white_mask_ruxud4.png",
+    "rating": "3.2",
+    "name": "One Time White Mask",
+    "price": "2",
+    "category": "mask All",
+    "slug": "bestSellar",
+    "SKU": "N/A-319"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995740/Health-OS/Mask/Eye_Mask_duu1ca.webp",
+    "rating": "5",
+    "name": "Eye Mask",
+    "price": "22",
+    "category": "mask All",
+    "slug": "bestSellar",
+    "SKU": "N/A-320"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995740/Health-OS/Mask/N95_Mask_Lab_vudimb.jpg",
+    "rating": "5",
+    "name": "N-95 Lab Mask",
+    "price": "105",
+    "category": "mask All",
+    "slug": "bestSellar",
+    "SKU": "N/A-321"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995748/Health-OS/Glaves/Glaves-7_u92sfg.jpg",
+    "rating": "5",
+    "name": "Slim One Time Gloves",
+    "price": "5",
+    "category": "gloves All",
+    "slug": "featured",
+    "SKU": "N/A-322"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995748/Health-OS/Glaves/Glaves-5_xsk4xo.jpg",
+    "rating": "5",
+    "name": "One Time Gloves",
+    "price": "7",
+    "category": "gloves All",
+    "slug": "featured",
+    "SKU": "N/A-323"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995748/Health-OS/Glaves/Glaves-3_nvvvhn.jpg",
+    "rating": "5",
+    "name": "Cosmic Gloves",
+    "price": "8",
+    "category": "gloves All",
+    "slug": "featured",
+    "SKU": "N/A-324"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995748/Health-OS/Glaves/Glaves-6_pfrgsn.jpg",
+    "rating": "5",
+    "name": "Operation Gloves",
+    "price": "6",
+    "category": "gloves All",
+    "slug": "featured",
+    "SKU": "N/A-325"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995748/Health-OS/Glaves/Glaves-4_hm9wf7.jpg",
+    "rating": "4.3",
+    "name": "Net Gloves",
+    "price": "4",
+    "category": "gloves All",
+    "slug": "trending",
+    "SKU": "N/A-326"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995749/Health-OS/Glaves/Glaves-8_rmihdz.jpg",
+    "rating": "4.9",
+    "name": "Double Gloves",
+    "price": "4",
+    "category": "gloves All",
+    "slug": "trending",
+    "SKU": "N/A-327"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995749/Health-OS/Glaves/Glaves-2_bmlt6r.jpg",
+    "rating": "4.1",
+    "name": "Single Layer Gloves",
+    "price": "6",
+    "category": "gloves All",
+    "slug": "trending",
+    "SKU": "N/A-328"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995749/Health-OS/Glaves/glaves_y1oeml.jpg",
+    "rating": "4.9",
+    "name": "Emergency Gloves",
+    "price": "5",
+    "category": "gloves All",
+    "slug": "trending",
+    "SKU": "N/A-329"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677174654/Health-OS/Glaves/black-gloves_woonjc.png",
+    "rating": "5",
+    "name": "Beat Black Gloves",
+    "price": "12",
+    "category": "gloves All",
+    "slug": "bestSellar",
+    "SKU": "N/A-330"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677174654/Health-OS/Glaves/gray-gloves_gmwb8c.png",
+    "rating": "5",
+    "name": "Latest White Gloves",
+    "price": "10",
+    "offerPrice": "8",
+    "category": "gloves All",
+    "slug": "bestSellar",
+    "SKU": "N/A-331"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677174654/Health-OS/Glaves/Disposel_Gloves_qnglcy.png",
+    "rating": "5",
+    "name": "Latest Slim Gloves",
+    "price": "5",
+    "category": "gloves All",
+    "slug": "bestSellar",
+    "SKU": "N/A-332"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677174654/Health-OS/Glaves/single_gloves_tf5h1w.png",
+    "rating": "4.9",
+    "name": "Poly Gloves",
+    "price": "4",
+    "offerPrice": "3",
+    "category": "gloves All",
+    "slug": "bestSellar",
+    "SKU": "N/A-333"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677174654/Health-OS/Glaves/white_gloves_gu7ixw.png",
+    "rating": "5",
+    "name": "New Model Gray Gloves",
+    "price": "9",
+    "offerPrice": "6",
+    "category": "gloves All",
+    "slug": "newArrival",
+    "SKU": "N/A-334"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677174654/Health-OS/Glaves/half_gloves_wqrnga.png",
+    "rating": "4.8",
+    "name": "Short Gloves",
+    "price": "10",
+    "category": "gloves All",
+    "slug": "newArrival",
+    "SKU": "N/A-335"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677175447/Health-OS/Sanitizer/plus_Sanitizer_jzh3ca.jpg",
+    "rating": "5",
+    "name": "Plus Sanitizer",
+    "price": "15",
+    "offerPrice": "12",
+    "category": "sanitizer All",
+    "slug": "newArrival",
+    "SKU": "N/A-336"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677175447/Health-OS/Sanitizer/big_sanitizer_pack_nvuu8n.jpg",
+    "rating": "4.5",
+    "name": "Big Sanitizer Bottle",
+    "price": "95",
+    "offerPrice": "88",
+    "category": "sanitizer All",
+    "slug": "newArrival",
+    "SKU": "N/A-337"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677175447/Health-OS/Sanitizer/pcket_Sanitizer_bxw2la.jpg",
+    "rating": "5",
+    "name": "Pocket Sanitizer",
+    "price": "18",
+    "category": "sanitizer All",
+    "slug": "featured",
+    "SKU": "N/A-338"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677175447/Health-OS/Sanitizer/pocket_hand_sanitizer_aq5vl3.jpg",
+    "rating": "5",
+    "name": "Hand Sanitizer Mini",
+    "price": "11",
+    "offerPrice": "7",
+    "category": "sanitizer All",
+    "slug": "trending",
+    "SKU": "N/A-339"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677175446/Health-OS/Sanitizer/hand_sanitizer_flonxf.jpg",
+    "rating": "4.5",
+    "name": "Hand Sanitizer",
+    "price": "16",
+    "offerPrice": "14",
+    "category": "sanitizer All",
+    "slug": "trending",
+    "SKU": "N/A-340"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677175446/Health-OS/Sanitizer/medical_sanitizer_xdpwlp.jpg",
+    "rating": "5",
+    "name": "Medical Sanitizer",
+    "price": "42",
+    "category": "sanitizer All",
+    "slug": "trending",
+    "SKU": "N/A-341"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677175446/Health-OS/Sanitizer/cold_Hand_cleaner_fk7w0f.jpg",
+    "rating": "",
+    "name": "Refill Sanitizer",
+    "price": "42",
+    "offerPrice": "32",
+    "category": "sanitizer All",
+    "slug": "newArrival",
+    "SKU": "N/A-342"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677175446/Health-OS/Sanitizer/refil_Sanitizer_isba4y.jpg",
+    "rating": "5",
+    "name": "Refill Sanitizer",
+    "price": "49",
+    "offerPrice": "42",
+    "category": "sanitizer All",
+    "slug": "newArrival",
+    "SKU": "N/A-343"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677175446/Health-OS/Sanitizer/Hand_Cleaner_jhanb4.jpg",
+    "rating": "5",
+    "name": "Hand Cleaner",
+    "price": "22",
+    "offerPrice": "16",
+    "category": "sanitizer All",
+    "slug": "newArrival",
+    "SKU": "N/A-344"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677175446/Health-OS/Sanitizer/hand_sanitizer_flonxf.jpg",
+    "rating": "4.8",
+    "name": "Hand Sanitizer",
+    "price": "18",
+    "offerPrice": "12",
+    "category": "sanitizer All",
+    "slug": "newArrival",
+    "SKU": "N/A-345"
+  },
+
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995680/Health-OS/Sanitizer/Sanitizer_pd0x59.jpg",
+    "rating": "5",
+    "name": "Sanitizer With Spray Gun",
+    "price": "24",
+    "offerPrice": "18",
+    "category": "sanitizer All",
+    "slug": "featured",
+    "SKU": "N/A-346"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995680/Health-OS/Sanitizer/Sanitizer-2_xrxkmo.jpg",
+    "rating": "5",
+    "name": "Room Sanitizer",
+    "price": "18",
+    "offerPrice": "15",
+    "category": "sanitizer All",
+    "slug": "featured",
+    "SKU": "N/A-347"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995680/Health-OS/Sanitizer/Sanitizer-7_vv5lpa.jpg",
+    "rating": "5",
+    "name": "Hand Sanitizer Glass",
+    "price": "22",
+    "offerPrice": "17",
+    "category": "sanitizer All",
+    "slug": "bestSellar",
+    "SKU": "N/A-348"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995680/Health-OS/Sanitizer/Sanitizer-6_hjplqq.jpg",
+    "rating": "4.8",
+    "name": "Hand Sanitizer",
+    "price": "21",
+    "offerPrice": "18",
+    "category": "sanitizer All",
+    "slug": "bestSellar",
+    "SKU": "N/A-349"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677177398/Health-OS/Medical%20Items/pressure_meter_alvhqu.jpg",
+    "rating": "4.8",
+    "name": "Pressure Meter",
+    "price": "300",
+    "offerPrice": "285",
+    "category": "medicalItems All",
+    "slug": "featured",
+    "SKU": "N/A-350"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677177398/Health-OS/Medical%20Items/smart_digital_meter_phrvfa.jpg",
+    "rating": "4.4",
+    "name": "Smart Digital Meter",
+    "price": "270",
+    "offerPrice": "258",
+    "category": "medicalItems All",
+    "slug": "featured",
+    "SKU": "N/A-351"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677177398/Health-OS/Medical%20Items/safety_googles_ryxhlp.webp",
+    "rating": "4.9",
+    "name": "Safety Googles",
+    "price": "35",
+    "offerPrice": "32",
+    "category": "medicalItems All",
+    "slug": "featured",
+    "SKU": "N/A-352"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677177397/Health-OS/Medical%20Items/celcius_meter_qzb3fr.webp",
+    "rating": "5",
+    "name": "Celcius Meter",
+    "price": "90",
+    "offerPrice": "84",
+    "category": "medicalItems All",
+    "slug": "trending",
+    "SKU": "N/A-353"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677177397/Health-OS/Medical%20Items/ecg_meter_shwpdl.jpg",
+    "rating": "5",
+    "name": "ECG Meter",
+    "price": "320",
+    "offerPrice": "315",
+    "category": "medicalItems All",
+    "slug": "trending",
+    "SKU": "N/A-354"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677177397/Health-OS/Medical%20Items/medicin_bag_pu5peo.jpg",
+    "rating": "5",
+    "name": "Medicine Bag",
+    "price": "32",
+    "offerPrice": "27",
+    "category": "medicalItems All",
+    "slug": "trending",
+    "SKU": "N/A-355"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677177397/Health-OS/Medical%20Items/thermometer_bdk2a6.jpg",
+    "rating": "4.8",
+    "name": "Thermometer",
+    "price": "40",
+    "offerPrice": "36",
+    "category": "medicalItems All",
+    "slug": "newArrival",
+    "SKU": "N/A-356"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677177397/Health-OS/Medical%20Items/ear_thermometer_rbwqfz.webp",
+    "rating": "5",
+    "name": "Air Thermometer",
+    "price": "125",
+    "offerPrice": "115",
+    "category": "medicalItems All",
+    "slug": "newArrival",
+    "SKU": "N/A-357"
+  },
+
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677177397/Health-OS/Medical%20Items/digital_thermometer_p3cwdi.webp",
+    "rating": "4.5",
+    "name": "Digital Thermometer",
+    "price": "125",
+    "offerPrice": "115",
+    "category": "medicalItems All",
+    "slug": "bestSellar",
+    "SKU": "N/A-358"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995723/Health-OS/Medical%20Items/Waterpik_hf0egv.jpg",
+    "rating": "5",
+    "name": "Smart Water Pick case",
+    "price": "45",
+    "offerPrice": "42",
+    "category": "medicalItems All",
+    "slug": "bestSellar",
+    "SKU": "N/A-359"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995722/Health-OS/Medical%20Items/waterpik-3_ou4e6r.jpg",
+    "rating": "5",
+    "name": "Big Water Pick",
+    "price": "55",
+    "offerPrice": "42",
+    "category": "medicalItems All",
+    "slug": "bestSellar",
+    "SKU": "N/A-360"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995717/Health-OS/Medical%20Items/Electric_Irrigator_xypmdw.jpg",
+    "rating": "4.8",
+    "name": "Electic Irrigator",
+    "price": "55",
+    "offerPrice": "50",
+    "category": "medicalItems All",
+    "slug": "bestSellar",
+    "SKU": "N/A-361"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995717/Health-OS/Medical%20Items/waterpik-2_i9lj5x.jpg",
+    "rating": "4.8",
+    "name": "Smart Water Pick",
+    "price": "42",
+    "offerPrice": "37",
+    "category": "medicalItems All",
+    "slug": "bestSellar",
+    "SKU": "N/A-362"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1676995716/Health-OS/Medical%20Items/waterpik-4_scbgwe.jpg",
+    "rating": "4.1",
+    "name": "Water Pick",
+    "price": "46",
+    "offerPrice": "40",
+    "category": "medicalItems All",
+    "slug": "bestSellar",
+    "SKU": "N/A-363"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178332/Health-OS/othersProduct/ayush_zwsp09.jpg",
+    "rating": "4.5",
+    "name": "Ayush Serum",
+    "price": "85",
+    "offerPrice": "80",
+    "category": "others All",
+    "slug": "featured",
+    "SKU": "N/A-364"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178332/Health-OS/othersProduct/protine-pack_al45kr.jpg",
+    "rating": "5",
+    "name": "Protin Pack",
+    "price": "95",
+    "offerPrice": "90",
+    "category": "others All",
+    "slug": "featured",
+    "SKU": "N/A-365"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178332/Health-OS/othersProduct/vitamin_tablets_cmxki2.jpg",
+    "rating": "4.5",
+    "name": "Vitamin Capsule Pack",
+    "price": "85",
+    "offerPrice": "80",
+    "category": "others All",
+    "slug": "featured",
+    "SKU": "N/A-366"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178332/Health-OS/othersProduct/vitamin_xfawdp.jpg",
+    "rating": "4.5",
+    "name": "Protin Pack",
+    "price": "105",
+    "offerPrice": "95",
+    "category": "others All",
+    "slug": "newArrival",
+    "SKU": "N/A-367"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178332/Health-OS/othersProduct/vitamin_package_yctur2.jpg",
+    "rating": "5",
+    "name": "Vitamin Package",
+    "price": "105",
+    "offerPrice": "95",
+    "category": "others All",
+    "slug": "newArrival",
+    "SKU": "N/A-368"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178332/Health-OS/othersProduct/protine_pack_u52wmv.jpg",
+    "rating": "4.5",
+    "name": "Protin Pack",
+    "price": "95",
+    "offerPrice": "90",
+    "category": "others All",
+    "slug": "newArrival",
+    "SKU": "N/A-369"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178333/Health-OS/othersProduct/devices_csn2uq.jpg",
+    "rating": "3.9",
+    "name": "Medical Brush",
+    "price": "45",
+    "offerPrice": "40",
+    "category": "others All",
+    "slug": "trending",
+    "SKU": "N/A-370"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178333/Health-OS/othersProduct/covid_tracker_bcfl5c.jpg",
+    "rating": "4.5",
+    "name": "Covid Tracker",
+    "price": "165",
+    "offerPrice": "155",
+    "category": "others All",
+    "slug": "trending",
+    "SKU": "N/A-371"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178333/Health-OS/othersProduct/best_butter_oh3lcy.jpg",
+    "rating": "4.5",
+    "name": "Butter",
+    "price": "65",
+    "offerPrice": "60",
+    "category": "others All",
+    "slug": "trending",
+    "SKU": "N/A-372"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178333/Health-OS/othersProduct/diabetis_serum_uivbux.jpg",
+    "rating": "5",
+    "name": "Diabetis Serum",
+    "price": "105",
+    "offerPrice": "100",
+    "category": "others All",
+    "slug": "trending",
+    "SKU": "N/A-373"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178333/Health-OS/othersProduct/eyewear_fb4r2r.jpg",
+    "rating": "4.7",
+    "name": "Eye Wear",
+    "price": "75",
+    "offerPrice": "70",
+    "category": "others All",
+    "slug": "newArrival",
+    "SKU": "N/A-374"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178333/Health-OS/othersProduct/fitnes_pack_g9ky8z.jpg",
+    "rating": "3.5",
+    "name": "Fitness Pack",
+    "price": "82",
+    "offerPrice": "78",
+    "category": "others All",
+    "slug": "bestSellar",
+    "SKU": "N/A-375"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178333/Health-OS/othersProduct/minarel-suppliment_ascito.jpg",
+    "rating": "5",
+    "name": "Minarel Suppliment",
+    "price": "65",
+    "offerPrice": "60",
+    "category": "others All",
+    "slug": "bestSellar",
+    "SKU": "N/A-376"
+  },
+  {
+    "productImage": "https://res.cloudinary.com/ashraful-islam/image/upload/v1677178333/Health-OS/othersProduct/ocl_product_v1jsi5.jpg",
+    "rating": "5",
+    "name": "Ocl Product",
+    "price": "35",
+    "offerPrice": "30",
+    "category": "others All",
+    "slug": "bestSellar",
+    "SKU": "N/A-377"
+  }
+]
