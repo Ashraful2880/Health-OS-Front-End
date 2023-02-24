@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import axios from "axios";
 import { FaShareAlt } from "react-icons/fa";
+import LoadingScreen from "../../Shared/LoadingScreen/LoadingScreen";
 
 SwiperCore.use([Autoplay, Pagination]);
 
@@ -94,7 +95,7 @@ const Blogs = () => {
                           <button className="text-white hover:text-[#2563eb] font-bold bg-[#2563eb] hover:bg-white border-2 border-[#2563eb] duration-500 px-5 py-2 mt-3 text-sm rounded-sm">
                             Read More
                           </button>
-                          <FaShareAlt className="text-lg text-[#2563eb]"/>
+                          <FaShareAlt className="text-lg text-[#2563eb]" />
                         </div>
                       </div>
                     </div>
@@ -105,11 +106,7 @@ const Blogs = () => {
           </div>
         </div>
       ) : (
-        <img
-          className="w-96 rounded-2xl mx-auto mt-3"
-          src="https://i.ibb.co/D1GcjP6/Loading.gif"
-          alt="Loading..."
-        />
+        <LoadingScreen />
       )}
     </div>
   );
