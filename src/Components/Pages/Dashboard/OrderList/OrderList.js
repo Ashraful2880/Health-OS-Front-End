@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
+import { BsCardChecklist } from "react-icons/bs";
 
 const OrderList = () => {
   const [mails, setMails] = React.useState();
@@ -14,10 +15,12 @@ const OrderList = () => {
 
   return (
     <div className="h-screen footer-bg">
+      {/* Heading Title */}
       <div className="lg:pt-3 md:pt-3 pt-2 lg:px-3 md:px-3 px-0 mx-2">
-        <div className="headingTitle bg-white lg:w-60 w-full shadow-md">
-          <h3 className="text-xl text-left mb-4 font-semibold ml-1 text-[#2563eb] relative pl-10 py-1.5">
-            All Message List
+        <div className="text-xl bg-white lg:w-60 w-full flex items-center gap-x-2 px-5">
+          <BsCardChecklist className="text-[#2563eb]" />
+          <h3 className="font-semibold text-[#2563eb] py-1.5">
+            All Order List
           </h3>
         </div>
       </div>

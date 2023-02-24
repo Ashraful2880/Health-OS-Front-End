@@ -1,13 +1,14 @@
 import React from "react";
+import { BsGearFill } from "react-icons/bs";
 
 const ManageOrders = () => {
   return (
     <div className="footer-bg h-screen">
-      <div className="lg:py-3 md:py-3 py-2 lg:px-3 md:px-3 px-0 mx-2">
-        <div className="headingTitle bg-white lg:w-60 w-full">
-          <h3 className="text-xl text-left mb-4 font-semibold ml-1 text-[#2563eb] relative pl-10 py-1.5">
-            Manage All Projects
-          </h3>
+      {/* Heading Title */}
+      <div className="lg:pt-3 md:pt-3 pt-2 lg:px-3 md:px-3 px-0 mx-2">
+        <div className="text-xl bg-white lg:w-60 w-full flex items-center gap-x-2 px-5">
+          <BsGearFill className="text-[#2563eb]" />
+          <h3 className="font-semibold text-[#2563eb] py-1.5">Manage Orders</h3>
         </div>
       </div>
     </div>

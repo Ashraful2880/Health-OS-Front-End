@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect } from "react";
+import { AiOutlineAppstoreAdd } from "react-icons/ai";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 
 const AllProducts = () => {
@@ -42,9 +43,11 @@ const AllProducts = () => {
 
   return (
     <div className="bg-shape h-screen">
+      {/* Heading Title */}
       <div className="lg:pt-3 md:pt-3 pt-2 lg:px-3 md:px-3 px-0 mx-2">
-        <div className="headingTitle bg-white lg:w-60 w-full">
-          <h3 className="text-xl text-left mb-4 font-semibold ml-1 text-[#2563eb] relative pl-10 py-1.5">
+        <div className="text-xl bg-white lg:w-60 w-full flex items-center gap-x-2 px-5">
+          <AiOutlineAppstoreAdd className="text-[#2563eb]" />
+          <h3 className="font-semibold text-[#2563eb] py-1.5">
             All Product List
           </h3>
         </div>
@@ -118,7 +121,7 @@ const AllProducts = () => {
               </div>
               <div className="mt-3 flex justify-start">
                 <button
-                  className="px-6 py-2.5 border border-indigo-600 rounded-md bg-indigo-600 hover:bg-white hover:text-indigo-600 text-white duration-300"
+                  className="px-6 py-2.5 border border-indigo-600 rounded-md bg-indigo-600 hover:bg-white hover:text-[#2563eb] text-white duration-300"
                   onClick={() => updateChanges()}
                   type="submit"
                 >

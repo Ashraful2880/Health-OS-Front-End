@@ -40,27 +40,3 @@
   background-position: center center;
   height: 80vh;
 }
-
-/* Dashboard Heading Title */
-
-.headingTitle h3:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10px;
-  height: 100%;
-  background: #2563eb;
-  content: "";
-  display: block;
-}
-
-.headingTitle h3:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10px;
-  height: 12px;
-  background: black;
-  content: "";
-  display: block;
-}

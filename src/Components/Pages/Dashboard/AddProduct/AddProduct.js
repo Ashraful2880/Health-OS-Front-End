@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import { FaCartPlus } from "react-icons/fa";
 
 const AddProduct = () => {
   const [name, setName] = React.useState();
@@ -43,21 +44,21 @@ const AddProduct = () => {
 
   return (
     <div className="bg-shape h-screen">
-      <div className="lg:py-3 md:py-3 py-2 lg:px-3 md:px-3 px-0 mx-2">
-        <div className="headingTitle bg-white lg:w-60 w-full">
-          <h3 className="text-xl text-left mb-4 font-semibold ml-1 text-[#2563eb] relative pl-10 py-1.5">
-            Add Project
-          </h3>
+      {/* Heading Title */}
+      <div className="lg:pt-3 md:pt-3 pt-2 lg:px-3 md:px-3 px-0 mx-2">
+        <div className="text-xl bg-white lg:w-60 w-full flex items-center gap-x-2 px-5">
+          <FaCartPlus className="text-[#2563eb]" />
+          <h3 className="font-semibold text-[#2563eb] py-1.5">Add Product</h3>
         </div>
       </div>
 
       <div className="max-w-screen-lg mx-auto p-5 border myShadow rounded-md">
         <div className="text-center mb-10">
           <p className="mt-4 text-sm leading-7 text-gray-800 font-semibold uppercase">
-            Fill The Form
+            Fill The Product Details
           </p>
           <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
-            To <span className="text-indigo-600">Add Project</span>
+            To <span className="text-[#2563eb]">Add A Product</span>
           </h3>
         </div>
 
@@ -168,9 +169,9 @@ const AddProduct = () => {
             ></textarea>
           </div>
 
-          <div className="flex justify-end w-full px-3">
+          <div className="flex justify-start w-full px-3 pt-3">
             <button
-              className="shadow bg-indigo-600 hover:bg-indigo-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"
+              className="shadow bg-[#2563eb] hover:bg-white text-white hover:text-[#2563eb] font-bold py-2 px-6 rounded border border-[#2563eb] duration-300"
               type="submit"
             >
               Submit Project
