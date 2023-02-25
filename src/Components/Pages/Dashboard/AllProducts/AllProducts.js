@@ -4,15 +4,35 @@ import { AiFillDelete, AiOutlineAppstoreAdd } from "react-icons/ai";
 import { BsFillEyeFill } from "react-icons/bs";
 import { FaEdit } from "react-icons/fa";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
+import ViewSingleProduct from "./ViewSingleProduct";
 
 const AllProducts = () => {
   const [products, setproducts] = React.useState();
+  const [singleProduct, setSingleProduct] = React.useState();
+  const [view, setView] = React.useState(false);
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_PATH}/products`).then((resp) => {
       setproducts(resp.data);
     });
   }, []);
+
+  // View Single Product Details
+
+  const viewProduct = (id) => {
+    setView(true);
+    const fetchProduct = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_PATH}/products/${id}`
+        );
+        setSingleProduct(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchProduct();
+  };
 
   //<-------------- product Delete Function ------------>
 
@@ -87,7 +107,7 @@ const AllProducts = () => {
                 </div>
                 <div className="absolute top-2 right-3">
                   <button
-                    onClick={() => alert("Update Option Coming Soon")}
+                    onClick={() => viewProduct(product?._id)}
                     className="p-1 my-2 h-7 w-7 bg-[#2563eb] hover:bg-white text-white hover:text-[#2563eb] border border-[#2563eb] rounded-full flex justify-center items-center duration-300"
                   >
                     <BsFillEyeFill />
@@ -110,9 +130,14 @@ const AllProducts = () => {
           </div>
         </div>
       ) : (
-        <div className="w-full h-[60vh] flex justify-center items-center">
-          <div className="w-12 h-12 rounded-full animate-spin border-4 border-solid border-green-500 border-t-transparent"></div>
-        </div>
+        <LoadingScreen />
+      )}
+      {view && (
+        <ViewSingleProduct
+          view={view}
+          setView={setView}
+          singleProduct={singleProduct}
+        />
       )}
     </div>
   );
