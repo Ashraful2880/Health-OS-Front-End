@@ -50,10 +50,10 @@ const CustomerList = () => {
                       Address
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Total Orderd
+                      Register Date
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Customer Type
+                      Remarks
                     </th>
                   </tr>
                 </thead>
@@ -70,27 +70,27 @@ const CustomerList = () => {
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {customer?.quantity}
+                          {customer?.email}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {customer?.ship_add1}
+                          {customer?.phone}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          ${customer?.total_amount}
+                          {customer?.address}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {customer?.date}
+                          12-Nov-2021
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap flex items-center gap-x-2">
-                          {customer?._id}
+                          N/A
                         </p>
                       </td>
                     </tr>

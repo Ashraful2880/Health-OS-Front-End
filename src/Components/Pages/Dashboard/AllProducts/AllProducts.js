@@ -60,7 +60,7 @@ const AllProducts = () => {
         <div className="text-xl bg-white lg:w-60 w-full flex items-center gap-x-2 px-5">
           <AiOutlineAppstoreAdd className="text-[#2563eb]" />
           <h3 className="font-semibold text-[#2563eb] py-1.5">
-            All Product List {products?.length}
+            All Product List
           </h3>
         </div>
       </div>
