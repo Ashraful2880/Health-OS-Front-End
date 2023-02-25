@@ -57,7 +57,7 @@ const AddProduct = () => {
     const file = await res.json();
     setProductImage(file);
   };
-  console.log(productImage);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newProduct = {
@@ -71,8 +71,7 @@ const AddProduct = () => {
       SKU,
     };
     axios
-      // .post(`${process.env.REACT_APP_API_PATH}/products`, newProduct)
-      .post(`http://localhost:5000/products`, newProduct)
+      .post(`${process.env.REACT_APP_API_PATH}/products`, newProduct)
       .then(function (response) {
         alert("Project Submitted Successfull");
       })

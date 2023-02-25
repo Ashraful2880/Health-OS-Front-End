@@ -30,6 +30,13 @@ const EditSingleProduct = ({ setEdit, productID, updated, setUpdated }) => {
   ];
 
   //   Product All State Here
+
+  const [productImage, setProductImage] = React.useState();
+  const [productData, setProductData] = React.useState();
+  const [rating, setRating] = React.useState(productData?.rating);
+  const [category, setCategory] = React.useState(productData?.category);
+  const [slug, setSlug] = React.useState(productData?.slug);
+
   const { handleSubmit, reset, register } = useForm({
     defaultValues: {
       productImage: "",
@@ -42,11 +49,6 @@ const EditSingleProduct = ({ setEdit, productID, updated, setUpdated }) => {
       SKU: "",
     },
   });
-
-  const [productData, setProductData] = React.useState();
-  const [rating, setRating] = React.useState(productData?.rating);
-  const [category, setCategory] = React.useState(productData?.category);
-  const [slug, setSlug] = React.useState(productData?.slug);
 
   // All On Change Function Here
 
@@ -69,20 +71,21 @@ const EditSingleProduct = ({ setEdit, productID, updated, setUpdated }) => {
       });
   }, [productID, reset]);
 
-  /* const files = productImage;
-	const data = new FormData();
-	data.append("file", files[0]);
-	data.append("upload_preset", "UploadFromWebsite");
-  
-	const res =  fetch(`${process.env.REACT_APP_IMAGE_API_PATH}/upload`, {
-	  method: "PUT",
-	  body: data,
-	});
-	const file = res.json(); */
+  const handleImage = async (files) => {
+    const data = new FormData();
+    data.append("file", files[0]);
+    data.append("upload_preset", "UploadFromWebsite");
+    const res = await fetch(`${process.env.REACT_APP_IMAGE_API_PATH}/upload`, {
+      method: "POST",
+      body: data,
+    });
+    const file = await res.json();
+    setProductImage(file);
+  };
 
   const onSubmit = (data) => {
     const updateProduct = {
-      // productImage: file?.secure_url,
+      productImage: productImage?.secure_url,
       rating,
       category,
       slug,
@@ -101,7 +104,6 @@ const EditSingleProduct = ({ setEdit, productID, updated, setUpdated }) => {
         setEdit(false);
       })
       .catch(function (error) {
-        console.log(error);
         alert.error(error?.message);
       });
   };
@@ -233,6 +235,34 @@ const EditSingleProduct = ({ setEdit, productID, updated, setUpdated }) => {
                 <div className="flex justify-between items-center gap-x-4 mb-6">
                   <div className="w-full">
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
+                      Product Image
+                    </label>
+                    <div className="flex items-center justify-start bg-grey-lighter overflow-hidden">
+                      <label className="w-64 flex flex-col items-center px-4 py-3 bg-white text-blue-600 rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue-500 hover:text-white duration-300">
+                        <svg
+                          className="w-8 h-8"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                        </svg>
+                        <span className="mt-2 text-base leading-normal">
+                          {productImage?.original_filename ||
+                            "Select Product Image"}
+                        </span>
+                        <input
+                          type="file"
+                          className="hidden"
+                          defaultValue={productImage?.secure_url}
+                          onChange={(e) => handleImage(e.target.files)}
+                        />
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className="w-full">
+                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
                       You Can Change Your Product Rating
                     </label>
                     <div className="flex items-center border py-1.5 px-2">
@@ -248,28 +278,6 @@ const EditSingleProduct = ({ setEdit, productID, updated, setUpdated }) => {
                         fractions={2}
                         stop={5}
                       />
-                    </div>
-                  </div>
-
-                  <div className="w-full">
-                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
-                      Product Image
-                    </label>
-                    <div className="flex items-center justify-start bg-grey-lighter overflow-hidden">
-                      <label className="w-64 flex flex-col items-center px-4 py-3 bg-white text-blue-600 rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue-500 hover:text-white duration-300">
-                        <svg
-                          className="w-8 h-8"
-                          fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
-                        </svg>
-                        <span className="mt-2 text-base leading-normal">
-                          {(productData?.image && productData?.productImage) ||
-                            "Select Product Image"}
-                        </span>
-                      </label>
                     </div>
                   </div>
                 </div>
