@@ -11,7 +11,7 @@ import SignUp from "./Components/Pages/SignUp/SignUp";
 import About from "./Components/Pages/About/About";
 import ProductDetails from "./Components/Pages/CartAll/ProductDetails/ProductDetails";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
-import Cart from "./Components/Pages/CartAll/Cart/Cart";
+import Cart from "./Components/Pages/CartAll/CartOverview/CartOverview";
 import WishList from "./Components/Pages/CartAll/Wishlist/WishList";
 import Dashboard from "./Components/Pages/Dashboard/Dashboard/Dashboard";
 import DashboardHome from "./Components/Pages/Dashboard/DashboardHome/DashboardHome";
@@ -27,12 +27,15 @@ import Summary from "./Components/Pages/Dashboard/Summary/Summary";
 import Test from "./Components/Pages/Test/Test";
 import Shop from "./Components/Pages/Shop/Shop";
 import Users from "./Components/Pages/Dashboard/Users/Users";
+import ScrollToPageTop from "./Components/Shared/ScrollToPageTop/ScrollToPageTop";
+import CheckOut from "./Components/Pages/CartAll/CartOverview/CheckOut";
 
 function App() {
   return (
     <div className="App">
       {/* <AuthProvider> */}
       <BrowserRouter>
+        <ScrollToPageTop />
         <Header />
         <Routes>
           <Route path="/*" element={<NotFound />} />
@@ -45,7 +48,14 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/test" element={<Test />} />
           <Route path="shopCategory/:category" element={<Shop />} />
-          <Route path="/productDetails" element={<ProductDetails />} />
+          <Route
+            path="addToCart/:productId"
+            element={
+              // <PrivateRoute>
+              <ProductDetails />
+              // </PrivateRoute>
+            }
+          />
           <Route
             path="/cart"
             element={
@@ -59,6 +69,14 @@ function App() {
             element={
               // <PrivateRoute>
               <WishList />
+              // </PrivateRoute>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              // <PrivateRoute>
+              <CheckOut />
               // </PrivateRoute>
             }
           />

@@ -47,6 +47,9 @@ const ManageOrders = () => {
                       Total Amount
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
+                      Status
+                    </th>
+                    <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
                       Order Date
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
@@ -62,7 +65,7 @@ const ManageOrders = () => {
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {order?.product_name}
+                          {order?.productName}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
@@ -72,17 +75,30 @@ const ManageOrders = () => {
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {order?.ship_add1}
+                          {order?.address}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          ${order?.total_amount}
+                          ${order?.amount}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {order?.date}
+                          20-Dec-2022
+                        </p>
+                      </td>
+                      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
+                        <p className="text-gray-900 whitespace-no-wrap">
+                        {order?.status === "Pending" && (
+                            <span className="bg-gray-200 px-3 py-1 rounded-full font-semibold"> {order?.status} </span>
+                          )}
+                          {order?.status === "Approved" && (
+                            <span className="bg-green-600 text-white px-3 py-1 rounded-full font-semibold"> {order?.status} </span>
+                          )}
+                          {order?.status === "Rejected" && (
+                            <span className="bg-red-500 text-white px-3 py-1 rounded-full font-semibold"> {order?.status} </span>
+                          )}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">

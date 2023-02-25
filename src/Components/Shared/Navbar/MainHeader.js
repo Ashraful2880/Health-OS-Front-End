@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FiHeart, FiShoppingBag } from "react-icons/fi";
 import { FaAngleDoubleRight, FaAngleDown } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
@@ -6,9 +6,23 @@ import MobileNav from "./MobileNav";
 import Navbar from "./Navbar";
 
 const MainHeader = () => {
-  const [hide, setHide] = React.useState(false);
+  const [items, setItems] = React.useState();
+  const [wishListItems, setWishListItems] = React.useState();
+  const [changes, setChanges] = React.useState(0);
   const location = useLocation();
   const pathName = location?.pathname;
+
+  useEffect(() => {
+    const myCartProduct = localStorage.getItem("cart");
+    setItems(JSON.parse(myCartProduct));
+    // setChanges(changes + 1);
+  }, [items, changes]);
+
+  useEffect(() => {
+    const wishListProduct = localStorage.getItem("wishList");
+    setWishListItems(JSON.parse(wishListProduct));
+    // setChanges(changes + 1);
+  }, [wishListItems, changes]);
 
   return (
     <>
@@ -33,7 +47,7 @@ const MainHeader = () => {
                   >
                     <FiHeart className="text-2xl" />
                     <div className="h-5 w-5 rounded-full bg-[#2563eb] flex flex-col justify-center items-center p-2 text-white font-bold absolute -top-4 left-3">
-                      0
+                      {wishListItems?.length || 0}
                     </div>
                   </Link>
                   <Link
@@ -41,7 +55,7 @@ const MainHeader = () => {
                     className="relative hover:text-[#2563eb] duration-300"
                   >
                     <div className="h-5 w-5 rounded-full bg-[#2563eb] flex flex-col justify-center items-center p-2 text-white font-bold absolute -top-4 left-3">
-                      0
+                      {items?.length || 0}
                     </div>
                     <FiShoppingBag className="text-2xl" />
                   </Link>

@@ -8,13 +8,16 @@ import Rating from "react-rating";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import { BsStar, BsStarFill, BsCart } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const BestSellar = () => {
   const [bestSellar, setBestSellar] = React.useState();
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/bestSelling?bestSellar=bestSellar`)
+      .get(
+        `${process.env.REACT_APP_API_PATH}/bestSelling?bestSellar=bestSellar`
+      )
       .then((resp) => {
         setBestSellar(resp?.data);
       });
@@ -164,13 +167,13 @@ const BestSellar = () => {
                   </div>
                 </div>
                 {/* Add To Cart Button*/}
-                <div className="pb-3 z-50">
+                <Link className="pb-3 z-50" to={`/addToCart/${sellar._id}`}>
                   <div className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-2xl text-white bg-[#2563eb] h-12 w-12 p-1 flex justify-center items-center rounded-full opacity-0 group-hover:opacity-100 duration-700 z-50">
-                    <button onClick={() => alert("Added To Cart")}>
+                    <button>
                       <BsCart />
                     </button>
                   </div>
-                </div>
+                </Link>
                 {/* Cart Overlay */}
                 <div className="absolute bottom-0 h-full w-full bg-black opacity-0 group-hover:opacity-40 translate-y-[100%] group-hover:translate-y-0 duration-700 z-0"></div>
               </div>

@@ -46,9 +46,7 @@ const AddProduct = () => {
     setRating(newRating);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const files = productImage;
+  const handleImage = async (files) => {
     const data = new FormData();
     data.append("file", files[0]);
     data.append("upload_preset", "UploadFromWebsite");
@@ -57,18 +55,24 @@ const AddProduct = () => {
       body: data,
     });
     const file = await res.json();
+    setProductImage(file);
+  };
+  console.log(productImage);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     const newProduct = {
-      productImage: file?.secure_url,
+      productImage: productImage?.secure_url,
       rating,
       name,
       price,
       offerPrice,
-      category,
-      slug,
+      category: category.value,
+      slug: slug.value,
       SKU,
     };
     axios
-      .post(`${process.env.REACT_APP_API_PATH}/projects`, newProduct)
+      // .post(`${process.env.REACT_APP_API_PATH}/products`, newProduct)
+      .post(`http://localhost:5000/products`, newProduct)
       .then(function (response) {
         alert("Project Submitted Successfull");
       })
@@ -187,33 +191,13 @@ const AddProduct = () => {
               <input
                 onChange={(e) => setSKU(e.target.value)}
                 className="block w-full text-gray-700 border rounded-sm py-2.5 px-4 leading-tight focus:outline-blue-200 focus:bg-white"
-                type="number"
+                type="text"
                 placeholder="Enter SKU Number Example:(277)"
               />
             </div>
           </div>
           {/* Rating And Product Image */}
           <div className="flex justify-between items-center gap-x-4 mb-6">
-            <div className="w-full">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
-                You Can Change Your Product Rating
-              </label>
-              <div className="flex items-center border py-1.5 px-2">
-                <Rating
-                  initialRating={0}
-                  onClick={handleRatingChange}
-                  emptySymbol={
-                    <BsStar className="text-gray-400 text-xl mr-2" />
-                  }
-                  fullSymbol={
-                    <BsStarFill className="text-[#FFB627] text-xl mr-2" />
-                  }
-                  fractions={2}
-                  stop={5}
-                />
-              </div>
-            </div>
-
             <div className="w-full">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
                 Product Image
@@ -229,15 +213,35 @@ const AddProduct = () => {
                     <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
                   </svg>
                   <span className="mt-2 text-base leading-normal">
-                    {productImage || "Select Product Image"}
+                    {productImage?.original_filename || "Select Product Image"}
                   </span>
                   <input
                     type="file"
                     className="hidden"
-                    onChange={(e) => setProductImage(e.target.files)}
+                    onChange={(e) => handleImage(e.target.files)}
                   />
                 </label>
               </div>
+            </div>
+
+            <div className="w-full">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
+                You Can Change Your Product Rating
+              </label>
+              <button className="flex items-center border py-1.5 px-2">
+                <Rating
+                  initialRating={0}
+                  onClick={handleRatingChange}
+                  emptySymbol={
+                    <BsStar className="text-gray-400 text-xl mr-2" />
+                  }
+                  fullSymbol={
+                    <BsStarFill className="text-[#FFB627] text-xl mr-2" />
+                  }
+                  fractions={2}
+                  stop={5}
+                />
+              </button>
             </div>
           </div>
 

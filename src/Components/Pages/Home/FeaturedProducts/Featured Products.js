@@ -9,6 +9,7 @@ import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import { BsStar, BsStarFill, BsCart } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import featuredBannar from "../../../../Assets/Images/Others/featured-bannar.jpg";
+import { Link } from "react-router-dom";
 
 const FeaturedProducts = () => {
   const [featuredProduct, setFeaturedProduct] = React.useState();
@@ -158,21 +159,21 @@ const FeaturedProducts = () => {
                 )}
 
                 {/* Add To Wishlist Button*/}
-                <div className="pb-3 z-50">
+                <Link to={`/addToCart/${feature._id}`} className="pb-3 z-50">
                   <div className="absolute right-2 top-2 -translate-x-0 -translate-y-0 text-2xl text-[#2563eb] group-hover:text-white bg-transparent group-hover:bg-[#2563eb] h-10 w-10 p-1 flex justify-center items-center rounded-full duration-700 z-50">
                     <button onClick={() => alert("Added To WishList")}>
                       <FaRegHeart />
                     </button>
                   </div>
-                </div>
+                </Link>
                 {/* Add To Cart Button*/}
-                <div className="pb-3 z-50">
+                <Link className="pb-3 z-50" to={`/addToCart/${feature._id}`}>
                   <div className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-2xl text-white bg-[#2563eb] h-12 w-12 p-1 flex justify-center items-center rounded-full opacity-0 group-hover:opacity-100 duration-700 z-50">
-                    <button onClick={() => alert("Added To Cart")}>
+                    <button>
                       <BsCart />
                     </button>
                   </div>
-                </div>
+                </Link>
                 {/* Cart Overlay */}
                 <div className="absolute bottom-0 h-full w-full bg-black opacity-0 group-hover:opacity-40 translate-y-[100%] group-hover:translate-y-0 duration-700 z-0"></div>
               </div>

@@ -6,8 +6,11 @@ import { FaEdit } from "react-icons/fa";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import ViewSingleProduct from "./ViewSingleProduct";
 import EditSingleProduct from "./EditSingleProduct";
+import { useAlert } from "react-alert";
 
 const AllProducts = () => {
+  const alert = useAlert();
+
   const [products, setproducts] = React.useState();
   const [productID, setProductID] = React.useState();
   const [view, setView] = React.useState(false);
@@ -18,7 +21,7 @@ const AllProducts = () => {
     axios.get(`${process.env.REACT_APP_API_PATH}/products`).then((resp) => {
       setproducts(resp.data);
     });
-  }, []);
+  }, [updated]);
 
   // View Single Product
 
@@ -37,20 +40,15 @@ const AllProducts = () => {
   //<-------------- product Delete Function ------------>
 
   const handleDelete = (id) => {
-    const proceed = window.confirm("Are You Sure ? Want to Delete?");
-    if (proceed) {
-      const url = `${process.env.REACT_APP_API_PATH}/products/${id}`;
-      fetch(url, {
-        method: "DELETE",
+    axios
+      .delete(`${process.env.REACT_APP_API_PATH}/products/${id}`)
+      .then((response) => {
+        setUpdated(updated + 1);
+        alert.success("Deleted Successfully");
       })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.deletedCount > 0) {
-            window.alert("Deleted Successfully");
-          }
-          setUpdated(updated + 1);
-        });
-    }
+      .catch((error) => {
+        alert.error("Deleted Failed");
+      });
   };
 
   return (
@@ -134,7 +132,14 @@ const AllProducts = () => {
         <LoadingScreen />
       )}
       {view && <ViewSingleProduct setView={setView} productID={productID} />}
-      {edit && <EditSingleProduct setEdit={setEdit} productID={productID} />}
+      {edit && (
+        <EditSingleProduct
+          setEdit={setEdit}
+          productID={productID}
+          updated={updated}
+          setUpdated={setUpdated}
+        />
+      )}
     </div>
   );
 };

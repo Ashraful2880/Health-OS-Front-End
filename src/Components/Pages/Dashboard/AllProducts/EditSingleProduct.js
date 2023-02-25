@@ -4,8 +4,12 @@ import Rating from "react-rating";
 import Select from "react-select";
 import { BsStar, BsStarFill } from "react-icons/bs";
 import ModalLoader from "../../../Shared/ModalLoader/ModalLoader";
+import { useForm } from "react-hook-form";
+import { useAlert } from "react-alert";
 
-const EditSingleProduct = ({ setEdit, productID }) => {
+const EditSingleProduct = ({ setEdit, productID, updated, setUpdated }) => {
+  const alert = useAlert();
+
   const categories = [
     { value: "medicalEquip", label: "Medical Equipment" },
     { value: "medicine", label: "Medicine" },
@@ -26,16 +30,23 @@ const EditSingleProduct = ({ setEdit, productID }) => {
   ];
 
   //   Product All State Here
+  const { handleSubmit, reset, register } = useForm({
+    defaultValues: {
+      productImage: "",
+      rating: "",
+      name: "",
+      price: "",
+      offerPrice: "",
+      category: "",
+      slug: "",
+      SKU: "",
+    },
+  });
 
   const [productData, setProductData] = React.useState();
-  const [productImage, setProductImage] = React.useState();
-  const [rating, setRating] = React.useState(0);
-  const [name, setName] = React.useState();
-  const [price, setPrice] = React.useState();
-  const [offerPrice, setOfferPrice] = React.useState();
-  const [category, setCategory] = React.useState();
-  const [slug, setSlug] = React.useState();
-  const [SKU, setSKU] = React.useState();
+  const [rating, setRating] = React.useState(productData?.rating);
+  const [category, setCategory] = React.useState(productData?.category);
+  const [slug, setSlug] = React.useState(productData?.slug);
 
   // All On Change Function Here
 
@@ -54,44 +65,45 @@ const EditSingleProduct = ({ setEdit, productID }) => {
       .get(`${process.env.REACT_APP_API_PATH}/products/${productID}`)
       .then((resp) => {
         setProductData(resp.data);
+        reset(resp.data);
       });
-  }, [productID]);
+  }, [productID, reset]);
 
-  const handleEdit = async (e) => {
-    e.preventDefault();
-    const files = productImage;
-    const data = new FormData();
-    data.append("file", files[0]);
-    data.append("upload_preset", "UploadFromWebsite");
+  /* const files = productImage;
+	const data = new FormData();
+	data.append("file", files[0]);
+	data.append("upload_preset", "UploadFromWebsite");
+  
+	const res =  fetch(`${process.env.REACT_APP_IMAGE_API_PATH}/upload`, {
+	  method: "PUT",
+	  body: data,
+	});
+	const file = res.json(); */
 
-    const res = await fetch(`${process.env.REACT_APP_IMAGE_API_PATH}/upload`, {
-      method: "PUT",
-      body: data,
-    });
-    const file = await res.json();
-
+  const onSubmit = (data) => {
     const updateProduct = {
-      productImage: file?.secure_url,
+      // productImage: file?.secure_url,
       rating,
-      name,
-      price,
-      offerPrice,
       category,
       slug,
-      SKU,
+      ...data,
     };
+
     axios
       .put(
-        `${process.env.REACT_APP_API_PATH}/products/${productID}`,
+        // `${process.env.REACT_APP_API_PATH}/products/${productID}`,
+        `http://localhost:5000/products/${productID}`,
         updateProduct
       )
       .then(function (response) {
-        alert("Product Update Successfull");
+        alert.success("Product Update Successfull");
+        setUpdated(updated + 1);
+        setEdit(false);
       })
       .catch(function (error) {
         console.log(error);
+        alert.error(error?.message);
       });
-    e.target.reset();
   };
 
   //   Custom Style For React Select
@@ -128,7 +140,7 @@ const EditSingleProduct = ({ setEdit, productID }) => {
               </button>
             </div>
             {productData?._id ? (
-              <form onSubmit={handleEdit} className="w-full">
+              <form onSubmit={handleSubmit(onSubmit)} className="w-full">
                 {/* Product Name & Category */}
                 <div className="flex justify-between items-center gap-x-4 mb-6">
                   <div className="w-full">
@@ -136,8 +148,7 @@ const EditSingleProduct = ({ setEdit, productID }) => {
                       Product Name
                     </label>
                     <input
-                      onChange={(e) => setName(e.target.value)}
-                      defaultValue={productData?.name}
+                      {...register("name", { required: true })}
                       className="block w-full text-gray-700 border rounded-sm py-2.5 px-4 leading-tight focus:outline-blue-200 focus:bg-white"
                       type="text"
                       placeholder="Enter Product Name"
@@ -157,6 +168,7 @@ const EditSingleProduct = ({ setEdit, productID }) => {
                       placeholder="Select Product Category"
                       defaultInputValue={productData?.category}
                       styles={customStyles}
+                      {...register("category", { required: true })}
                     />
                   </div>
                 </div>
@@ -173,8 +185,9 @@ const EditSingleProduct = ({ setEdit, productID }) => {
                       onChange={handleSlugChange}
                       options={allSlugs}
                       placeholder="Select Product Slug"
-                      defaultValue={productData?.slug}
+                      defaultInputValue={productData?.slug}
                       styles={customStyles}
+                      {...register("slug", { required: true })}
                     />
                   </div>
 
@@ -183,8 +196,7 @@ const EditSingleProduct = ({ setEdit, productID }) => {
                       Current Price
                     </label>
                     <input
-                      onChange={(e) => setPrice(e.target.value)}
-                      defaultValue={productData?.price}
+                      {...register("price", { required: true })}
                       className="block w-full text-gray-700 border rounded-sm py-2.5 px-4 leading-tight focus:outline-blue-200 focus:bg-white"
                       type="number"
                       placeholder="Enter Product Price"
@@ -198,8 +210,7 @@ const EditSingleProduct = ({ setEdit, productID }) => {
                       Offer Price
                     </label>
                     <input
-                      onChange={(e) => setOfferPrice(e.target.value)}
-                      defaultValue={productData?.offerPrice}
+                      {...register("offerPrice")}
                       className="block w-full text-gray-700 border rounded-sm py-2.5 px-4 leading-tight focus:outline-blue-200 focus:bg-white"
                       type="number"
                       placeholder="Enter Offer Price"
@@ -211,10 +222,9 @@ const EditSingleProduct = ({ setEdit, productID }) => {
                       SKU
                     </label>
                     <input
-                      onChange={(e) => setSKU(e.target.value)}
-                      defaultValue={productData?.SKU}
+                      {...register("SKU", { required: true })}
                       className="block w-full text-gray-700 border rounded-sm py-2.5 px-4 leading-tight focus:outline-blue-200 focus:bg-white"
-                      type="number"
+                      type="text"
                       placeholder="Enter SKU Number Example:(277)"
                     />
                   </div>
@@ -259,11 +269,6 @@ const EditSingleProduct = ({ setEdit, productID }) => {
                           {(productData?.image && productData?.productImage) ||
                             "Select Product Image"}
                         </span>
-                        <input
-                          type="file"
-                          className="hidden"
-                          onChange={(e) => setProductImage(e.target.files)}
-                        />
                       </label>
                     </div>
                   </div>

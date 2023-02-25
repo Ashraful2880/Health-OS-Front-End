@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import { BsCardChecklist } from "react-icons/bs";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaEye } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 
 const CustomerList = () => {
@@ -89,8 +89,8 @@ const CustomerList = () => {
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
-                        <p className="text-gray-900 whitespace-no-wrap flex items-center gap-x-2">
-                          N/A
+                        <p className="text-white hover:text-[#2563eb] p-1.5 whitespace-no-wrap flex justify-center items-center gap-x-2 text-xl h-7 w-7 bg-[#2563eb] border border-[#2563eb] rounded-full">
+                          <FaEye />
                         </p>
                       </td>
                     </tr>
