@@ -1,48 +1,39 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-import { AiOutlineAppstoreAdd } from "react-icons/ai";
+import { AiFillDelete, AiOutlineAppstoreAdd } from "react-icons/ai";
+import { BsFillEyeFill } from "react-icons/bs";
+import { FaEdit } from "react-icons/fa";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 
 const AllProducts = () => {
-  const [projects, setProjects] = React.useState();
-  const [selectComponent, setSelectComponent] = React.useState();
+  const [products, setproducts] = React.useState();
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_PATH}/projects`).then((resp) => {
-      setProjects(resp.data);
+    axios.get(`${process.env.REACT_APP_API_PATH}/products`).then((resp) => {
+      setproducts(resp.data);
     });
   }, []);
 
-  useEffect(() => {
-    setSelectComponent(
-      projects?.map((element) => {
-        delete element?._id;
-        return element;
-      })
-    );
-  }, [projects]);
+  //<-------------- product Delete Function ------------>
 
-  const handleDrop = (droppedItem) => {
-    if (!droppedItem.destination) return;
-    var updatedList = [...selectComponent];
-    const [reorderedItem] = updatedList.splice(droppedItem.source.index, 1);
-    updatedList.splice(droppedItem.destination.index, 0, reorderedItem);
-    setSelectComponent(updatedList);
-  };
-
-  const updateChanges = () => {
-    axios
-      .put(`${process.env.REACT_APP_API_PATH}/projects`, selectComponent)
-      .then(function (response) {
-        alert("Updated Successfull");
+  const handleDelete = (id) => {
+    const proceed = window.confirm("Are You Sure ? Want to Delete?");
+    if (proceed) {
+      const url = `${process.env.REACT_APP_API_PATH}/deleteProduct/${id}`;
+      fetch(url, {
+        method: "DELETE",
       })
-      .catch(function (error) {
-        console.log(error);
-      });
+        .then((res) => res.json())
+        .then((data) => {
+          alert("Deleted Successfully");
+
+          window.location.reload(false);
+        });
+    }
   };
 
   return (
-    <div className="bg-shape h-screen">
+    <div className="h-screen">
       {/* Heading Title */}
       <div className="lg:pt-3 md:pt-3 pt-2 lg:px-3 md:px-3 px-0 mx-2">
         <div className="text-xl bg-white lg:w-60 w-full flex items-center gap-x-2 px-5">
@@ -53,86 +44,75 @@ const AllProducts = () => {
         </div>
       </div>
 
-      {projects?.length > 0 ? (
-        <div className="mx-auto px-6">
-          <div className="pb-8">
-            <div className="py-4 overflow-x-auto">
-              <div className="inline-block min-w-full shadow-md rounded-lg overflow-hidden">
-                <table className="min-w-full leading-normal">
-                  <thead>
-                    <tr>
-                      <th className="px-5 py-3 border-b-2 border-indigo-500 bg-indigo-500 text-left text-sm font-bold text-white uppercase tracking-wider">
-                        SL No
-                      </th>
-                      <th className="px-5 py-3 border-b-2 border-indigo-500 bg-indigo-500 text-left text-sm font-bold text-white uppercase tracking-wider">
-                        Name
-                      </th>
-                      <th className="px-5 py-3 border-b-2 border-indigo-500 bg-indigo-500 text-left text-sm font-bold text-white uppercase tracking-wider">
-                        Category
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {/* <DragDropContext onDragEnd={handleDrop}>
-                      <Droppable droppableId="list-container">
-                        {(provided) => (
-                          <div
-                            className="list-container"
-                            {...provided.droppableProps}
-                            ref={provided.innerRef}
-                          >
-                            {selectComponent?.map((item, index) => (
-                              <Draggable
-                                key={item}
-                                draggableId={item?.name}
-                                index={index}
-                              >
-                                {(provided) => (
-                                  <tr
-                                    className="item-container"
-                                    ref={provided.innerRef}
-                                    {...provided.dragHandleProps}
-                                    {...provided.draggableProps}
-                                  >
-                                    <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
-                                      <p> {index + 1} </p>
-                                    </td>
-                                    <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
-                                      <p className="text-gray-900 whitespace-no-wrap">
-                                        {item?.name}
-                                      </p>
-                                    </td>
-                                    <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
-                                      <p className="text-gray-900 whitespace-no-wrap">
-                                        {item?.category}
-                                      </p>
-                                    </td>
-                                  </tr>
-                                )}
-                              </Draggable>
-                            ))}
-                            {provided.placeholder}
-                          </div>
-                        )}
-                      </Droppable>
-                    </DragDropContext> */}
-                  </tbody>
-                </table>
+      {products?.length > 0 ? (
+        <div className="mx-auto container py-8">
+          <div className="flex flex-wrap items-center lg:justify-start justify-center">
+            {products?.map((product) => (
+              <div
+                className="mx-2 w-72 lg:mb-6 border rounded-md shadow-md hover:shadow duration-300 relative"
+                key={product._id}
+              >
+                <div>
+                  <img
+                    src={product?.productImage}
+                    className="w-full h-44"
+                    alt="product"
+                  />
+                </div>
+                <div className="bg-white">
+                  <div className="px-4 pt-2 pb-4">
+                    <div className="text-left">
+                      <h2 className="text-lg font-bold text-[#2563eb]">
+                        {product?.name}
+                      </h2>
+                      <p className="text-gray-500 text-md">
+                        {product?.category}
+                      </p>
+                    </div>
+                    <p className="text-sm text-gray-600 mt-2 text-left">
+                      The product system has significant impacts on a wide range
+                      of other social and political issues including
+                    </p>
+                    <div className="flex items-center justify-between pt-3 pb-2">
+                      <p className="text-orange-500 font-semibold">
+                        Price: ${product?.price}
+                      </p>
+                      {product.offerPrice && (
+                        <p className="text-gray-400 line-through">
+                          Offer Price: ${product?.offerPrice}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute top-2 right-3">
+                  <button
+                    onClick={() => alert("Update Option Coming Soon")}
+                    className="p-1 my-2 h-7 w-7 bg-[#2563eb] hover:bg-white text-white hover:text-[#2563eb] border border-[#2563eb] rounded-full flex justify-center items-center duration-300"
+                  >
+                    <BsFillEyeFill />
+                  </button>
+                  <button
+                    onClick={() => handleDelete(product._id)}
+                    className="p-1 my-2 h-7 w-7 bg-sky-500 hover:bg-white text-white hover:text-sky-600 border border-sky-500 rounded-full flex justify-center items-center duration-300"
+                  >
+                    <FaEdit />
+                  </button>
+                  <button
+                    onClick={() => alert(product._id)}
+                    className="p-1 my-2 h-7 w-7 bg-red-600 hover:bg-white text-white hover:text-red-600 border hover:border-red-600 rounded-full flex justify-center items-center duration-300"
+                  >
+                    <AiFillDelete />
+                  </button>
+                </div>
               </div>
-              <div className="mt-3 flex justify-start">
-                <button
-                  className="px-6 py-2.5 border border-indigo-600 rounded-md bg-indigo-600 hover:bg-white hover:text-[#2563eb] text-white duration-300"
-                  onClick={() => updateChanges()}
-                  type="submit"
-                >
-                  Save Changes
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       ) : (
-        <LoadingScreen />
+        <div className="w-full h-[60vh] flex justify-center items-center">
+          <div className="w-12 h-12 rounded-full animate-spin border-4 border-solid border-green-500 border-t-transparent"></div>
+        </div>
       )}
     </div>
   );

@@ -4,6 +4,7 @@ import BestSellar from "./BestSellar/BestSellar";
 import CategoryFeature from "./CategoryFeature/CategoryFeature";
 import DealOfTheDay from "./DealOfTheDay/DealOfTheDay";
 import FeaturedProducts from "./FeaturedProducts/Featured Products";
+import NewArrival from "./NewArrival/NewArrival";
 import PromoBannar from "./PromoBannar/PromoBannar";
 import PromoOffer from "./PromoOffer/PromoOffer";
 import ShopByCategory from "./ShopByCategory/ShopByCategory";
@@ -21,6 +22,7 @@ const Home = () => {
       <PromoOffer />
       <BestSellar />
       <PromoBannar />
+      <NewArrival />
     </>
   );
 };

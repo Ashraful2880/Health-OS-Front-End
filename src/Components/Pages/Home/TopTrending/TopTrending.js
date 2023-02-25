@@ -13,9 +13,11 @@ const TopTrending = () => {
   const [topTrending, setTopTrending] = React.useState();
 
   useEffect(() => {
-    axios.get("./Products.json").then((resp) => {
-      setTopTrending(resp?.data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_API_PATH}/topTrending?trending=trending`)
+      .then((resp) => {
+        setTopTrending(resp?.data);
+      });
   }, []);
 
   const settings = {

@@ -10,16 +10,14 @@ import { BsStar, BsStarFill, BsCart } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import featuredBannar from "../../../../Assets/Images/Others/featured-bannar.jpg";
 
-const FeaturedProducts = () => {
-  const [featuredProduct, setFeaturedProduct] = React.useState();
+const NewArrival = () => {
+  const [newArrivalData, setNewArrivalData] = React.useState();
 
   useEffect(() => {
     axios
-      .get(
-        `${process.env.REACT_APP_API_PATH}/featuredProduct?featured=featured`
-      )
+      .get(`http://localhost:5000/newArrival?newArrival=newArrival`)
       .then((resp) => {
-        setFeaturedProduct(resp?.data);
+        setNewArrivalData(resp?.data);
       });
   }, []);
 
@@ -74,15 +72,15 @@ const FeaturedProducts = () => {
         {/* Heading Title */}
         <div className="lg:text-left text-center">
           <h1 className="text-4xl font-bold">
-            <span className="text-[#2563eb]">F</span>eatured
-            <span className="text-[#2563eb] ">P</span>roducts
+            <span className="text-[#2563eb]">N</span>ew
+            <span className="text-[#2563eb] ">A</span>rrival
           </h1>
           <p className="text-md text-gray-600">
             Visit our shop to see amazing products
           </p>
         </div>
         {/* Slider Arrow Item */}
-        {featuredProduct && (
+        {newArrivalData && (
           <div className="flex items-center gap-x-2">
             <div>
               <button
@@ -103,30 +101,30 @@ const FeaturedProducts = () => {
           </div>
         )}
       </div>
-      {/* Featured Products Area */}
-      {featuredProduct?.length > 0 ? (
+      {/* New Arrival Data Area */}
+      {newArrivalData?.length > 0 ? (
         <Slider ref={slider} {...settings}>
-          {featuredProduct?.map((feature) => (
-            <div key={feature?._id} className="mt-7">
+          {newArrivalData?.map((arrivalItem) => (
+            <div key={arrivalItem?._id} className="mt-7">
               <div className="mx-3 border rounded-md relative group cursor-pointer overflow-hidden">
-                {/* Featured Product Image */}
+                {/* New Arrival Product Image */}
                 <div className="bg-[#F8F8F8]">
                   <img
-                    src={feature?.productImage}
+                    src={arrivalItem?.productImage}
                     alt="product_Image"
                     className="w-full lg:h-[250px] h-auto mx-auto pb-4"
                   />
                 </div>
-                {/* Featured Content */}
+                {/* New Arrival Content */}
                 <div className="pl-5 text-left">
-                  <h4 className="text-[17px] font-bold">{feature?.name}</h4>
+                  <h4 className="text-[17px] font-bold">{arrivalItem?.name}</h4>
                   <div className="flex items-center gap-x-2 mb-2">
                     <h4 className="text-[17px] font-semibold text-[#2563eb]">
-                      ${feature?.price}.00
+                      ${arrivalItem?.price}.00
                     </h4>
-                    {feature?.offerPrice && (
+                    {arrivalItem?.offerPrice && (
                       <h4 className="text-[15px] mb-0.5 text-gray-500 line-through">
-                        $ {feature?.offerPrice}.00
+                        $ {arrivalItem?.offerPrice}.00
                       </h4>
                     )}
                   </div>
@@ -138,16 +136,16 @@ const FeaturedProducts = () => {
                       fullSymbol={
                         <BsStarFill className="mx-0.5 text-[#FFB627]" />
                       }
-                      initialRating={feature?.rating}
+                      initialRating={arrivalItem?.rating}
                     />
                     <p className="text-gray-500 text-[13px] font-semibold">
-                      ({feature?.rating})
+                      ({arrivalItem?.rating})
                     </p>
                   </div>
                 </div>
                 {/* percentage Notification */}
 
-                {feature?.offerPrice && (
+                {arrivalItem?.offerPrice && (
                   <div className="pb-3 z-50">
                     <div className="absolute left-2 top-2 text-2xl text-white bg-red-500 w-10 p-1 flex justify-center items-center rounded-full z-50">
                       <p className="text-xs font-semibold">
@@ -186,4 +184,4 @@ const FeaturedProducts = () => {
   );
 };
 
-export default FeaturedProducts;
+export default NewArrival;

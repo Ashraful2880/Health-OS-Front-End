@@ -25,6 +25,7 @@ import CustomerList from "./Components/Pages/Dashboard/CustomerList/CustomerList
 import Overview from "./Components/Pages/Dashboard/Overview/Overview";
 import Summary from "./Components/Pages/Dashboard/Summary/Summary";
 import Test from "./Components/Pages/Test/Test";
+import Shop from "./Components/Pages/Shop/Shop";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/test" element={<Test />} />
+          <Route path="shopCategory/:category" element={<Shop />} />
           <Route path="/productDetails" element={<ProductDetails />} />
           <Route
             path="/cart"

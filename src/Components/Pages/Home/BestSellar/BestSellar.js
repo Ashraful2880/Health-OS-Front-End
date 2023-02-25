@@ -13,9 +13,11 @@ const BestSellar = () => {
   const [bestSellar, setBestSellar] = React.useState();
 
   useEffect(() => {
-    axios.get("./Products.json").then((resp) => {
-      setBestSellar(resp?.data);
-    });
+    axios
+      .get(`http://localhost:5000/bestSelling?bestSellar=bestSellar`)
+      .then((resp) => {
+        setBestSellar(resp?.data);
+      });
   }, []);
 
   const settings = {
