@@ -3,13 +3,15 @@ import axios from "axios";
 import { useEffect } from "react";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import { BsCardChecklist } from "react-icons/bs";
+import { FaCheck } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
 
 const OrderList = () => {
-  const [mails, setMails] = React.useState();
+  const [orders, setOrders] = React.useState();
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_PATH}/contact`).then((resp) => {
-      setMails(resp?.data);
+    axios.get(`${process.env.REACT_APP_API_PATH}/orders`).then((resp) => {
+      setOrders(resp?.data);
     });
   }, []);
 
@@ -25,70 +27,70 @@ const OrderList = () => {
         </div>
       </div>
 
-      {mails?.length > 0 ? (
+      {orders?.length > 0 ? (
         <div className="mx-auto px-6">
           <div className="py-4 overflow-x-auto">
             <div className="inline-block min-w-full shadow-md rounded-lg overflow-hidden">
               <table className="min-w-full leading-normal">
                 <thead>
                   <tr>
-                    <th className="px-5 py-3 border-b-2 border-indigo-500 bg-indigo-500 text-left text-sm font-bold text-white uppercase tracking-wider">
+                    <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
                       SL No
                     </th>
-                    <th className="px-5 py-3 border-b-2 border-indigo-500 bg-indigo-500 text-left text-sm font-bold text-white uppercase tracking-wider">
-                      From
+                    <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
+                      Product Name
                     </th>
-                    <th className="px-5 py-3 border-b-2 border-indigo-500 bg-indigo-500 text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Name
+                    <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
+                      Quantity
                     </th>
-                    <th className="px-5 py-3 border-b-2 border-indigo-500 bg-indigo-500 text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Number
+                    <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
+                      Shipping Address
                     </th>
-                    <th className="px-5 py-3 border-b-2 border-indigo-500 bg-indigo-500 text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Subject
+                    <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
+                      Total Amount
                     </th>
-                    <th className="px-5 py-3 border-b-2 border-indigo-500 bg-indigo-500 text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Message
+                    <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
+                      Order Date
                     </th>
-                    <th className="px-5 py-3 border-b-2 border-indigo-500 bg-indigo-500 text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Time
+                    <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
+                      Order ID
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {mails?.map((mail, index) => (
+                  {orders?.map((order, index) => (
                     <tr key={index + 1}>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p> {index + 1} </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {mail?.userEmail}
+                          {order?.product_name}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {mail?.userName}
+                          {order?.quantity}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {mail?.number}
+                          {order?.ship_add1}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {mail?.subject}
+                          ${order?.total_amount}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {mail?.message}
+                          {order?.date}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
-                        <p className="text-gray-900 whitespace-no-wrap">
-                          {mail?.submitTime}
+                        <p className="text-gray-900 whitespace-no-wrap flex items-center gap-x-2">
+                          {order?._id}
                         </p>
                       </td>
                     </tr>

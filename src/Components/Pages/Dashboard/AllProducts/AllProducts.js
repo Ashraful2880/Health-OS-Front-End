@@ -5,11 +5,14 @@ import { BsFillEyeFill } from "react-icons/bs";
 import { FaEdit } from "react-icons/fa";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import ViewSingleProduct from "./ViewSingleProduct";
+import EditSingleProduct from "./EditSingleProduct";
 
 const AllProducts = () => {
   const [products, setproducts] = React.useState();
-  const [singleProduct, setSingleProduct] = React.useState();
+  const [productID, setProductID] = React.useState();
   const [view, setView] = React.useState(false);
+  const [edit, setEdit] = React.useState(false);
+  const [updated, setUpdated] = React.useState(0);
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_PATH}/products`).then((resp) => {
@@ -17,21 +20,18 @@ const AllProducts = () => {
     });
   }, []);
 
-  // View Single Product Details
+  // View Single Product
 
-  const viewProduct = (id) => {
+  const handleView = (id) => {
     setView(true);
-    const fetchProduct = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.REACT_APP_API_PATH}/products/${id}`
-        );
-        setSingleProduct(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchProduct();
+    setProductID(id);
+  };
+
+  // Edit Single Product
+
+  const handleEdit = (id) => {
+    setEdit(true);
+    setProductID(id);
   };
 
   //<-------------- product Delete Function ------------>
@@ -39,15 +39,16 @@ const AllProducts = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are You Sure ? Want to Delete?");
     if (proceed) {
-      const url = `${process.env.REACT_APP_API_PATH}/deleteProduct/${id}`;
+      const url = `${process.env.REACT_APP_API_PATH}/products/${id}`;
       fetch(url, {
         method: "DELETE",
       })
         .then((res) => res.json())
         .then((data) => {
-          alert("Deleted Successfully");
-
-          window.location.reload(false);
+          if (data.deletedCount > 0) {
+            window.alert("Deleted Successfully");
+          }
+          setUpdated(updated + 1);
         });
     }
   };
@@ -59,7 +60,7 @@ const AllProducts = () => {
         <div className="text-xl bg-white lg:w-60 w-full flex items-center gap-x-2 px-5">
           <AiOutlineAppstoreAdd className="text-[#2563eb]" />
           <h3 className="font-semibold text-[#2563eb] py-1.5">
-            All Product List
+            All Product List {products?.length}
           </h3>
         </div>
       </div>
@@ -107,19 +108,19 @@ const AllProducts = () => {
                 </div>
                 <div className="absolute top-2 right-3">
                   <button
-                    onClick={() => viewProduct(product?._id)}
+                    onClick={() => handleView(product?._id)}
                     className="p-1 my-2 h-7 w-7 bg-[#2563eb] hover:bg-white text-white hover:text-[#2563eb] border border-[#2563eb] rounded-full flex justify-center items-center duration-300"
                   >
                     <BsFillEyeFill />
                   </button>
                   <button
-                    onClick={() => handleDelete(product._id)}
+                    onClick={() => handleEdit(product._id)}
                     className="p-1 my-2 h-7 w-7 bg-sky-500 hover:bg-white text-white hover:text-sky-600 border border-sky-500 rounded-full flex justify-center items-center duration-300"
                   >
                     <FaEdit />
                   </button>
                   <button
-                    onClick={() => alert(product._id)}
+                    onClick={() => handleDelete(product._id)}
                     className="p-1 my-2 h-7 w-7 bg-red-600 hover:bg-white text-white hover:text-red-600 border hover:border-red-600 rounded-full flex justify-center items-center duration-300"
                   >
                     <AiFillDelete />
@@ -132,13 +133,8 @@ const AllProducts = () => {
       ) : (
         <LoadingScreen />
       )}
-      {view && (
-        <ViewSingleProduct
-          view={view}
-          setView={setView}
-          singleProduct={singleProduct}
-        />
-      )}
+      {view && <ViewSingleProduct setView={setView} productID={productID} />}
+      {edit && <EditSingleProduct setEdit={setEdit} productID={productID} />}
     </div>
   );
 };

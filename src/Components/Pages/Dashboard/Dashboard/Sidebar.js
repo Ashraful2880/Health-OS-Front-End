@@ -261,6 +261,35 @@ const Sidebar = ({ open }) => {
                 </Link>
 
                 <Link
+                  to="users"
+                  className={`duration-75 text-[17px] py-2 hover:text-[#2563EB] hover:bg-[#dbeafe] focus:text-[#2563EB] focus:bg-[#dbeafe] rounded-md flex items-center 
+                  ${
+                    open ? "justify-start gap-x-4 pl-4" : "justify-center"
+                  } duration-300`}
+                >
+                  {open ? (
+                    <>
+                      <FaBlog />
+                      <h4 className="text-gray-900">Users List</h4>
+                    </>
+                  ) : (
+                    <Tooltip
+                      content="Users List"
+                      className="w-full"
+                      placement="right"
+                      padding={3}
+                      fontSize="15px"
+                      fadeDuration={500}
+                      background="#DBEAFE"
+                      color="#2563EB"
+                      border="#2563EB"
+                    >
+                      <FaBlog className="w-full" />
+                    </Tooltip>
+                  )}
+                </Link>
+
+                <Link
                   to="overview"
                   className={`duration-75 text-[17px] py-2 hover:text-[#2563EB] hover:bg-[#dbeafe] focus:text-[#2563EB] focus:bg-[#dbeafe] rounded-md flex items-center 
                   ${

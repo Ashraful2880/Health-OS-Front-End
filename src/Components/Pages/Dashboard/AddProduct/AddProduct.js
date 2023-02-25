@@ -1,19 +1,54 @@
 import axios from "axios";
 import React from "react";
+import Select from "react-select";
+import { BsStar, BsStarFill } from "react-icons/bs";
 import { FaCartPlus } from "react-icons/fa";
+import Rating from "react-rating";
 
 const AddProduct = () => {
+  const categories = [
+    { value: "medicalEquip", label: "Medical Equipment" },
+    { value: "medicine", label: "Medicine" },
+    { value: "emergencyKits", label: "Emergency Kits" },
+    { value: "mask", label: "Masks" },
+    { value: "gloves", label: "Gloves" },
+    { value: "sanitizer", label: "Sanitizers" },
+    { value: "medicalItems", label: "Medical Items" },
+    { value: "others", label: "Others" },
+  ];
+
+  const allSlugs = [
+    { value: "featured", label: "Featured Products" },
+    { value: "trending", label: "Top Trending" },
+    { value: "newArrival", label: "New Arrival" },
+    { value: "bestSellar", label: "Best Sellar" },
+    ,
+  ];
+
+  const [productImage, setProductImage] = React.useState();
+  const [rating, setRating] = React.useState(0);
   const [name, setName] = React.useState();
+  const [price, setPrice] = React.useState();
+  const [offerPrice, setOfferPrice] = React.useState();
   const [category, setCategory] = React.useState();
-  const [live, setLive] = React.useState();
-  const [github, setGithub] = React.useState();
-  const [technology, setTechnology] = React.useState();
-  const [details, setDetails] = React.useState();
-  const [imagePrev, setImagePrev] = React.useState();
+  const [slug, setSlug] = React.useState();
+  const [SKU, setSKU] = React.useState();
+
+  // All On Change Function Here
+
+  const handleCategoryChange = (selectedOption) => {
+    setCategory(selectedOption);
+  };
+  const handleSlugChange = (selectedOption) => {
+    setSlug(selectedOption);
+  };
+  const handleRatingChange = (newRating) => {
+    setRating(newRating);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const files = imagePrev;
+    const files = productImage;
     const data = new FormData();
     data.append("file", files[0]);
     data.append("upload_preset", "UploadFromWebsite");
@@ -22,17 +57,18 @@ const AddProduct = () => {
       body: data,
     });
     const file = await res.json();
-    const newProject = {
+    const newProduct = {
+      productImage: file?.secure_url,
+      rating,
       name,
+      price,
+      offerPrice,
       category,
-      homepage: file?.secure_url,
-      live,
-      github,
-      technology,
-      details,
+      slug,
+      SKU,
     };
     axios
-      .post(`${process.env.REACT_APP_API_PATH}/projects`, newProject)
+      .post(`${process.env.REACT_APP_API_PATH}/projects`, newProduct)
       .then(function (response) {
         alert("Project Submitted Successfull");
       })
@@ -40,6 +76,15 @@ const AddProduct = () => {
         console.log(error);
       });
     e.target.reset();
+  };
+  //   Custom Style For React Select
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      height: "40px",
+      "min-height": "40px",
+      textAlign: "left",
+    }),
   };
 
   return (
@@ -63,78 +108,118 @@ const AddProduct = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="w-full">
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          {/* Product Name & Category */}
+          <div className="flex justify-between items-center gap-x-4 mb-6">
+            <div className="w-full">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
-                Project Name
+                Product Name
               </label>
               <input
                 onChange={(e) => setName(e.target.value)}
-                className="block w-full text-gray-700 border rounded-sm py-3 px-4 mb-3 leading-tight focus:outline-blue-200 focus:bg-white"
+                className="block w-full text-gray-700 border rounded-sm py-2.5 px-4 leading-tight focus:outline-blue-200 focus:bg-white"
                 type="text"
-                placeholder="Project Name"
+                placeholder="Enter Product Name"
               />
             </div>
 
-            <div className="w-full md:w-1/2 px-3">
+            <div className="w-full">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
-                Project Category
+                Product Category
               </label>
-              <input
-                onChange={(e) => setCategory(e.target.value)}
-                className="block w-full text-gray-700 border rounded-sm py-3 px-4 mb-3 leading-tight focus:outline-blue-200 focus:bg-white"
-                type="text"
-                placeholder="Project Category"
-              />
-            </div>
-          </div>
-
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
-                Github Link
-              </label>
-              <input
-                onChange={(e) => setGithub(e.target.value)}
-                className="block w-full text-gray-700 border rounded-sm py-3 px-4 mb-3 leading-tight focus:outline-blue-200 focus:bg-white"
-                type="text"
-                placeholder="Github Link"
-              />
-            </div>
-
-            <div className="w-full md:w-1/2 px-3">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
-                Live URL
-              </label>
-              <input
-                onChange={(e) => setLive(e.target.value)}
-                className="block w-full text-gray-700 border rounded-sm py-3 px-4 mb-3 leading-tight focus:outline-blue-200 focus:bg-white"
-                type="text"
-                placeholder="Project Live URL"
+              <Select
+                id="category"
+                name="category"
+                value={category}
+                onChange={handleCategoryChange}
+                options={categories}
+                placeholder="Select Product Category"
+                styles={customStyles}
               />
             </div>
           </div>
-
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full md:w-1/2 px-3">
+          {/* Product Slug & Current Price */}
+          <div className="flex justify-between items-center gap-x-4 mb-6">
+            <div className="w-full">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
-                Technology
+                Product Slug
               </label>
-              <textarea
-                cols={12}
-                onChange={(e) => setTechnology(e.target.value)}
-                className="block w-full text-gray-700 border rounded-sm py-3 px-4 mb-3 leading-tight focus:outline-blue-200 focus:bg-white"
-                type="text"
-                placeholder="Technology Used"
+              <Select
+                id="slug"
+                name="slug"
+                value={slug}
+                onChange={handleSlugChange}
+                options={allSlugs}
+                placeholder="Select Product Slug"
+                styles={customStyles}
               />
             </div>
 
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <div className="w-full">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
-                Project Image
+                Current Price
               </label>
-              <div className="flex items-center justify-start bg-grey-lighter">
-                <label className="w-60 flex flex-col items-center px-4 py-3 bg-white text-blue-600 rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue-500 hover:text-white duration-300">
+              <input
+                onChange={(e) => setPrice(e.target.value)}
+                className="block w-full text-gray-700 border rounded-sm py-2.5 px-4 leading-tight focus:outline-blue-200 focus:bg-white"
+                type="number"
+                placeholder="Enter Product Price"
+              />
+            </div>
+          </div>
+          {/* Offer Price & SKU */}
+          <div className="flex justify-between items-center gap-x-4 mb-6">
+            <div className="w-full">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-start mb-2">
+                Offer Price
+              </label>
+              <input
+                onChange={(e) => setOfferPrice(e.target.value)}
+                className="block w-full text-gray-700 border rounded-sm py-2.5 px-4 leading-tight focus:outline-blue-200 focus:bg-white"
+                type="number"
+                placeholder="Enter Offer Price"
+              />
+            </div>
+
+            <div className="w-full">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
+                SKU
+              </label>
+              <input
+                onChange={(e) => setSKU(e.target.value)}
+                className="block w-full text-gray-700 border rounded-sm py-2.5 px-4 leading-tight focus:outline-blue-200 focus:bg-white"
+                type="number"
+                placeholder="Enter SKU Number Example:(277)"
+              />
+            </div>
+          </div>
+          {/* Rating And Product Image */}
+          <div className="flex justify-between items-center gap-x-4 mb-6">
+            <div className="w-full">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
+                You Can Change Your Product Rating
+              </label>
+              <div className="flex items-center border py-1.5 px-2">
+                <Rating
+                  initialRating={0}
+                  onClick={handleRatingChange}
+                  emptySymbol={
+                    <BsStar className="text-gray-400 text-xl mr-2" />
+                  }
+                  fullSymbol={
+                    <BsStarFill className="text-[#FFB627] text-xl mr-2" />
+                  }
+                  fractions={2}
+                  stop={5}
+                />
+              </div>
+            </div>
+
+            <div className="w-full">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
+                Product Image
+              </label>
+              <div className="flex items-center justify-start bg-grey-lighter overflow-hidden">
+                <label className="w-64 flex flex-col items-center px-4 py-3 bg-white text-blue-600 rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue-500 hover:text-white duration-300">
                   <svg
                     className="w-8 h-8"
                     fill="currentColor"
@@ -144,37 +229,24 @@ const AddProduct = () => {
                     <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
                   </svg>
                   <span className="mt-2 text-base leading-normal">
-                    {(imagePrev && imagePrev[0]?.name) ||
-                      "Select Project Image"}
+                    {productImage || "Select Product Image"}
                   </span>
                   <input
                     type="file"
                     className="hidden"
-                    onChange={(e) => setImagePrev(e.target.files)}
+                    onChange={(e) => setProductImage(e.target.files)}
                   />
                 </label>
               </div>
             </div>
           </div>
 
-          <div className="w-full px-3">
-            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
-              Project Details
-            </label>
-            <textarea
-              onChange={(e) => setDetails(e.target.value)}
-              rows="6"
-              className="block w-full text-gray-700 border rounded-sm py-3 px-4 mb-3 leading-tight focus:outline-blue-200 focus:bg-white"
-              placeholder="Enter Project Details"
-            ></textarea>
-          </div>
-
-          <div className="flex justify-start w-full px-3 pt-3">
+          <div className="flex justify-start w-full px-3 pb-4">
             <button
-              className="shadow bg-[#2563eb] hover:bg-white text-white hover:text-[#2563eb] font-bold py-2 px-6 rounded border border-[#2563eb] duration-300"
+              className="shadow bg-[#2563eb] hover:bg-white text-white hover:text-[#2563eb] border border-[#2563eb] font-bold py-2 px-6 rounded duration-300"
               type="submit"
             >
-              Submit Project
+              Update Changes
             </button>
           </div>
         </form>

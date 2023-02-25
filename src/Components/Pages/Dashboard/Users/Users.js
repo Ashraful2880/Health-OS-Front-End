@@ -1,30 +1,33 @@
+import React from "react";
 import axios from "axios";
-import React, { useEffect } from "react";
-import { BsGearFill } from "react-icons/bs";
+import { useEffect } from "react";
+import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import { BsCardChecklist } from "react-icons/bs";
 import { FaCheck } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
-import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 
-const ManageOrders = () => {
-  const [orders, setOrders] = React.useState();
+const Users = () => {
+  const [userLists, setUserLists] = React.useState();
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_PATH}/orders`).then((resp) => {
-      setOrders(resp?.data);
+    axios.get(`${process.env.REACT_APP_API_PATH}/users`).then((resp) => {
+      setUserLists(resp?.data);
     });
   }, []);
 
   return (
-    <div className="footer-bg h-screen">
+    <div className="h-screen footer-bg">
       {/* Heading Title */}
       <div className="lg:pt-3 md:pt-3 pt-2 lg:px-3 md:px-3 px-0 mx-2">
         <div className="text-xl bg-white lg:w-60 w-full flex items-center gap-x-2 px-5">
-          <BsGearFill className="text-[#2563eb]" />
-          <h3 className="font-semibold text-[#2563eb] py-1.5">Manage Orders</h3>
+          <BsCardChecklist className="text-[#2563eb]" />
+          <h3 className="font-semibold text-[#2563eb] py-1.5">
+            All Users List
+          </h3>
         </div>
       </div>
-      {orders?.length > 0 ? (
+
+      {userLists?.length > 0 ? (
         <div className="mx-auto px-6">
           <div className="py-4 overflow-x-auto">
             <div className="inline-block min-w-full shadow-md rounded-lg overflow-hidden">
@@ -35,70 +38,59 @@ const ManageOrders = () => {
                       SL No
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Product Name
+                      Customer Name
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Quantity
+                      Customer Email
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Shipping Address
+                      Contact Number
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Total Amount
+                      Address
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Order Date
+                      Total Orderd
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Action
+                      Customer Type
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {orders?.map((order, index) => (
+                  {userLists?.map((currentUser, index) => (
                     <tr key={index + 1}>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p> {index + 1} </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {order?.product_name}
+                          {currentUser?.name}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {order?.quantity}
+                          {currentUser?.quantity}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {order?.ship_add1}
+                          {currentUser?.ship_add1}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          ${order?.total_amount}
+                          ${currentUser?.total_amount}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {order?.date}
+                          {currentUser?.date}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap flex items-center gap-x-2">
-                          <button
-                            onClick={() => alert("Order Approved")}
-                            className="h-7 w-7 bg-[#2563eb] hover:bg-white text-white hover:text-[#2563eb] border border-[#2563eb] rounded-full flex justify-center items-center duration-300"
-                          >
-                            <FaCheck />
-                          </button>
-                          <button
-                            onClick={() => alert("Order Declaine")}
-                            className="h-7 w-7 bg-red-500 hover:bg-white text-white hover:text-red-600 border border-red-500 rounded-full flex justify-center items-center duration-300 text-xl"
-                          >
-                            <RxCross2 />
-                          </button>
+                          {currentUser?._id}
                         </p>
                       </td>
                     </tr>
@@ -115,4 +107,4 @@ const ManageOrders = () => {
   );
 };
 
-export default ManageOrders;
+export default Users;

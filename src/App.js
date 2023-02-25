@@ -26,6 +26,7 @@ import Overview from "./Components/Pages/Dashboard/Overview/Overview";
 import Summary from "./Components/Pages/Dashboard/Summary/Summary";
 import Test from "./Components/Pages/Test/Test";
 import Shop from "./Components/Pages/Shop/Shop";
+import Users from "./Components/Pages/Dashboard/Users/Users";
 
 function App() {
   return (
@@ -77,6 +78,7 @@ function App() {
             <Route path="manageOrders" element={<ManageOrders />} />
             <Route path="customerList" element={<CustomerList />} />
             <Route path="addCustomer" element={<AddCustomer />} />
+            <Route path="users" element={<Users />} />
             <Route path="overview" element={<Overview />} />
             <Route path="summary" element={<Summary />} />
             <Route path="makeAdmin" element={<MakeAdmin />} />
