@@ -12,7 +12,7 @@ import { TbWorldDownload } from "react-icons/tb";
 
 const SingleCustomerDetails = ({ setView, productID }) => {
   const [singleCustomer, setSingleCustomer] = React.useState();
-  console.log("singleCustomer", singleCustomer);
+
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API_PATH}/customer/${productID}`)
