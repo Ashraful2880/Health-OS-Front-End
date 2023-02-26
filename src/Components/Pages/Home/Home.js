@@ -5,9 +5,12 @@ import CategoryFeature from "./CategoryFeature/CategoryFeature";
 import DealOfTheDay from "./DealOfTheDay/DealOfTheDay";
 import FeaturedProducts from "./FeaturedProducts/Featured Products";
 import NewArrival from "./NewArrival/NewArrival";
+import NewsLater from "./NewsLater/NewsLater";
 import PromoBannar from "./PromoBannar/PromoBannar";
+import PromoLast from "./PromoLast/PromoLast";
 import PromoOffer from "./PromoOffer/PromoOffer";
 import ShopByCategory from "./ShopByCategory/ShopByCategory";
+import Testimonial from "./Testimonial/Testimonial";
 import TopTrending from "./TopTrending/TopTrending";
 
 const Home = () => {
@@ -23,6 +26,9 @@ const Home = () => {
       <BestSellar />
       <PromoBannar />
       <NewArrival />
+      <PromoLast />
+      <Testimonial />
+      <NewsLater />
     </>
   );
 };
