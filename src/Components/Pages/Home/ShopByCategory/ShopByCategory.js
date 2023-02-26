@@ -62,7 +62,7 @@ const ShopByCategory = () => {
   return (
     <div className="container mx-auto mb-10">
       {/* Heading Title */}
-      <div className="mt-10 mb-12 lg:text-left text-center">
+      <div className="mt-10 mb-12 lg:text-left text-center relative">
         <h1 className="text-4xl font-bold">Shop By Category</h1>
         <p className="text-md text-gray-700">
           Visit our shop to see amazing products

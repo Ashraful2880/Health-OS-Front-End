@@ -3,17 +3,39 @@ import axios from "axios";
 import { useEffect } from "react";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import { BsCardChecklist } from "react-icons/bs";
-import { FaCheck, FaEye } from "react-icons/fa";
-import { RxCross2 } from "react-icons/rx";
+import { FaEye, FaTrash } from "react-icons/fa";
+import SingleCustomerDetails from "./SingleCustomerDetails";
+import { useAlert } from "react-alert";
 
 const CustomerList = () => {
+  const alert = useAlert();
   const [customers, setCustomers] = React.useState();
+  const [productID, setProductId] = React.useState();
+  const [view, setView] = React.useState(false);
+  const [updated, setUpdated] = React.useState(0);
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_PATH}/customers`).then((resp) => {
       setCustomers(resp?.data);
     });
-  }, []);
+  }, [updated]);
+
+  const handleView = (id) => {
+    setProductId(id);
+    setView(true);
+  };
+
+  const handleDelete = (id) => {
+    axios
+      .delete(`${process.env.REACT_APP_API_PATH}/customer/${id}`)
+      .then((response) => {
+        setUpdated(updated + 1);
+        alert.success("Deleted Successfully");
+      })
+      .catch((error) => {
+        alert.error("Deleted Failed");
+      });
+  };
 
   return (
     <div className="h-screen footer-bg">
@@ -39,6 +61,9 @@ const CustomerList = () => {
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
                       Customer Name
+                    </th>
+                    <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
+                      User Name
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
                       Customer Email
@@ -70,6 +95,11 @@ const CustomerList = () => {
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
+                          {customer?.userName}
+                        </p>
+                      </td>
+                      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
+                        <p className="text-gray-900 whitespace-no-wrap">
                           {customer?.email}
                         </p>
                       </td>
@@ -88,10 +118,19 @@ const CustomerList = () => {
                           12-Nov-2021
                         </p>
                       </td>
-                      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
-                        <p className="text-white hover:text-[#2563eb] p-1.5 whitespace-no-wrap flex justify-center items-center gap-x-2 text-xl h-7 w-7 bg-[#2563eb] border border-[#2563eb] rounded-full">
+                      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start flex justify-center items-center gap-x-4">
+                        <button
+                          onClick={() => handleView(customer?._id)}
+                          className="text-white hover:text-[#2563eb] bg-[#2563eb] hover:bg-white p-1.5 text-xl h-7 w-7 whitespace-no-wrap flex justify-center items-center gap-x-2 border border-[#2563eb] rounded-full duration-300"
+                        >
                           <FaEye />
-                        </p>
+                        </button>
+                        <button
+                          onClick={() => handleDelete(customer?._id)}
+                          className="text-white hover:text-red-600 bg-red-500 hover:bg-white p-1.5 text-xl h-7 w-7 whitespace-no-wrap flex justify-center items-center gap-x-2 border border-red-500 rounded-full duration-300"
+                        >
+                          <FaTrash />
+                        </button>
                       </td>
                     </tr>
                   ))}
@@ -99,6 +138,9 @@ const CustomerList = () => {
               </table>
             </div>
           </div>
+          {view && (
+            <SingleCustomerDetails setView={setView} productID={productID} />
+          )}
         </div>
       ) : (
         <LoadingScreen />

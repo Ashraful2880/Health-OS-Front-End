@@ -28,7 +28,7 @@ const ViewSingleProduct = ({ setView, productID }) => {
         <div className="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-7xl sm:w-full">
           <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4 footer-bg">
             <div className="pb-2 flex justify-between items-center border-b mb-6">
-              <h2 className="text-2xl text-indigo-600 font-semibold">
+              <h2 className="text-2xl text-[#2563eb] font-semibold">
                 View Product Details
               </h2>
               <button

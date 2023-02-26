@@ -40,3 +40,45 @@
   background-position: center center;
   height: 80vh;
 }
+
+/* Style For Pagination */
+
+.paginationBttns {
+  list-style: none;
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+.paginationBttns li {
+  margin: 0 4px;
+  padding: 2px 10px;
+  border: 1px solid #2563eb;
+  border-radius: 5px;
+  transition: ease-in-out 0.3s;
+}
+.paginationBttns li:hover {
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}
+.paginationBttns li:hover .nextBttn {
+  color: #fff;
+}
+.paginationBttns li:hover .previousBttn {
+  color: #fff;
+}
+.paginationDisabled {
+  color: grey;
+  cursor: default;
+  background: none;
+}
+.paginationActive {
+  background-color: #2563eb;
+  color: #fff;
+}
+.previousBttn,
+.nextBttn {
+  color: #2563eb;
+  text-decoration: none;
+}

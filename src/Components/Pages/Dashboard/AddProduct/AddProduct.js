@@ -4,8 +4,13 @@ import Select from "react-select";
 import { BsStar, BsStarFill } from "react-icons/bs";
 import { FaCartPlus } from "react-icons/fa";
 import Rating from "react-rating";
+import { useNavigate } from "react-router-dom";
+import { useAlert } from "react-alert";
 
 const AddProduct = () => {
+  const alert = useAlert();
+  const navigate = useNavigate();
+
   const categories = [
     { value: "medicalEquip", label: "Medical Equipment" },
     { value: "medicine", label: "Medicine" },
@@ -73,10 +78,11 @@ const AddProduct = () => {
     axios
       .post(`${process.env.REACT_APP_API_PATH}/products`, newProduct)
       .then(function (response) {
-        alert("Project Submitted Successfull");
+        alert.success("Project Submitted Successfull");
+        navigate("/dashboard/allProducts");
       })
       .catch(function (error) {
-        console.log(error);
+        alert.error(error.message);
       });
     e.target.reset();
   };

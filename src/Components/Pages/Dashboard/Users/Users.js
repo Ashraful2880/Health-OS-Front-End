@@ -3,8 +3,6 @@ import axios from "axios";
 import { useEffect } from "react";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import { BsCardChecklist } from "react-icons/bs";
-import { FaCheck } from "react-icons/fa";
-import { RxCross2 } from "react-icons/rx";
 
 const Users = () => {
   const [userLists, setUserLists] = React.useState();
@@ -50,7 +48,7 @@ const Users = () => {
                       Address
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
-                      Last Visited
+                      Created Date
                     </th>
                     <th className="px-5 py-3 border-b-2 border-[#2563eb] bg-[#2563eb] text-left text-sm font-bold text-white uppercase tracking-wider">
                       User ID
@@ -85,7 +83,7 @@ const Users = () => {
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          {currentUser?.LastVisited}
+                          {currentUser?.createdAt}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">

@@ -1,19 +1,47 @@
 import axios from "axios";
 import React, { useEffect } from "react";
+import { useAlert } from "react-alert";
 import { BsGearFill } from "react-icons/bs";
-import { BsCardChecklist } from "react-icons/bs";
 import { FaCheck } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 
 const ManageOrders = () => {
+  const alert = useAlert();
   const [orders, setOrders] = React.useState();
+  const [updated, setUpdated] = React.useState(false);
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_PATH}/orders`).then((resp) => {
       setOrders(resp?.data);
     });
-  }, []);
+  }, [updated]);
+
+  const approve = (id) => {
+    const changeStatus = { status: "Approved" };
+    axios
+      .put(`${process.env.REACT_APP_API_PATH}/order/${id}`, changeStatus)
+      .then(function (response) {
+        alert.success("Product Approved SuccessFul");
+        setUpdated(updated + 1);
+      })
+      .catch(function (error) {
+        alert.error(error?.message);
+      });
+  };
+
+  const reject = (id) => {
+    const changeStatus = { status: "Rejected" };
+    axios
+      .put(`${process.env.REACT_APP_API_PATH}/order/${id}`, changeStatus)
+      .then(function (response) {
+        alert.success("Status Rejected Successful");
+        setUpdated(updated + 1);
+      })
+      .catch(function (error) {
+        alert.error(error?.message);
+      });
+  };
 
   return (
     <div className="footer-bg h-screen">
@@ -90,31 +118,40 @@ const ManageOrders = () => {
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                        {order?.status === "Pending" && (
-                            <span className="bg-gray-200 px-3 py-1 rounded-full font-semibold"> {order?.status} </span>
+                          {order?.status === "Pending" && (
+                            <span className="bg-gray-200 px-3 py-1 rounded-full font-semibold">
+                              {order?.status}
+                            </span>
                           )}
                           {order?.status === "Approved" && (
-                            <span className="bg-green-600 text-white px-3 py-1 rounded-full font-semibold"> {order?.status} </span>
+                            <span className="bg-green-600 text-white px-3 py-1 rounded-full font-semibold">
+                              {order?.status}
+                            </span>
                           )}
                           {order?.status === "Rejected" && (
-                            <span className="bg-red-500 text-white px-3 py-1 rounded-full font-semibold"> {order?.status} </span>
+                            <span className="bg-red-500 text-white px-3 py-1 rounded-full font-semibold">
+                              {order?.status}
+                            </span>
                           )}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap flex items-center gap-x-2">
-                          <button
-                            onClick={() => alert("Order Approved")}
-                            className="h-7 w-7 bg-[#2563eb] hover:bg-white text-white hover:text-[#2563eb] border border-[#2563eb] rounded-full flex justify-center items-center duration-300"
-                          >
-                            <FaCheck />
-                          </button>
-                          <button
-                            onClick={() => alert("Order Declaine")}
-                            className="h-7 w-7 bg-red-500 hover:bg-white text-white hover:text-red-600 border border-red-500 rounded-full flex justify-center items-center duration-300 text-xl"
-                          >
-                            <RxCross2 />
-                          </button>
+                          {order?.status === "Approved" ? (
+                            <button
+                              onClick={() => reject(order?._id)}
+                              className="h-7 w-7 bg-red-500 hover:bg-white text-white hover:text-red-600 border border-red-500 rounded-full flex justify-center items-center duration-300 text-xl"
+                            >
+                              <RxCross2 />
+                            </button>
+                          ) : (
+                            <button
+                              onClick={() => approve(order?._id)}
+                              className="h-7 w-7 bg-[#2563eb] hover:bg-white text-white hover:text-[#2563eb] border border-[#2563eb] rounded-full flex justify-center items-center duration-300"
+                            >
+                              <FaCheck />
+                            </button>
+                          )}
                         </p>
                       </td>
                     </tr>
