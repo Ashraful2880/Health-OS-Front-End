@@ -84,7 +84,7 @@ const MobileNav = () => {
           <Link
             to="/home"
             className="text-md font-semibold hover:text-[#2563eb] focus:text-[#2563eb] duration-300"
-            onClick={()=>setHide(false)}
+            onClick={() => setHide(false)}
           >
             Home
           </Link>
@@ -93,7 +93,7 @@ const MobileNav = () => {
               <Link
                 to="/shopCategory/All"
                 className="text-md font-semibold hover:text-[#2563eb] focus:text-[#2563eb] duration-300 my-0 flex items-end py-5"
-                onClick={()=>setHide(false)}
+                onClick={() => setHide(false)}
               >
                 <span className="font-semibold "> Browse Categories </span>
                 <FaAngleDown className="ml-1 text-md" />
@@ -110,7 +110,7 @@ const MobileNav = () => {
                       <Link
                         to="/shopCategory/All"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         <span> All Products</span>
@@ -118,7 +118,7 @@ const MobileNav = () => {
                       <Link
                         to="/shopCategory/medicalEquipments"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         <span> Medical Equipments </span>
@@ -126,7 +126,7 @@ const MobileNav = () => {
                       <Link
                         to="/shopCategory/medicine"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         <span> All Medicine </span>
@@ -134,7 +134,7 @@ const MobileNav = () => {
                       <Link
                         to="/shopCategory/emergencyKits"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         Emergency Kits
@@ -142,7 +142,7 @@ const MobileNav = () => {
                       <Link
                         to="/shopCategory/mask"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         Mask Collections
@@ -150,7 +150,7 @@ const MobileNav = () => {
                       <Link
                         to="/shopCategory/medicalItems"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         Medical Items
@@ -158,7 +158,7 @@ const MobileNav = () => {
                       <Link
                         to="/shopCategory/others"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         UnCategorized
@@ -175,7 +175,7 @@ const MobileNav = () => {
                       <Link
                         to="/home"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         Top Trending
@@ -183,7 +183,7 @@ const MobileNav = () => {
                       <Link
                         to="/home"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         Best Selling
@@ -191,7 +191,7 @@ const MobileNav = () => {
                       <Link
                         to="/home"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         New Arraival
@@ -199,7 +199,7 @@ const MobileNav = () => {
                       <Link
                         to="/home"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         Hot Sales
@@ -207,7 +207,7 @@ const MobileNav = () => {
                       <Link
                         to="/sanitizers"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         sanitizer Collections
@@ -215,7 +215,7 @@ const MobileNav = () => {
                       <Link
                         to="/home"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         Brand Of The Week
@@ -223,7 +223,7 @@ const MobileNav = () => {
                       <Link
                         to="/home"
                         className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
+                        onClick={() => setHide(false)}
                       >
                         <FaAngleDoubleRight className="mr-2 text-md" />
                         App Info
@@ -261,7 +261,7 @@ const MobileNav = () => {
                         Weekly Hot
                       </h3>
                     </div>
-                    <Link to="/women" onClick={()=>setHide(false)}>
+                    <Link to="/women" onClick={() => setHide(false)}>
                       <img
                         src="https://res.cloudinary.com/ashraful-islam/image/upload/v1677009072/Health-OS/Others/Categories-Mega_Menu_Feature_at1grz.png"
                         alt="Drop Down Bannar"
@@ -277,233 +277,30 @@ const MobileNav = () => {
               </div>
             </li>
           </ul>
-          <ul className="flex justify-center">
-            <li className="group">
-              <Link
-                className="text-md font-semibold hover:text-[#2563eb] focus:text-[#2563eb] py-5 flex items-end duration-300"
-                to="/shopCategory/All"
-                onClick={()=>setHide(false)}
-              >
-                Shop
-                <FaAngleDown className="ml-1 text-md" />
-              </Link>
-              <div className="w-full text-left px-6 pt-6 mb-0 bg-[#0b1144] absolute top-16 left-0 z-50 shadow-xl overflow-hidden hidden group-hover:block">
-                <div className="w-full container mx-auto flex flex-wrap justify-between megaMenuAnimation">
-                  <ul className="w-full sm:w-1/2 lg:w-1/4 px-4 lg:pt-3 border-b sm:border-r lg:border-b-0 border-gray-600">
-                    <div className="text-gray-100 text-md flex flex-col">
-                      <Link
-                        to="/shopCategory/medicalItems"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        Medical Items
-                      </Link>
-                      <Link
-                        to="/shopCategory/emergencyKits"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        Emergency Kits
-                      </Link>
-                      <Link
-                        to="/shopCategory/mask"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        Mask Collection
-                      </Link>
-                      <Link
-                        to="/shopCategory/gloves"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        Gloves Collections
-                      </Link>
-                      <Link
-                        to="/shopCategory/medicalEquipments"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        Medical Equipments
-                      </Link>
-                      <Link
-                        to="/shopCategory/sanitizers"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        Sanitizer Collections
-                      </Link>
-                      <Link
-                        to="/shopCategory/others"
-                        className="mb-2 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        Others
-                      </Link>
-                    </div>
-                    <div className="flex items-center my-4">
-                      <Link to="/shopCategory/" className="w-full"
-                      onClick={()=>setHide(false)}>
-                        <img
-                          className="w-full mb-2"
-                          src="https://res.cloudinary.com/ashraful-islam/image/upload/v1677010983/Health-OS/Others/1_rkbro2.png"
-                          alt="shop banner"
-                        />
-                      </Link>
-                    </div>
-                  </ul>
-                  <ul className="w-full sm:w-1/2 lg:w-1/4 px-4 pt-6 lg:pt-3 lg:border-b-0 border-b lg:border-r border-r-0 border-gray-600">
-                    <div className="text-gray-100 text-md flex flex-col">
-                      <Link
-                        to="/home"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        Top Trending
-                      </Link>
-                      <Link
-                        to="/home"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        Best Selling
-                      </Link>
-                      <Link
-                        to="/home"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        New Arraival
-                      </Link>
-                      <Link
-                        to="/home"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        Hot Sales
-                      </Link>
-                      <Link
-                        to="/shopCategory/bestCollections"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        Best Collections
-                      </Link>
-                      <Link
-                        to="/home"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        Brand Of The Week
-                      </Link>
-                      <Link
-                        to="/home"
-                        className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
-                        onClick={()=>setHide(false)}
-                      >
-                        <FaAngleDoubleRight className="mr-2 text-md" />
-                        App Info
-                      </Link>
-                    </div>
-                    <div className="flex items-center my-4">
-                      <Link to="/shopCategory/BagPack" className="w-full"
-                      onClick={()=>setHide(false)}>
-                        <img
-                          className="w-full mb-2"
-                          src="https://res.cloudinary.com/ashraful-islam/image/upload/v1677010983/Health-OS/Others/2_za6qzo.png"
-                          alt="shop banner"
-                        />
-                      </Link>
-                    </div>
-                  </ul>
-                  <ul className="w-full sm:w-1/2 lg:w-1/4 px-4 lg:pt-3 pt-6 border-b md:border-b-0 sm:border-b-0 sm:border-r border-gray-600 cursor-pointer">
-                    <h4 className="text-[#2563eb] mb-2 font-bold flex items-center gap-x-1">
-                      <FaAngleDoubleRight className="mr-1 text-md" />
-                      For Sellar
-                    </h4>
-                    <p className="text-gray-300 text-sm mt-3">
-                      This proposal is a win-win situation which will cause a
-                      stellar paradigm shift, let's touch base off-line before
-                      we fire the new ux experience.
-                    </p>
-                    <h4 className="text-[#2563eb] my-2 font-bold flex items-center gap-x-1 mt-8">
-                      <FaAngleDoubleRight className="mr-1 text-md" />
-                      For Buyer
-                    </h4>
-                    <p className="text-gray-300 text-sm mt-3">
-                      This proposal is a win-win situation which will cause a
-                      stellar paradigm shift, let's touch base off-line before
-                      we fire the new ux experience.
-                    </p>
-                    <div className="flex items-center mb-4 mt-10">
-                      <Link to="/shopCategory/Women" className="mb-2 w-full"
-                      onClick={()=>setHide(false)}>
-                        <img
-                          className="mb-2 w-full"
-                          src="https://res.cloudinary.com/ashraful-islam/image/upload/v1677010984/Health-OS/Others/3_qitakq.png"
-                          alt="shop banner"
-                        />
-                      </Link>
-                    </div>
-                  </ul>
-                  <ul className="w-full sm:w-1/2 lg:w-1/4 px-4 lg:pt-3 pt-6 cursor-pointer">
-                    <div className="flex items-center mb-4">
-                      <Link to="/shopCategory/Kids" className="mx-1"
-                      onClick={()=>setHide(false)}>
-                        <img
-                          src="https://res.cloudinary.com/ashraful-islam/image/upload/v1677010983/Health-OS/Others/4_v13bxk.jpg"
-                          alt="Drop Down Bannar"
-                        />
-                      </Link>
-                      <Link to="/shopCategory/Women" className="mx-1"
-                      onClick={()=>setHide(false)}>
-                        <img
-                          src="https://res.cloudinary.com/ashraful-islam/image/upload/v1677010983/Health-OS/Others/5_stqhrv.jpg"
-                          alt="Drop Down Bannar"
-                        />
-                      </Link>
-                    </div>
-                    <p className="text-gray-100 text-sm mt-4">
-                      This is a no-brainer to wash your face, or we need to
-                      future-proof this high performance keywords granularity.
-                    </p>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
-
+          <Link
+            className="text-md font-semibold hover:text-[#2563eb] focus:text-[#2563eb] duration-300 flex items-center gap-x-1"
+            to="/shopCategory/All"
+          >
+            Shop Now
+          </Link>
           <Link
             to="/about"
             className="text-md font-semibold hover:text-[#2563eb] focus:text-[#2563eb] duration-300 flex justify-center items-center gap-x-1 my-2"
-            onClick={()=>setHide(false)}
+            onClick={() => setHide(false)}
           >
             About
           </Link>
           <Link
             to="/blogs"
             className="text-md font-semibold hover:text-[#2563eb] focus:text-[#2563eb] duration-300 flex justify-center items-center gap-x-1 my-2"
-            onClick={()=>setHide(false)}
+            onClick={() => setHide(false)}
           >
             Blog
           </Link>
           <Link
             to="/contact"
             className="text-md font-semibold hover:text-[#2563eb] focus:text-[#2563eb] duration-300 flex justify-center items-center gap-x-1 my-2 pb-3"
-            onClick={()=>setHide(false)}
+            onClick={() => setHide(false)}
           >
             Contact
           </Link>
