@@ -8,7 +8,6 @@ import Rating from "react-rating";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import { BsStar, BsStarFill, BsCart } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
-import featuredBannar from "../../../../Assets/Images/Others/featured-bannar.jpg";
 import { Link } from "react-router-dom";
 
 const NewArrival = () => {

@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import {
   FaEnvelope,
   FaHeartbeat,
@@ -9,18 +8,9 @@ import {
   FaUser,
 } from "react-icons/fa";
 import DashboardHome from "../DashboardHome/DashboardHome";
-import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import { TbWorldDownload } from "react-icons/tb";
 
 const Overview = () => {
-  const [orders, setOrders] = React.useState();
-
-  useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_PATH}/orders`).then((resp) => {
-      setOrders(resp.data);
-    });
-  }, []);
-
   return (
     <div className=" h-screen bg-white">
       {/* Heading Title */}
@@ -31,7 +21,9 @@ const Overview = () => {
         </div>
       </div>
       <div>
-        <h1 className="text-left text-2xl font-bold pl-10 pb-3 pt-1">Best Customer Of <span className="text-[#2563eb]">2022</span></h1>
+        <h1 className="text-left text-2xl font-bold pl-10 pb-3 pt-1">
+          Best Customer Of <span className="text-[#2563eb]">2022</span>
+        </h1>
         <div className="grid lg:grid-cols-3 d:grid-cols-2 grid-cols-1 lg:pb-20 pb-10 px-6">
           <div className="p-2 w-full">
             <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg shadow-md hover:shadow-none cursor-pointer duration-300">
@@ -119,7 +111,9 @@ const Overview = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-left text-2xl font-bold pl-10 -mb-4 pt-1">Overall Account <span className="text-[#2563eb]">Activity</span></h1>
+      <h1 className="text-left text-2xl font-bold pl-10 -mb-4 pt-1">
+        Overall Account <span className="text-[#2563eb]">Activity</span>
+      </h1>
       <DashboardHome />
     </div>
   );

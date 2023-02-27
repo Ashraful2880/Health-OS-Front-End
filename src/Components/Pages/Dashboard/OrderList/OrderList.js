@@ -9,6 +9,7 @@ import { RxCross2 } from "react-icons/rx";
 const OrderList = () => {
   const [orders, setOrders] = React.useState();
 
+  // Get All Orders
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_PATH}/orders`).then((resp) => {
       setOrders(resp?.data);

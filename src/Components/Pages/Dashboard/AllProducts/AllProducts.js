@@ -21,6 +21,7 @@ const AllProducts = () => {
   const productPerPage = 10;
   const pagesVisited = pageNumber * productPerPage;
 
+  // Get All Products
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_PATH}/products`).then((resp) => {
       setproducts(resp.data);

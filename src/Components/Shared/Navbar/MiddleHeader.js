@@ -1,11 +1,19 @@
 import React from "react";
 import logo from "../../../Assets/Images/logo.png";
 import { FaEnvelope, FaLocationArrow, FaPhoneAlt } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { MdLogout } from "react-icons/md";
 
 const MiddleHeader = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const pathName = location?.pathname;
+
+  const handleLogOut = () => {
+    localStorage.removeItem("token");
+    navigate("/home");
+    alert.success("Logout Successful");
+  };
 
   return (
     <>
@@ -66,6 +74,13 @@ const MiddleHeader = () => {
               >
                 DASHBOARD
               </Link>
+              <button
+                onClick={handleLogOut}
+                className="font-bold text-white hover:text-red-500 bg-red-500 hover:bg-white px-2 py-1 ml-4 border border-red-500 rounded-md duration-300 flex gap-x-2 items-center"
+              >
+                <span>Log Out</span>
+                <MdLogout className="text-lg animate-pulse" />
+              </button>
             </div>
           </div>
         </div>

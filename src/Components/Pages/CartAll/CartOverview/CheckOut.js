@@ -24,7 +24,7 @@ const CheckOut = () => {
   useEffect(() => {
     const getCheckoutProduct = localStorage.getItem("pendingPayment");
     const getCart = localStorage.getItem("cart");
-    setProductDetails(getCart);
+    setProductDetails(JSON.parse(getCart));
     setCheckoutProduct(JSON.parse(getCheckoutProduct));
   }, []);
 
@@ -56,7 +56,6 @@ const CheckOut = () => {
         localStorage.removeItem("pendingPayment");
         localStorage.removeItem("cart");
         alert.success("Order Placed Successful");
-        console.log("data", response);
         navigate("/success");
       })
       .catch(function (error) {

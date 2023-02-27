@@ -28,14 +28,12 @@ import Shop from "./Components/Pages/Shop/Shop";
 import Users from "./Components/Pages/Dashboard/Users/Users";
 import ScrollToPageTop from "./Components/Shared/ScrollToPageTop/ScrollToPageTop";
 import CheckOut from "./Components/Pages/CartAll/CartOverview/CheckOut";
-import AuthProvider from "./Context/AuthProvider";
 import ScrollToTop from "react-scroll-to-top";
 import SuccessPage from "./Components/Pages/CartAll/SuccessPage/SuccessPage";
 
 function App() {
   return (
     <div className="App">
-      {/* <AuthProvider> */}
       <div className="lg:block md:block hidden">
         <ScrollToTop smooth className="scroll-button" color="white" />
       </div>
@@ -54,37 +52,23 @@ function App() {
           <Route path="shopCategory/:category" element={<Shop />} />
           <Route path="addToCart/:productId" element={<ProductDetails />} />
           <Route path="/success" element={<SuccessPage />} />
-          <Route
-            path="/cart"
-            element={
-              // <PrivateRoute>
-              <Cart />
-              // </PrivateRoute>
-            }
-          />
-          <Route
-            path="/wishList"
-            element={
-              // <PrivateRoute>
-              <WishList />
-              // </PrivateRoute>
-            }
-          />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/wishList" element={<WishList />} />
           <Route
             path="/checkout"
             element={
-              // <PrivateRoute>
-              <CheckOut />
-              // </PrivateRoute>
+              <PrivateRoute>
+                <CheckOut />
+              </PrivateRoute>
             }
           />
 
           <Route
             path="/dashboard"
             element={
-              // <PrivateRoute>
-              <Dashboard />
-              // </PrivateRoute>
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
             }
           >
             <Route path="" element={<DashboardHome />} />
@@ -102,7 +86,6 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-      {/* </AuthProvider> */}
     </div>
   );
 }

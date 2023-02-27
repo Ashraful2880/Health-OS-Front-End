@@ -18,13 +18,14 @@ const Shop = () => {
   };
 
   useEffect(() => {
+    // search Product Category By Query
     fetch(`${process.env.REACT_APP_API_PATH}/findProducts?category=${search}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
         setIsLoading(false);
       });
-
+    // get All Product Category
     axios
       .get(`${process.env.REACT_APP_API_PATH}/productsCategory`)
       .then((resp) => {

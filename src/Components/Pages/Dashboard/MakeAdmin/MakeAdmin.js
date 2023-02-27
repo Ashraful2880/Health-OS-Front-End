@@ -1,8 +1,10 @@
 import React from "react";
 import axios from "axios";
 import { MdAdminPanelSettings } from "react-icons/md";
+import { useAlert } from "react-alert";
 
 const MakeAdmin = () => {
+  const alert = useAlert();
   const [adminEmail, setAdminEmail] = React.useState();
 
   const handleSubmit = (e) => {
@@ -12,10 +14,10 @@ const MakeAdmin = () => {
     axios
       .put(`${process.env.REACT_APP_API_PATH}/services`, admin)
       .then(function (response) {
-        alert("Admin Added Successfull");
+        alert.success("Admin Added Successfull");
       })
       .catch(function (error) {
-        console.log(error);
+        alert.error(error);
       });
     e.target.reset();
   };

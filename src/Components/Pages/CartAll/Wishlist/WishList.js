@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
+import { useAlert } from "react-alert";
 import { FaTrash } from "react-icons/fa";
 
 const WishList = () => {
+  const alert = useAlert();
   const [wishList, setWishList] = React.useState();
 
   useEffect(() => {

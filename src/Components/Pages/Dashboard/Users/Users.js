@@ -7,6 +7,7 @@ import { BsCardChecklist } from "react-icons/bs";
 const Users = () => {
   const [userLists, setUserLists] = React.useState();
 
+  // Get All Users
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_PATH}/users`).then((resp) => {
       setUserLists(resp?.data);

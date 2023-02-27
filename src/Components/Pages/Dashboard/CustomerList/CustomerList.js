@@ -14,16 +14,21 @@ const CustomerList = () => {
   const [view, setView] = React.useState(false);
   const [updated, setUpdated] = React.useState(0);
 
+  // Get All Customers
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_PATH}/customers`).then((resp) => {
       setCustomers(resp?.data);
     });
   }, [updated]);
 
+  // View Single Customer
+
   const handleView = (id) => {
     setProductId(id);
     setView(true);
   };
+
+  // Delete A Customer
 
   const handleDelete = (id) => {
     axios

@@ -1,34 +1,8 @@
-import axios from "axios";
 import React from "react";
 import { MdSummarize } from "react-icons/md";
+import DashboardHome from "../DashboardHome/DashboardHome";
 
 const Summary = () => {
-  const [certificates, setCertificates] = React.useState();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const files = certificates;
-    const data = new FormData();
-    data.append("file", files[0]);
-    data.append("upload_preset", "UploadFromWebsite");
-    const res = await fetch(`${process.env.REACT_APP_IMAGE_API_PATH}/upload`, {
-      method: "POST",
-      body: data,
-    });
-    const file = await res.json();
-    const newCertificate = { certificates: file?.secure_url };
-
-    axios
-      .post(`${process.env.REACT_APP_API_PATH}/certificates`, newCertificate)
-      .then(function (response) {
-        alert("New Certificate Added");
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    e.target.reset();
-  };
-
   return (
     <div className="footer-bg h-screen">
       {/* Heading Title */}
@@ -38,7 +12,12 @@ const Summary = () => {
           <h3 className="font-semibold text-[#2563eb] py-1.5">Summary</h3>
         </div>
       </div>
-      
+      <div className="mt-5">
+        <h1 className="text-left text-2xl font-bold pl-10 -mb-4 pt-1">
+          Overall Account <span className="text-[#2563eb]">Activity</span>
+        </h1>
+        <DashboardHome />
+      </div>
     </div>
   );
 };

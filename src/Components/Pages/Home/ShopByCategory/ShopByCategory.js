@@ -8,6 +8,8 @@ const ShopByCategory = () => {
   const [productCategory, setProductCategory] = React.useState();
   const [search, setSearch] = React.useState(category);
 
+  // Get product Category From DB
+
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API_PATH}/productsCategory`)
@@ -27,7 +29,9 @@ const ShopByCategory = () => {
           Visit our shop to see amazing products
         </p>
       </div>
-      {/* Category */}
+
+      {/* Product Category */}
+
       {productCategory?.length > 0 ? (
         <button className="w-full grid lg:grid-cols-9 md:grid-cols-5 grid-cols-3 gap-5 place-content-center place-items-center lg:px-0 px-4">
           {productCategory?.map((singleProduct) => (

@@ -14,6 +14,8 @@ const AddCustomer = () => {
   const [phone, setPhone] = React.useState();
   const [address, setAddress] = React.useState();
 
+  // Add a New Customer
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newData = { name, userName, email, phone, address };

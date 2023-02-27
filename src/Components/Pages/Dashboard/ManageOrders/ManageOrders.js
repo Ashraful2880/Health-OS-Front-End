@@ -11,12 +11,14 @@ const ManageOrders = () => {
   const [orders, setOrders] = React.useState();
   const [updated, setUpdated] = React.useState(false);
 
+  // Get All Orders
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_PATH}/orders`).then((resp) => {
       setOrders(resp?.data);
     });
   }, [updated]);
 
+  // Change Order To Approve
   const approve = (id) => {
     const changeStatus = { status: "Approved" };
     axios
@@ -29,7 +31,7 @@ const ManageOrders = () => {
         alert.error(error?.message);
       });
   };
-
+  // Change Order To Reject
   const reject = (id) => {
     const changeStatus = { status: "Rejected" };
     axios

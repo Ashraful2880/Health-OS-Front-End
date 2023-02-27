@@ -11,11 +11,12 @@ const DashboardHome = () => {
   const location = useLocation();
   const pathName = location?.pathname;
 
+  // Get All Users Data
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_PATH}/users`).then((resp) => {
       setUsers(resp?.data);
     });
-
+    // Get All Customers Data
     axios.get(`${process.env.REACT_APP_API_PATH}/customers`).then((resp) => {
       setCustomers(resp?.data);
     });
@@ -24,16 +25,17 @@ const DashboardHome = () => {
 
   return (
     <div className="min-h-screen">
-      {!pathName.includes("dashboard/overview") && (
-        <div className="lg:pt-3 md:pt-3 pt-2 lg:px-3 md:px-3 px-0 mx-2">
-          <div className="text-xl bg-white lg:w-60 w-full flex items-center gap-x-2 px-5">
-            <FaHome className="text-[#2563eb]" />
-            <h3 className="font-semibold text-[#2563eb] py-1.5">
-              Dashboard Home
-            </h3>
+      {!pathName.includes("dashboard/overview") &&
+        !pathName.includes("dashboard/summary") && (
+          <div className="lg:pt-3 md:pt-3 pt-2 lg:px-3 md:px-3 px-0 mx-2">
+            <div className="text-xl bg-white lg:w-60 w-full flex items-center gap-x-2 px-5">
+              <FaHome className="text-[#2563eb]" />
+              <h3 className="font-semibold text-[#2563eb] py-1.5">
+                Dashboard Home
+              </h3>
+            </div>
           </div>
-        </div>
-      )}
+        )}
       {users?.length > 0 ? (
         <main className="px-6 pb-5 space-y-6 mt-10">
           <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
