@@ -36,7 +36,7 @@ const Shop = () => {
     <div className="container mx-auto min-h-screen">
       {/* Category Area */}
       <div className="mt-6 mb-5">
-        {!isLoading ? (
+        {productCategory?.length > 0 ? (
           <div className="w-full grid lg:grid-cols-9 md:grid-cols-5 grid-cols-3 gap-5 place-content-center place-items-center lg:px-0 px-4">
             {productCategory?.map((singleProduct) => (
               <button
@@ -58,7 +58,11 @@ const Shop = () => {
         )}
       </div>
       {/* Filtered Product Area */}
-      <FilteredProducts products={products} search={search} />
+      {!isLoading ? (
+        <FilteredProducts products={products} search={search} />
+      ) : (
+        <LoadingScreen />
+      )}
     </div>
   );
 };
