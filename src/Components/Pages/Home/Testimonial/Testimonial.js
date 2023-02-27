@@ -77,7 +77,7 @@ const Testimonial = () => {
         <div className="px-5 lg:py-6 py-5">
           <div className="border border-t-4 rounded-t-2xl border-t-[#1675FB] shadow-lg my-4 w-full flex flex-col justify-between items-start mx-5 p-6 rounded-lg">
             <h2 className="text-3xl font-bold text-[#314259] text-start">
-              More than <span className="text-[#1678FB]"> 60,000 </span> tax
+              More than <span className="text-[#1678FB]"> 60,000 </span> Clients
             </h2>
             <p className="mb-4 mt-3 text-start text-lg text-gray-500">
               My executives could learn it so quickly and we implemented
@@ -100,7 +100,7 @@ const Testimonial = () => {
         <div className="px-5 lg:py-6 py-5">
           <div className="border border-t-4 rounded-t-2xl border-t-[#1675FB] shadow-lg my-4 w-full flex flex-col justify-between items-start mx-5 p-6 rounded-lg">
             <h2 className="text-3xl font-bold text-[#314259] text-start">
-              More than <span className="text-[#1678FB]"> 60,000 </span> tax
+              More than <span className="text-[#1678FB]"> 60,000 </span> Clients
             </h2>
             <p className="mb-4 mt-3 text-start text-lg text-gray-500">
               My executives could learn it so quickly and we implemented
@@ -123,7 +123,7 @@ const Testimonial = () => {
         <div className="px-5 lg:py-6 py-5">
           <div className="border border-t-4 rounded-t-2xl border-t-[#1675FB] shadow-lg my-4 w-full flex flex-col justify-between items-start mx-5 p-6 rounded-lg">
             <h2 className="text-3xl font-bold text-[#314259] text-start">
-              More than <span className="text-[#1678FB]"> 60,000 </span> tax
+              More than <span className="text-[#1678FB]"> 60,000 </span> Clients
             </h2>
             <p className="mb-4 mt-3 text-start text-lg text-gray-500">
               My executives could learn it so quickly and we implemented
@@ -146,7 +146,7 @@ const Testimonial = () => {
         <div className="px-5 lg:py-6 py-5">
           <div className="border border-t-4 rounded-t-2xl border-t-[#1675FB] shadow-lg my-4 w-full flex flex-col justify-between items-start mx-5 p-6 rounded-lg">
             <h2 className="text-3xl font-bold text-[#314259] text-start">
-              More than <span className="text-[#1678FB]"> 60,000 </span> tax
+              More than <span className="text-[#1678FB]"> 60,000 </span> Clients
             </h2>
             <p className="mb-4 mt-3 text-start text-lg text-gray-500">
               My executives could learn it so quickly and we implemented
@@ -169,7 +169,7 @@ const Testimonial = () => {
         <div className="px-5 lg:py-6 py-5">
           <div className="border border-t-4 rounded-t-2xl border-t-[#1675FB] shadow-lg my-4 w-full flex flex-col justify-between items-start mx-5 p-6 rounded-lg">
             <h2 className="text-3xl font-bold text-[#314259] text-start">
-              More than <span className="text-[#1678FB]"> 60,000 </span> tax
+              More than <span className="text-[#1678FB]"> 60,000 </span> Clients
             </h2>
             <p className="mb-4 mt-3 text-start text-lg text-gray-500">
               My executives could learn it so quickly and we implemented

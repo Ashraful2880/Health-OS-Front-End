@@ -3,7 +3,7 @@ import newslater from "../../../../Assets/Images/Others/newslater.jpg";
 
 const NewsLater = () => {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <img src={newslater} alt="Newslater" className="w-full" />
       <div className="flex flex-col w-full items-start absolute left-32 top-24">
         <h2 className="text-4xl font-bold mb-8">

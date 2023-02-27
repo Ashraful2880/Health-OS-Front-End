@@ -37,7 +37,7 @@ const Navbar = () => {
                     <span> All Products</span>
                   </Link>
                   <Link
-                    to="/shopCategory/medicalEquipments"
+                    to="/shopCategory/medicalEquip"
                     className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
                   >
                     <FaAngleDoubleRight className="mr-2 text-md" />
@@ -97,56 +97,56 @@ const Navbar = () => {
                 </div>
                 <div className="text-gray-100 text-md flex flex-col">
                   <Link
-                    to="/home"
+                    to="/#topTrending"
                     className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
                   >
                     <FaAngleDoubleRight className="mr-2 text-md" />
                     Top Trending
                   </Link>
                   <Link
-                    to="/home"
+                    to="/#bestSelling"
                     className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
                   >
                     <FaAngleDoubleRight className="mr-2 text-md" />
                     Best Selling
                   </Link>
                   <Link
-                    to="/home"
+                    to="/#newArrival"
                     className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
                   >
                     <FaAngleDoubleRight className="mr-2 text-md" />
                     New Arraival
                   </Link>
                   <Link
-                    to="/home"
+                    to="shopCategory/All"
                     className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
                   >
                     <FaAngleDoubleRight className="mr-2 text-md" />
                     Hot Sales
                   </Link>
                   <Link
-                    to="/sanitizers"
+                    to="shopCategory/All"
                     className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
                   >
                     <FaAngleDoubleRight className="mr-2 text-md" />
                     sanitizer Collections
                   </Link>
                   <Link
-                    to="/home"
+                    to="shopCategory/All"
                     className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
                   >
                     <FaAngleDoubleRight className="mr-2 text-md" />
                     Brand Of The Week
                   </Link>
                   <Link
-                    to="/home"
+                    to="shopCategory/All"
                     className="mb-3 hover:text-[#2563eb] duration-300 flex items-center gap-x-1"
                   >
                     <FaAngleDoubleRight className="mr-2 text-md" />
                     App Info
                   </Link>
                   <div className="flex items-center my-4">
-                    <Link to="/shopCategory/BagPack" className="w-full">
+                    <Link to="shopCategory/All" className="w-full">
                       <img
                         className="w-full mb-2"
                         src="https://res.cloudinary.com/ashraful-islam/image/upload/v1677010983/Health-OS/Others/2_za6qzo.png"
@@ -181,7 +181,7 @@ const Navbar = () => {
                   fire the new ux experience.
                 </p>
                 <div className="flex items-center mb-4 lg:mt-20 mt-10">
-                  <Link to="/shopCategory/Women" className="mb-2 w-full">
+                  <Link to="shopCategory/All" className="mb-2 w-full">
                     <img
                       className="mb-2 w-full"
                       src="https://res.cloudinary.com/ashraful-islam/image/upload/v1677010984/Health-OS/Others/3_qitakq.png"
@@ -207,7 +207,7 @@ const Navbar = () => {
                   This is a no-brainer to wash your face
                 </p>
                 <div className="flex items-center mb-4">
-                  <Link to="/shopCategory/Kids" className="mx-1">
+                  <Link to="shopCategory/All" className="mx-1">
                     <img
                       src="https://res.cloudinary.com/ashraful-islam/image/upload/v1677010983/Health-OS/Others/4_v13bxk.jpg"
                       alt="Drop Down Bannar"

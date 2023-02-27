@@ -8,7 +8,7 @@ const CategoryFeature = () => {
   return (
     <div className="container mx-auto lg:flex block justify-center gap-x-6 items-center lg:px-0 px-4">
       <div className="overflow-hidden rounded-md lg:my-0 my-2">
-        <Link to="/mask">
+        <Link to="/shopCategory/mask">
           <img
             src={feature01}
             alt="Feature_Image"
@@ -17,20 +17,20 @@ const CategoryFeature = () => {
         </Link>
       </div>
       <div className="overflow-hidden rounded-md lg:my-0 my-2">
-        <Link to="/mask">
+        <Link to="/shopCategory/mask">
           <img
             src={feature03}
             alt="Feature_Image"
-             className="rounded-md hover:scale-105 duration-300"
+            className="rounded-md hover:scale-105 duration-300"
           />
         </Link>
       </div>
       <div className="overflow-hidden rounded-md lg:my-0 my-2">
-        <Link to="/mask">
+        <Link to="/shopCategory/sanitizer">
           <img
             src={feature02}
             alt="Feature_Image"
-             className="rounded-md hover:scale-105 duration-300"
+            className="rounded-md hover:scale-105 duration-300"
           />
         </Link>
       </div>

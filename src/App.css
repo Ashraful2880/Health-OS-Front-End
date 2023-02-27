@@ -2,6 +2,39 @@
   text-align: center;
 }
 
+/* Hide Arrow Of Input Number */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Scroll To Top Button Style */
+
+.scroll-button {
+  background-color: #2563eb !important;
+  border: 2px solid #2563eb !important;
+  border-radius: 50% !important;
+  padding: 9px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  box-shadow: 0px 1px 15px #2563eb !important;
+  z-index: 999 !important;
+  transition: ease-in-out 0.2s;
+}
+
+.scroll-button:hover {
+  background-color: black !important;
+  border: 1px solid black !important;
+  box-shadow: 0px 1px 15px black !important;
+}
+
 /* Mega Menu Open Animation */
 .megaMenuAnimation {
   animation: openMegaMenu 1s ease-in-out;

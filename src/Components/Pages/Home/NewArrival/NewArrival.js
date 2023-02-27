@@ -69,12 +69,12 @@ const NewArrival = () => {
     <div className="container mx-auto lg:mb-10 mb-5">
       {/* Heading Title */}
 
-      <div className="flex justify-between items-center mt-12 border-b pb-3">
+      <div className="flex lg:justify-between md:justify-between justify-center items-center mt-12 border-b-2 border-b-[#2563eb] pb-3 mb-5">
         {/* Heading Title */}
-        <div className="lg:text-left text-center">
+        <div className="text-left">
           <h1 className="text-4xl font-bold">
-            <span className="text-[#2563eb]">N</span>ew
-            <span className="text-[#2563eb] ">A</span>rrival
+            New
+            <span className="text-[#2563eb] ">Arrival</span>
           </h1>
           <p className="text-md text-gray-600">
             Visit our shop to see amazing products
@@ -107,7 +107,7 @@ const NewArrival = () => {
         <Slider ref={slider} {...settings}>
           {newArrivalData?.map((arrivalItem) => (
             <div key={arrivalItem?._id} className="mt-7">
-              <div className="mx-3 border rounded-md relative group cursor-pointer overflow-hidden">
+              <div className="mx-3 border rounded-md relative group cursor-pointer overflow-hidden lg:h-[350px] h-auto">
                 {/* New Arrival Product Image */}
                 <div className="bg-[#F8F8F8]">
                   <img

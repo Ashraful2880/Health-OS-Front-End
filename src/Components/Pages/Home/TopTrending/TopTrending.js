@@ -64,15 +64,15 @@ const TopTrending = () => {
   const slider = React.useRef(null);
 
   return (
-    <div className="container mx-auto lg:mb-10 mb-5">
+    <div className="container mx-auto lg:mb-10 mb-5" id="topTrending">
       {/* Heading Title */}
 
-      <div className="flex justify-between items-center mt-12 border-b pb-3">
+      <div className="flex lg:justify-between md:justify-between justify-center items-center mt-12 border-b-2 border-b-[#2563eb] pb-3 mb-5">
         {/* Heading Title */}
-        <div className="lg:text-left text-center">
+        <div className="text-left">
           <h1 className="text-4xl font-bold">
-            <span className="text-[#2563eb]">T</span>op
-            <span className="text-[#2563eb] ">T</span>rending
+            Top
+            <span className="text-[#2563eb] ">Trending</span>
           </h1>
           <p className="text-md text-gray-600">
             All Top Trending products on there
@@ -107,7 +107,7 @@ const TopTrending = () => {
         <Slider ref={slider} {...settings}>
           {topTrending?.map((trending) => (
             <div key={trending?._id} className="mt-7">
-              <div className="mx-3 border rounded-md relative group cursor-pointer overflow-hidden">
+              <div className="mx-3 border rounded-md relative group cursor-pointer overflow-hidden lg:h-[350px] h-auto">
                 {/*Top trending Product Image */}
                 <div className="bg-[#F8F8F8]">
                   <img

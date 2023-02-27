@@ -24,16 +24,20 @@ import AddCustomer from "./Components/Pages/Dashboard/AddCustomer/AddCustomer";
 import CustomerList from "./Components/Pages/Dashboard/CustomerList/CustomerList";
 import Overview from "./Components/Pages/Dashboard/Overview/Overview";
 import Summary from "./Components/Pages/Dashboard/Summary/Summary";
-import Test from "./Components/Pages/Test/Test";
 import Shop from "./Components/Pages/Shop/Shop";
 import Users from "./Components/Pages/Dashboard/Users/Users";
 import ScrollToPageTop from "./Components/Shared/ScrollToPageTop/ScrollToPageTop";
 import CheckOut from "./Components/Pages/CartAll/CartOverview/CheckOut";
+import AuthProvider from "./Context/AuthProvider";
+import ScrollToTop from "react-scroll-to-top";
 
 function App() {
   return (
     <div className="App">
       {/* <AuthProvider> */}
+      <div className="lg:block md:block hidden">
+        <ScrollToTop smooth className="scroll-button" color="white" />
+      </div>
       <BrowserRouter>
         <ScrollToPageTop />
         <Header />
@@ -46,16 +50,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/test" element={<Test />} />
           <Route path="shopCategory/:category" element={<Shop />} />
-          <Route
-            path="addToCart/:productId"
-            element={
-              // <PrivateRoute>
-              <ProductDetails />
-              // </PrivateRoute>
-            }
-          />
+          <Route path="addToCart/:productId" element={<ProductDetails />} />
           <Route
             path="/cart"
             element={
@@ -101,14 +97,6 @@ function App() {
             <Route path="summary" element={<Summary />} />
             <Route path="makeAdmin" element={<MakeAdmin />} />
           </Route>
-
-          {/* <Route path="/students" element={<Students />} />
-            <Route path="/foods" element={<Foods />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/dashboard/*" element={<Dashboard />} / */}
         </Routes>
         <Footer />
       </BrowserRouter>

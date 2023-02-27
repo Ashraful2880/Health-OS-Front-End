@@ -15,7 +15,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    axios.get("./Blogs.json").then((resp) => {
+    axios.get(`${process.env.REACT_APP_API_PATH}/blogs`).then((resp) => {
       setBlogs(resp?.data);
     });
   }, []);
@@ -26,9 +26,8 @@ const Blogs = () => {
         <div className="container mx-auto">
           <div className="lg:text-left text-center pt-6">
             <h1 className="text-4xl font-bold">
-              <span className="text-[#2563eb]">F</span>rom
-              <span className="text-[#2563eb] "> O</span>ur
-              <span className="text-[#2563eb] "> B</span>logs
+              From Our
+              <span className="text-[#2563eb] "> Blogs</span>
             </h1>
             <p className="text-md text-gray-600">
               View Best Selling products in last month
@@ -63,12 +62,12 @@ const Blogs = () => {
                   <div className="border rounded-lg card mx-auto duration-300 bg-white lg:px-0 px-2">
                     <div className="overflow-hidden">
                       <img
-                        className="w-full card-image rounded-t-lg"
+                        className="w-full h-full min-h-[200px] rounded-t-lg"
                         src={blog?.blogImage}
                         alt="BlogImage"
                       />
                     </div>
-                    <div className="px-4 pb-4 card-content text-left">
+                    <div className="px-4 pb-4 text-left">
                       <h1 className="text-lg font-bold my-5 text-gray-700 cursor-pointer">
                         {blog?.title}
                       </h1>
