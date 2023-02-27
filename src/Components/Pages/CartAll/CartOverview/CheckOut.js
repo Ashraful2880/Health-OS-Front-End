@@ -1,6 +1,12 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useAlert } from "react-alert";
+import { useNavigate } from "react-router-dom";
 
 const CheckOut = () => {
+  const alert = useAlert();
+  const navigate = useNavigate();
+
   const [cusName, setCusName] = useState("");
   const [email, setEmail] = useState("");
   const [street, setStreet] = useState("");
@@ -24,13 +30,11 @@ const CheckOut = () => {
 
   //<-------- sslCommerz Function Here --------->
 
-  const handlePay = (e) => {
+  const handleProceed = (e) => {
     e.preventDefault();
-    const info = {
-      product_name: "follow the product details",
-      product_profile: "product details",
-      product_image: "see the product details",
-      total_amount:
+    const newOrder = {
+      productName: "follow the product details",
+      amount:
         checkoutProduct?.netTotal * 80 ||
         checkoutProduct?.totalWithoutCoupon * 80,
       cus_name: cusName,
@@ -42,18 +46,21 @@ const CheckOut = () => {
       cus_postcode: postal,
       cus_country: country,
       cus_phone: phone,
+      status: "Pending",
       productDetails,
     };
-    fetch(`https://server-firat-deal-shop.onrender.com/init`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(info),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        window.location.replace(data);
+
+    axios
+      .post(`${process.env.REACT_APP_API_PATH}/orders`, newOrder)
+      .then(function (response) {
+        localStorage.removeItem("pendingPayment");
+        localStorage.removeItem("cart");
+        alert.success("Order Placed Successful");
+        console.log("data", response);
+        navigate("/success");
+      })
+      .catch(function (error) {
+        alert.error(error?.message);
       });
   };
 
@@ -67,7 +74,7 @@ const CheckOut = () => {
                 Billing Address
               </h2>
               <div className=" shadow-xl overflow-hidden rounded-md border border-gray-200">
-                <form onSubmit={handlePay}>
+                <form onSubmit={handleProceed}>
                   <div className="px-4 py-5 bg-white sm:p-6">
                     <div className="grid grid-cols-6 gap-6">
                       <div className="col-span-6 sm:col-span-3">
@@ -227,10 +234,10 @@ const CheckOut = () => {
                       type="submit"
                       className="bg-[#2563eb] border border-[#2563eb] text-white px-3 py-2 rounded-md ml-2 hover:bg-transparent hover:text-[#2563eb] duration-300 lg:w-1/2 w-full font-bold text-lg"
                     >
-                      Proceed To Pay With{" "}
+                      Proceed To Pay With ({""}{" "}
                       {checkoutProduct?.netTotal ||
                         checkoutProduct?.totalWithoutCoupon}
-                      $
+                      $ )
                     </button>
                   </div>
                 </form>

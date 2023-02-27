@@ -1,11 +1,6 @@
 import React from "react";
 import { CgTwitter } from "react-icons/cg";
-import {
-  FaAngleDoubleRight,
-  FaAngleDown,
-  FaBars,
-  FaFacebookF,
-} from "react-icons/fa";
+import { FaBars, FaFacebookF } from "react-icons/fa";
 import { GrClose, GrInstagram } from "react-icons/gr";
 import { ImGooglePlus } from "react-icons/im";
 import { Link } from "react-router-dom";

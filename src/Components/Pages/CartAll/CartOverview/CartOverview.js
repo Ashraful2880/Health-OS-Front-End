@@ -51,10 +51,9 @@ const CartOverview = () => {
       setCoupon("");
     }
   };
-
   //<------ Pending Payment Order Save To Local Storage ---------->
 
-  /*  const orderSaveToLocalStorage = () => {
+  const orderSaveToLocalStorage = () => {
     const pendingPayment = {
       totalProduct: cartItems?.length,
       totalProductPrice: TotalCartPrice,
@@ -66,7 +65,7 @@ const CartOverview = () => {
       totalWithoutCoupon: subTotal,
     };
     localStorage.setItem("pendingPayment", JSON.stringify(pendingPayment));
-  }; */
+  };
 
   return (
     <div className="container mx-auto mb-10 min-h-screen">
@@ -117,42 +116,35 @@ const CartOverview = () => {
               </tr>
             </thead>
             <tbody className="bg-white divide-y">
-              {cartItems?.length > 0 ? (
-                <>
-                  {cartItems.map((item, key) => (
-                    <tr key={key} className="font-bold">
-                      <td className="px-6 py-4 whitespace-nowrap mx-auto">
-                        <img
-                          className="mx-auto lg:w-28 w-full"
-                          src={item?.productImage}
-                          alt="CartImage"
-                        />
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-black">
-                        {item?.name || ""}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-black">
-                        {item?.price || 0}$
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-black">
-                        {item?.quantity || 0}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-black">
-                        {item?.price || 0}$
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-orange-600">
-                        <button onClick={() => removeItem(item?.productId)}>
-                          <FaTrash />
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </>
-              ) : (
-                <p className="text-center text-lg font-semibold text-gray-300 py-5">
-                  No Product Found
-                </p>
-              )}
+              {cartItems &&
+                cartItems.map((item, key) => (
+                  <tr key={key} className="font-bold">
+                    <td className="px-6 py-4 whitespace-nowrap mx-auto">
+                      <img
+                        className="mx-auto lg:w-28 w-full"
+                        src={item?.productImage}
+                        alt="CartImage"
+                      />
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-black">
+                      {item?.name || ""}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-black">
+                      {item?.price || 0}$
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-black">
+                      {item?.quantity || 0}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-black">
+                      {item?.price || 0}$
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-orange-600">
+                      <button onClick={() => removeItem(item?.productId)}>
+                        <FaTrash />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
@@ -163,29 +155,29 @@ const CartOverview = () => {
           <div className="px-8 pt-8">
             <h2 className="text-lg font-bold border-b my-4 flex justify-between">
               <span>Products Total: </span>
-              <span className="text-orange-500">{TotalCartPrice || 0}$</span>
+              <span className="text-[#2563eb]">{TotalCartPrice || 0}$</span>
             </h2>
             <h2 className="text-lg font-bold border-b my-4 flex justify-between">
               <span>Shipping: </span>
-              <span className="text-orange-500">
+              <span className="text-[#2563eb]">
                 {shippingCost?.toFixed(2) || 0}$
               </span>
             </h2>
             <h2 className="text-lg font-bold border-b my-4 flex justify-between">
               <span>Delivery: </span>
-              <span className="text-orange-500">
+              <span className="text-[#2563eb]">
                 {deliveryCost?.toFixed(2) || 0}$
               </span>
             </h2>
             <h2 className="text-lg font-bold border-b my-4 flex justify-between">
               <span>Sub Total: </span>
-              <span className="text-orange-500">
+              <span className="text-[#2563eb]">
                 {subTotal?.toFixed(2) || 0}$
               </span>
             </h2>
           </div>
           <div className="px-8 pt-4 pb-4 flex justify-start">
-            <div className="flex items-center border border-[#2563eb] rounded-lg">
+            <div className="flex items-center border border-text-[#2563eb] rounded-lg">
               <input
                 className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                 type="text"
@@ -193,7 +185,7 @@ const CartOverview = () => {
                 onChange={(e) => setCoupon(e.target.value)}
               />
               <button
-                className="text-md font-bold text-white border bg-[#2563eb] hover:bg-transparent border-[#2563eb] hover:text-[#2563eb] py-1 px-3 rounded-lg hover:border-l-2 duration-300"
+                className="text-md font-bold text-white border bg-[#2563eb] hover:bg-transparent border-[#2563eb] hover:border-[#2563eb] hover:text-[#2563eb] py-1 px-3 rounded-lg hover:border-l-2 duration-300"
                 type="button"
                 style={{
                   pointerEvents: `${disablebtn}`,
@@ -212,7 +204,10 @@ const CartOverview = () => {
             </h2>
           </div>
           <Link to="/checkout">
-            <button className="lg:text-lg text-base font-bold text-white hover:text-[#2563eb] bg-[#2563eb] border border-[#2563eb] hover:bg-transparent duration-300 lg:py-3 py-2 mb-6 lg:px-6 px-3 rounded-md lg:absolute static bottom-4 left-10 lg:ml-1 ml-16">
+            <button
+              onClick={orderSaveToLocalStorage}
+              className="lg:text-lg text-base text-white font-bold bg-[#2563eb] border border-[#2563eb] hover:bg-transparent hover:text-[#2563eb] duration-300 lg:py-3 py-2 mb-6 lg:px-6 px-3 rounded-md lg:absolute static bottom-4 left-10 lg:ml-1 ml-16"
+            >
               Proceed to Checkout
             </button>
           </Link>

@@ -91,13 +91,22 @@ const OrderList = () => {
                       <td className="px-1 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap flex items-center gap-x-2">
                           {order?.status === "Pending" && (
-                            <span className="bg-gray-200 px-3 py-1 rounded-full font-semibold"> {order?.status} </span>
+                            <span className="bg-gray-200 px-3 py-1 rounded-full font-semibold">
+                              {" "}
+                              {order?.status}{" "}
+                            </span>
                           )}
                           {order?.status === "Approved" && (
-                            <span className="bg-green-600 text-white px-3 py-1 rounded-full font-semibold"> {order?.status} </span>
+                            <span className="bg-green-600 text-white px-3 py-1 rounded-full font-semibold">
+                              {" "}
+                              {order?.status}{" "}
+                            </span>
                           )}
                           {order?.status === "Rejected" && (
-                            <span className="bg-red-500 text-white px-3 py-1 rounded-full font-semibold"> {order?.status} </span>
+                            <span className="bg-red-500 text-white px-3 py-1 rounded-full font-semibold">
+                              {" "}
+                              {order?.status}{" "}
+                            </span>
                           )}
                         </p>
                       </td>

@@ -30,6 +30,7 @@ import ScrollToPageTop from "./Components/Shared/ScrollToPageTop/ScrollToPageTop
 import CheckOut from "./Components/Pages/CartAll/CartOverview/CheckOut";
 import AuthProvider from "./Context/AuthProvider";
 import ScrollToTop from "react-scroll-to-top";
+import SuccessPage from "./Components/Pages/CartAll/SuccessPage/SuccessPage";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="shopCategory/:category" element={<Shop />} />
           <Route path="addToCart/:productId" element={<ProductDetails />} />
+          <Route path="/success" element={<SuccessPage />} />
           <Route
             path="/cart"
             element={
