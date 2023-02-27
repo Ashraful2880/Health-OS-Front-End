@@ -82,7 +82,7 @@ const AllProducts = () => {
               ?.slice(pagesVisited, pagesVisited + productPerPage)
               ?.map((product) => (
                 <div
-                  className="mx-2 w-72 lg:mb-6 border rounded-md shadow-md hover:shadow duration-300 relative"
+                  className="mx-2 lg:w-72 md:w-80 w-full lg:mb-6 mb-4 border rounded-md shadow-md hover:shadow duration-300 relative"
                   key={product._id}
                 >
                   <div>

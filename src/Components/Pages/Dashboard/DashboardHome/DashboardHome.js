@@ -37,7 +37,7 @@ const DashboardHome = () => {
           </div>
         )}
       {users?.length > 0 ? (
-        <main className="px-6 pb-5 space-y-6 mt-10">
+        <main className="px-6 pb-5 space-y-6 mt-10 lg:block hidden">
           <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
             <div className="flex items-center p-8 bg-white shadow rounded-lg cursor-pointer hover:shadow-md duration-300 relative group overflow-hidden">
               <div className="h-full w-full bg-[#2563eb] absolute top-0 right-0 translate-x-[88%] group-hover:translate-x-0 translate-y-[60%] group-hover:translate-y-0 rounded-l-full group-hover:rounded-l-none duration-300"></div>

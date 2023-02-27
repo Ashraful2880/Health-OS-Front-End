@@ -24,7 +24,7 @@ const Overview = () => {
         <h1 className="text-left text-2xl font-bold pl-10 pb-3 pt-1">
           Best Customer Of <span className="text-[#2563eb]">2022</span>
         </h1>
-        <div className="grid lg:grid-cols-3 d:grid-cols-2 grid-cols-1 lg:pb-20 pb-10 px-6">
+        <div className="grid lg:grid-cols-3 d:grid-cols-2 grid-cols-1 lg:pb-20 pb-10 lg:px-6 px-2">
           <div className="p-2 w-full">
             <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg shadow-md hover:shadow-none cursor-pointer duration-300">
               <div className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4 flex justify-center items-center">

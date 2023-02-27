@@ -52,7 +52,7 @@ const AddCustomer = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="w-full">
-          <div className="flex justify-between items-center gap-x-4 mb-3">
+          <div className="lg:flex block justify-between items-center gap-x-4 mb-3">
             <div className="w-full">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
                 Customer Name
@@ -78,7 +78,7 @@ const AddCustomer = () => {
             </div>
           </div>
 
-          <div className="flex justify-between items-center gap-x-4 mb-3">
+          <div className="lg:flex block justify-between items-center gap-x-4 mb-3">
             <div className="w-full">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
                 Customer Email

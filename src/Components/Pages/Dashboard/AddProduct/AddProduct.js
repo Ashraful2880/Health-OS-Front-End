@@ -97,7 +97,7 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="bg-shape h-screen">
+    <div className="bg-shape min-h-screen">
       {/* Heading Title */}
       <div className="lg:pt-3 md:pt-3 pt-2 lg:px-3 md:px-3 px-0 mx-2">
         <div className="text-xl bg-white lg:w-60 w-full flex items-center gap-x-2 px-5">
@@ -118,7 +118,7 @@ const AddProduct = () => {
 
         <form onSubmit={handleSubmit} className="w-full">
           {/* Product Name & Category */}
-          <div className="flex justify-between items-center gap-x-4 mb-6">
+          <div className="lg:flex block justify-between items-center gap-x-4 mb-6">
             <div className="w-full">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
                 Product Name
@@ -131,7 +131,7 @@ const AddProduct = () => {
               />
             </div>
 
-            <div className="w-full">
+            <div className="w-full lg:mt-0 mt-4">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
                 Product Category
               </label>
@@ -147,7 +147,7 @@ const AddProduct = () => {
             </div>
           </div>
           {/* Product Slug & Current Price */}
-          <div className="flex justify-between items-center gap-x-4 mb-6">
+          <div className="lg:flex block justify-between items-center gap-x-4 mb-6">
             <div className="w-full">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
                 Product Slug
@@ -163,7 +163,7 @@ const AddProduct = () => {
               />
             </div>
 
-            <div className="w-full">
+            <div className="w-full lg:mt-0 mt-4">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
                 Current Price
               </label>
@@ -176,7 +176,7 @@ const AddProduct = () => {
             </div>
           </div>
           {/* Offer Price & SKU */}
-          <div className="flex justify-between items-center gap-x-4 mb-6">
+          <div className="lg:flex block justify-between items-center gap-x-4 mb-6">
             <div className="w-full">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-start mb-2">
                 Offer Price
@@ -189,7 +189,7 @@ const AddProduct = () => {
               />
             </div>
 
-            <div className="w-full">
+            <div className="w-full lg:mt-0 mt-4">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
                 SKU
               </label>
@@ -202,13 +202,13 @@ const AddProduct = () => {
             </div>
           </div>
           {/* Rating And Product Image */}
-          <div className="flex justify-between items-center gap-x-4 mb-6">
+          <div className="lg:flex block justify-between items-center gap-x-4 mb-6">
             <div className="w-full">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
                 Product Image
               </label>
               <div className="flex items-center justify-start bg-grey-lighter overflow-hidden">
-                <label className="w-64 flex flex-col items-center px-4 py-3 bg-white text-blue-600 rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue-500 hover:text-white duration-300">
+                <label className="lg:w-64 md:w-80 w-full flex flex-col items-center px-4 py-3 bg-white text-blue-600 rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue-500 hover:text-white duration-300">
                   <svg
                     className="w-8 h-8"
                     fill="currentColor"
@@ -229,11 +229,11 @@ const AddProduct = () => {
               </div>
             </div>
 
-            <div className="w-full">
+            <div className="w-full lg:mt-0 mt-4">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 text-start">
                 You Can Change Your Product Rating
               </label>
-              <button className="flex items-center border py-1.5 px-2">
+              <button className="flex items-center border py-1.5 px-2 w-full">
                 <Rating
                   initialRating={0}
                   onClick={handleRatingChange}

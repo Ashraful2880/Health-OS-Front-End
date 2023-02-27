@@ -17,7 +17,7 @@ const OrderList = () => {
   }, []);
 
   return (
-    <div className="h-screen footer-bg">
+    <div className="min-h-screen footer-bg overflow-hidden">
       {/* Heading Title */}
       <div className="lg:pt-3 md:pt-3 pt-2 lg:px-3 md:px-3 px-0 mx-2">
         <div className="text-xl bg-white lg:w-60 w-full flex items-center gap-x-2 px-5">
