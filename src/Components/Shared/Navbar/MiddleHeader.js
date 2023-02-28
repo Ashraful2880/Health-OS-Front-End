@@ -58,12 +58,6 @@ const MiddleHeader = () => {
               </div>
             </div>
             <div className="flex items-center gap-x-1">
-              <Link
-                to="/dashboard"
-                className="font-bold text-white hover:text-[#2563eb] bg-[#2563eb] hover:bg-white px-2 py-1 mr-4 border border-[#2563eb] rounded-md duration-300"
-              >
-                DASHBOARD
-              </Link>
               {!loggedInUser && (
                 <div className="flex items-center gap-x-1">
                   <Link
@@ -82,13 +76,21 @@ const MiddleHeader = () => {
                 </div>
               )}
               {loggedInUser && (
-                <button
-                  onClick={handleLogOut}
-                  className="font-bold text-white hover:text-red-500 bg-red-500 hover:bg-white px-2 py-1 ml-4 border border-red-500 rounded-md duration-300 flex gap-x-2 items-center"
-                >
-                  <span>Log Out</span>
-                  <MdLogout className="text-lg animate-pulse" />
-                </button>
+                <div className="flex items-center gap-x-1">
+                  <Link
+                    to="/dashboard"
+                    className="font-bold text-white hover:text-[#2563eb] bg-[#2563eb] hover:bg-white px-2 py-1 mr-4 border border-[#2563eb] rounded-md duration-300"
+                  >
+                    DASHBOARD
+                  </Link>
+                  <button
+                    onClick={handleLogOut}
+                    className="font-bold text-white hover:text-red-500 bg-red-500 hover:bg-white px-2 py-1 ml-4 border border-red-500 rounded-md duration-300 flex gap-x-2 items-center"
+                  >
+                    <span>Log Out</span>
+                    <MdLogout className="text-lg animate-pulse" />
+                  </button>
+                </div>
               )}
             </div>
           </div>
