@@ -11,7 +11,7 @@ SwiperCore.use([Autoplay, Navigation]);
 
 const Bannar = () => {
   return (
-    <div className="lg:h-[78vh] md:h-[70vh] h-[65vh] overflow-hidden">
+    <div className="lg:h-[90vh] md:h-[75vh] h-[65vh] overflow-hidden">
       <Swiper
         cssMode={true}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
@@ -23,7 +23,7 @@ const Bannar = () => {
 
         <SwiperSlide className="slider-bg">
           <div className="slider-bg"></div>
-          <div className="absolute lg:left-[300px] md:left-[180px] left-[50px] lg:top-[165px] md:top-[100px] top-[50px] text-left">
+          <div className="absolute lg:left-[300px] md:left-[180px] left-[50px] lg:top-[155px] md:top-[100px] top-[50px] text-left">
             <div className="lg:text-6xl md:text-5xl text-4xl font-bold text-white">
               <h1>Digital</h1>
               <h1 className="my-3">Blood Pressure</h1>

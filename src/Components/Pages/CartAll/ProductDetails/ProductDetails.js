@@ -14,6 +14,7 @@ const ProductDetails = () => {
   const [cartCount, setCartCount] = React.useState(1);
   const [price, setPrice] = React.useState();
   const [wishList, setWishList] = React.useState();
+  const [cartData, setCartData] = React.useState([]);
 
   useEffect(() => {
     setPrice(cart?.price * cartCount);
@@ -25,19 +26,47 @@ const ProductDetails = () => {
       .then((data) => setCart(data));
   }, [productId]);
 
-  const addLocalStorage = () => {
-    let AddLocalStorage = [];
-    if (localStorage.getItem("cart")) {
-      AddLocalStorage = JSON.parse(localStorage.getItem("cart"));
+  useEffect(() => {
+    setCartData(JSON.parse(localStorage.getItem("cart")) || []);
+  }, []);
+
+  const addLocalStorage = (id) => {
+    const findProduct = cartData?.find((item) => item?.id === id);
+    console.log(findProduct);
+    if (findProduct) {
+      const filteredProduct = cartData?.filter(
+        (item) => item?.id !== findProduct?.id
+      );
+      localStorage?.setItem(
+        "cart",
+        JSON.stringify([
+          ...filteredProduct,
+          {
+            productId: productId,
+            id: id,
+            productImage: `${cart.productImage}`,
+            name: `${cart.name}`,
+            price: price,
+            quantity: findProduct?.quantity + cartCount,
+          },
+        ])
+      );
+    } else {
+      localStorage.setItem(
+        "cart",
+        JSON.stringify([
+          ...cartData,
+          {
+            productId: productId,
+            id: id,
+            productImage: `${cart.productImage}`,
+            name: `${cart.name}`,
+            price: price,
+            quantity: cartCount,
+          },
+        ])
+      );
     }
-    AddLocalStorage.push({
-      productId: productId + 1,
-      productImage: `${cart.productImage}`,
-      name: `${cart.name}`,
-      price: price,
-      quantity: cartCount,
-    });
-    localStorage.setItem("cart", JSON.stringify(AddLocalStorage));
     alert.success("Product Added to Cart");
   };
 
@@ -126,7 +155,8 @@ const ProductDetails = () => {
               </h3>
               <div className="flex items-center gap-x-4 w-full">
                 <button
-                  onClick={addLocalStorage}
+                  onClick={() => addLocalStorage(cart?._id)}
+                  // onClick={() => cartSetToLocalstorage(cart)}
                   className="bg-[#2563eb] border border-[#2563eb] text-white hover:text-[#2563eb] px-3 lg:py-2 py-1 lg:text-base text-xs rounded-md hover:bg-transparent hover:[#2563eb] duration-300 flex items-center gap-x-2"
                 >
                   Add To Cart
