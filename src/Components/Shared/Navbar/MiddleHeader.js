@@ -1,18 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../../../Assets/Images/logo.png";
 import { FaEnvelope, FaLocationArrow, FaPhoneAlt } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { MdLogout } from "react-icons/md";
+import { useAlert } from "react-alert";
 
 const MiddleHeader = () => {
+  const alert = useAlert();
   const navigate = useNavigate();
   const location = useLocation();
   const pathName = location?.pathname;
+  const loggedInUser = JSON.parse(localStorage.getItem("token"))?.token;
+  const [update, setUpdate] = React.useState(0);
+
+  useEffect(() => {
+    localStorage.removeItem("token");
+  }, [update]);
 
   const handleLogOut = () => {
     localStorage.removeItem("token");
-    navigate("/home");
     alert.success("Logout Successful");
+    navigate("/home");
+    setUpdate(update + 1);
   };
 
   return (
@@ -56,31 +65,37 @@ const MiddleHeader = () => {
             </div>
             <div className="flex items-center gap-x-1">
               <Link
-                to="/login"
-                className="font-semibold text-black hover:text-[#2563eb] duration-300"
-              >
-                SIGNIN
-              </Link>
-              <span> / </span>
-              <Link
-                to="/signup"
-                className="font-semibold text-black hover:text-[#2563eb] duration-300"
-              >
-                SIGN UP
-              </Link>
-              <Link
                 to="/dashboard"
-                className="font-bold text-white hover:text-[#2563eb] bg-[#2563eb] hover:bg-white px-2 py-1 ml-4 border border-[#2563eb] rounded-md duration-300"
+                className="font-bold text-white hover:text-[#2563eb] bg-[#2563eb] hover:bg-white px-2 py-1 mr-4 border border-[#2563eb] rounded-md duration-300"
               >
                 DASHBOARD
               </Link>
-              <button
-                onClick={handleLogOut}
-                className="font-bold text-white hover:text-red-500 bg-red-500 hover:bg-white px-2 py-1 ml-4 border border-red-500 rounded-md duration-300 flex gap-x-2 items-center"
-              >
-                <span>Log Out</span>
-                <MdLogout className="text-lg animate-pulse" />
-              </button>
+              {!loggedInUser && (
+                <div className="flex items-center gap-x-1">
+                  <Link
+                    to="/login"
+                    className="font-semibold text-black hover:text-[#2563eb] duration-300"
+                  >
+                    SIGNIN
+                  </Link>
+                  <span> / </span>
+                  <Link
+                    to="/signup"
+                    className="font-semibold text-black hover:text-[#2563eb] duration-300"
+                  >
+                    SIGN UP
+                  </Link>
+                </div>
+              )}
+              {loggedInUser && (
+                <button
+                  onClick={handleLogOut}
+                  className="font-bold text-white hover:text-red-500 bg-red-500 hover:bg-white px-2 py-1 ml-4 border border-red-500 rounded-md duration-300 flex gap-x-2 items-center"
+                >
+                  <span>Log Out</span>
+                  <MdLogout className="text-lg animate-pulse" />
+                </button>
+              )}
             </div>
           </div>
         </div>

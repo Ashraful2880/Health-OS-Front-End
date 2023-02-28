@@ -115,3 +115,33 @@ input[type="number"] {
   color: #2563eb;
   text-decoration: none;
 }
+
+/* Custom Animation */
+
+/* .trans-animation2 {
+  animation: trans-2 1s ease infinite alternate;
+}
+
+@keyframes trans-2 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-25px);
+  }
+}
+ */
+.trans-animation {
+  animation: trans 3s ease infinite alternate;
+}
+
+@keyframes trans {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-25px);
+  }
+}

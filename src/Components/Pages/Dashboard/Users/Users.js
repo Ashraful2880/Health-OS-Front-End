@@ -6,7 +6,7 @@ import { BsCardChecklist } from "react-icons/bs";
 
 const Users = () => {
   const [userLists, setUserLists] = React.useState();
-
+  console.log("userLists", userLists);
   // Get All Users
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_PATH}/users`).then((resp) => {
@@ -79,7 +79,7 @@ const Users = () => {
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
                         <p className="text-gray-900 whitespace-no-wrap">
-                          ${currentUser?.address}
+                          {currentUser?.address}
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start">
