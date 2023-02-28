@@ -124,18 +124,22 @@ const CustomerList = () => {
                         </p>
                       </td>
                       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-start flex justify-center items-center gap-x-4">
-                        <button
-                          onClick={() => handleView(customer?._id)}
-                          className="text-white hover:text-[#2563eb] bg-[#2563eb] hover:bg-white p-1.5 text-xl h-7 w-7 whitespace-no-wrap flex justify-center items-center gap-x-2 border border-[#2563eb] rounded-full duration-300"
-                        >
-                          <FaEye />
-                        </button>
-                        <button
-                          onClick={() => handleDelete(customer?._id)}
-                          className="text-white hover:text-red-600 bg-red-500 hover:bg-white p-1.5 text-xl h-7 w-7 whitespace-no-wrap flex justify-center items-center gap-x-2 border border-red-500 rounded-full duration-300"
-                        >
-                          <FaTrash />
-                        </button>
+                        <div className="whitespace-no-wrap py-5">
+                          <button
+                            onClick={() => handleView(customer?._id)}
+                            className="text-white hover:text-[#2563eb] bg-[#2563eb] hover:bg-white p-1.5 text-xl h-7 w-7 whitespace-no-wrap flex justify-center items-center gap-x-2 border border-[#2563eb] rounded-full duration-300"
+                          >
+                            <FaEye />
+                          </button>
+                        </div>
+                        <div className="whitespace-no-wrap py-5">
+                          <button
+                            onClick={() => handleDelete(customer?._id)}
+                            className="text-white hover:text-red-600 bg-red-500 hover:bg-white p-1.5 text-xl h-7 w-7 whitespace-no-wrap flex justify-center items-center gap-x-2 border border-red-500 rounded-full duration-300"
+                          >
+                            <FaTrash />
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   ))}

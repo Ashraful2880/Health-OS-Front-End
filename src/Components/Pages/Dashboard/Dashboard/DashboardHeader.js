@@ -2,8 +2,8 @@ import React from "react";
 import { RiBarChartHorizontalLine } from "react-icons/ri";
 import { VscClose } from "react-icons/vsc";
 import { IoIosArrowDown } from "react-icons/io";
-import { CgLogIn, CgLogOut } from "react-icons/cg";
-import { Link, useNavigate } from "react-router-dom";
+import { CgLogOut } from "react-icons/cg";
+import { useNavigate } from "react-router-dom";
 import { useAlert } from "react-alert";
 
 const DashboardHeader = ({ open, setOpen, mobileOpen, setMobileOpen }) => {

@@ -77,7 +77,7 @@ const AllProducts = () => {
 
       {products?.length > 0 ? (
         <div className="mx-auto container py-8">
-          <div className="flex flex-wrap items-center lg:justify-start justify-center">
+          <div className="flex flex-wrap items-center justify-center">
             {products
               ?.slice(pagesVisited, pagesVisited + productPerPage)
               ?.map((product) => (

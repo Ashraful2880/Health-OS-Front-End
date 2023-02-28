@@ -59,7 +59,7 @@ const Blogs = () => {
             >
               {blogs?.map((blog, key) => (
                 <SwiperSlide key={key}>
-                  <div className="border rounded-lg card mx-auto duration-300 bg-white lg:px-0 px-2">
+                  <div className="border rounded-lg mx-auto duration-300 bg-white lg:px-0 px-2">
                     <div className="overflow-hidden">
                       <img
                         className="w-full h-full min-h-[200px] rounded-t-lg"
@@ -75,14 +75,13 @@ const Blogs = () => {
                       <div className="flex justify-evenly pt-2 pb-2">
                         <div className="flex text-stone-500 text-sm">
                           <div className="text-base">
-                            Published:
-                            <span> {blog?.date} </span>
+                            <span>{blog?.date} </span>
                           </div>
                         </div>
                         <div className="border-l-2 "></div>
                         <div className="flex text-stone-500 text-sm">
                           <div className="text-base">
-                            Posted By:
+                            Post By:
                             <span> {blog?.by} </span>
                           </div>
                         </div>

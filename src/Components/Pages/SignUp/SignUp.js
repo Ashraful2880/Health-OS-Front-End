@@ -19,6 +19,26 @@ const SignUp = () => {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [token, setToken] = useState("");
+  const [warningMessage, setWarningMessage] = useState("");
+
+  const handlePhoneNumberChange = (event) => {
+    const inputPhoneNumber = event.target.value;
+    const phoneNumberPattern = /^01[3-9]\d{8}$/; // regular expression pattern for Bangladeshi phone numbers
+    setPhone(inputPhoneNumber);
+
+    if (!phoneNumberPattern.test(inputPhoneNumber)) {
+      setWarningMessage("Please Enter a valid BD phone number.");
+    } else {
+      setWarningMessage("");
+    }
+  };
+  // Set The Length Of BD Number
+  const handleKeyPress = (event) => {
+    const value = event.target.value;
+    if (value.length >= 11) {
+      event.preventDefault();
+    }
+  };
 
   // Handle signup form submission
   const handleSignup = async (event) => {
@@ -105,16 +125,21 @@ const SignUp = () => {
               />
             </div>
 
-            <div className="flex items-center border-2 py-2 px-3 rounded-md mb-4">
-              <ImPhone className="text-[#2563eb]" />
-              <input
-                className="pl-2 outline-none border-none"
-                type="number"
-                placeholder="Phone Number"
-                value={phone}
-                onChange={(event) => setPhone(event.target.value)}
-                required
-              />
+            <div className="mb-4">
+              <div className="flex items-center border-2 py-2 px-3 rounded-md">
+                <ImPhone className="text-[#2563eb]" />
+                <input
+                  className="pl-2 outline-none border-none"
+                  type="number"
+                  placeholder="Phone Number"
+                  value={phone}
+                  onChange={handlePhoneNumberChange}
+                  // onChange={(event) => setPhone(event.target.value)}
+                  required
+                  onKeyPress={handleKeyPress}
+                />
+              </div>
+              <p className="text-red-500">{phone && warningMessage}</p>
             </div>
 
             <div className="flex items-center border-2 py-2 px-3 rounded-md mb-4">
@@ -144,7 +169,7 @@ const SignUp = () => {
               type="submit"
               className="block w-full bg-[#2563eb] hover:bg-white mt-4 py-2 rounded-2xl text-white hover:text-[#2563eb] font-semibold mb-3 border border-[#2563eb] duration-300"
             >
-              Login
+              Register
             </button>
 
             <span className="text-md ml-2 hover:text-[#2563eb] cursor-pointer duration-300">

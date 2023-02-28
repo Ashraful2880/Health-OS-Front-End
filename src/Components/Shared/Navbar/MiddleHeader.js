@@ -11,17 +11,11 @@ const MiddleHeader = () => {
   const location = useLocation();
   const pathName = location?.pathname;
   const loggedInUser = JSON.parse(localStorage.getItem("token"))?.token;
-  const [update, setUpdate] = React.useState(0);
-
-  useEffect(() => {
-    localStorage.removeItem("token");
-  }, [update]);
 
   const handleLogOut = () => {
     localStorage.removeItem("token");
     alert.success("Logout Successful");
     navigate("/home");
-    setUpdate(update + 1);
   };
 
   return (
