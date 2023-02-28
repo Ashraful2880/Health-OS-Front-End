@@ -18,7 +18,6 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-  const [token, setToken] = useState("");
   const [warningMessage, setWarningMessage] = useState("");
 
   const handlePhoneNumberChange = (event) => {

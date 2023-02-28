@@ -10,7 +10,6 @@ const Login = () => {
   // Define state variables for phone, password, and token
   const [phone, setPhone] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const [token, setToken] = React.useState("");
   const navigate = useNavigate();
 
   // Handle login form submission
@@ -27,7 +26,7 @@ const Login = () => {
         }
       );
       // Set the token state variable
-      setToken(response.data.token);
+      // setToken(response.data.token);
       localStorage.setItem("token", JSON.stringify(response?.data));
       // Clear the form
       setPhone("");

@@ -27,7 +27,6 @@ const AddProduct = () => {
     { value: "trending", label: "Top Trending" },
     { value: "newArrival", label: "New Arrival" },
     { value: "bestSellar", label: "Best Sellar" },
-    ,
   ];
 
   const [productImage, setProductImage] = React.useState();

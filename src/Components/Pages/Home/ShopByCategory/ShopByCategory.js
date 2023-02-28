@@ -41,7 +41,7 @@ const ShopByCategory = () => {
                 className="overflow-hidden"
               >
                 <div className="border h-36 w-36 rounded-md hover:scale-110 duration-300">
-                  <img src={singleProduct?.product} className="" />
+                  <img src={singleProduct?.product} alt="Product" />
                 </div>
                 <h1 className="mt-2 mb-6 text-lg font-semibold">
                   {singleProduct?.title}

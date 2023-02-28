@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Rating from "react-rating";
 import { BsStar, BsStarFill } from "react-icons/bs";
 import axios from "axios";
-import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import ModalLoader from "../../../Shared/ModalLoader/ModalLoader";
 
 const ViewSingleProduct = ({ setView, productID }) => {

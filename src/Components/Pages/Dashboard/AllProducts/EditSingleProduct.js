@@ -26,7 +26,6 @@ const EditSingleProduct = ({ setEdit, productID, updated, setUpdated }) => {
     { value: "trending", label: "Top Trending" },
     { value: "newArrival", label: "New Arrival" },
     { value: "bestSellar", label: "Best Sellar" },
-    ,
   ];
 
   //   Product All State Here

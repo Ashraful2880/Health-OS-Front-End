@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import logo from "../../../Assets/Images/logo.png";
 import { FaEnvelope, FaLocationArrow, FaPhoneAlt } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
