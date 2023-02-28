@@ -23,7 +23,7 @@ const Bannar = () => {
 
         <SwiperSlide className="slider-bg">
           <div className="slider-bg"></div>
-          <div className="absolute lg:left-[300px] md:left-[180px] left-[50px] lg:top-[140px] md:top-[100px] top-[50px] text-left">
+          <div className="absolute lg:left-[300px] md:left-[180px] left-[50px] lg:top-[100px] md:top-[100px] top-[50px] text-left">
             <div className="lg:text-6xl md:text-5xl text-4xl font-bold text-white">
               <h1>Digital</h1>
               <h1 className="my-3">Blood Pressure</h1>
@@ -45,7 +45,7 @@ const Bannar = () => {
 
         <SwiperSlide className="slider-bg2">
           <div className="slider-bg2"></div>
-          <div className="absolute lg:left-[300px] md:left-[180px] left-[50px] lg:top-[140px] md:top-[100px] top-[50px] text-left">
+          <div className="absolute lg:left-[300px] md:left-[180px] left-[50px] lg:top-[100px] md:top-[100px] top-[50px] text-left">
             <div className="lg:text-6xl md:text-5xl text-4xl font-bold text-white">
               <h1>Medical</h1>
               <h1 className="my-3">First Aid New</h1>
@@ -67,7 +67,7 @@ const Bannar = () => {
 
         <SwiperSlide className="slider-bg3">
           <div className="slider-bg3"></div>
-          <div className="absolute lg:left-[300px] md:left-[180px] left-[50px] lg:top-[140px] md:top-[100px] top-[50px] text-left">
+          <div className="absolute lg:left-[300px] md:left-[180px] left-[50px] lg:top-[100px] md:top-[100px] top-[50px] text-left">
             <div className="lg:text-6xl md:text-5xl text-4xl font-bold text-white">
               <h1>Digital</h1>
               <h1 className="my-3">New Glucometer</h1>
