@@ -131,3 +131,11 @@ input[type="number"] {
     transform: translateX(-25px);
   }
 }
+
+/* 404 Page Style */
+
+.error-bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 450px;
+  background-position: center;
+}

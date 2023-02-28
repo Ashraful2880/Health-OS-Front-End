@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useAlert } from "react-alert";
 import logo from "../../../Assets/Images/logo.png";
 import { ImPhone } from "react-icons/im";

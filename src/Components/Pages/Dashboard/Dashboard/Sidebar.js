@@ -1,20 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaHome, FaBlog, FaBusinessTime, FaCertificate } from "react-icons/fa";
+import { FaHome, FaBlog, FaBusinessTime } from "react-icons/fa";
 import logo from "../../../../Assets/Images/logo.png";
 import Tooltip from "react-simple-tooltip";
 import {
   RiAdminFill,
-  RiComputerFill,
   RiFileListFill,
   RiListUnordered,
   RiServiceFill,
 } from "react-icons/ri";
-import {
-  MdMarkEmailRead,
-  MdOutlineManageAccounts,
-  MdOutlineManageSearch,
-} from "react-icons/md";
+import { MdOutlineManageAccounts } from "react-icons/md";
 import { BsFillBagPlusFill, BsGearFill } from "react-icons/bs";
 
 const Sidebar = ({ open }) => {

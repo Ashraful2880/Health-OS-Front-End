@@ -3,8 +3,6 @@ import axios from "axios";
 import { useEffect } from "react";
 import LoadingScreen from "../../../Shared/LoadingScreen/LoadingScreen";
 import { BsCardChecklist } from "react-icons/bs";
-import { FaCheck } from "react-icons/fa";
-import { RxCross2 } from "react-icons/rx";
 
 const OrderList = () => {
   const [orders, setOrders] = React.useState();
