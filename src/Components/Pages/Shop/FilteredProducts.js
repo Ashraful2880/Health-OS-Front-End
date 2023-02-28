@@ -22,7 +22,7 @@ const FilteredProducts = ({ products, search }) => {
       {products?.length > 0 ? (
         <div>
           <div>
-            <h3 className="text-left mb-1 mt-2 font-bold lg:text-3xl text-xl relative">
+            <h3 className="text-left mb-1 mt-2 font-bold lg:text-3xl text-xl relative lg:px-0 px-4">
               <span className="text-[#2563eb]">{search}</span> Products
             </h3>
             <hr className="bg-[#2563eb] pb-0.5 mb-5" />
@@ -121,17 +121,17 @@ const FilteredProducts = ({ products, search }) => {
                 ))}
             </div>
             <div className="pt-10">
-            <ReactPaginate
-              previousLabel={<FaArrowLeft className="mt-1 pt-0.5" />}
-              nextLabel={<FaArrowRight className="mt-1 pt-0.5" />}
-              pageCount={pageCount}
-              onPageChange={changePage}
-              containerClassName={"paginationBttns"}
-              previousLinkClassName={"previousBttn"}
-              nextLinkClassName={"nextBttn"}
-              disabledClassName={"paginationDisabled"}
-              activeClassName={"paginationActive"}
-            />
+              <ReactPaginate
+                previousLabel={<FaArrowLeft className="mt-1 pt-0.5" />}
+                nextLabel={<FaArrowRight className="mt-1 pt-0.5" />}
+                pageCount={pageCount}
+                onPageChange={changePage}
+                containerClassName={"paginationBttns"}
+                previousLinkClassName={"previousBttn"}
+                nextLinkClassName={"nextBttn"}
+                disabledClassName={"paginationDisabled"}
+                activeClassName={"paginationActive"}
+              />
             </div>
           </div>
         </div>

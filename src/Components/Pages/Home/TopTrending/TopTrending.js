@@ -80,7 +80,7 @@ const TopTrending = () => {
         </div>
         {/* Slider Arrow Item */}
         {topTrending && (
-          <div className="flex items-center gap-x-2">
+          <div className="lg:flex md:flex hidden items-center gap-x-2">
             <div>
               <button
                 className="bg-white h-9 w-9 rounded-full flex flex-col items-center justify-center text-2xl border text-[#2563eb] hover:text-white hover:bg-[#2563eb] duration-300 hover:border-[#2563eb]"

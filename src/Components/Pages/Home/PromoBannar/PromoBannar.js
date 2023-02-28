@@ -19,7 +19,7 @@ const PromoBannar = () => {
       <div className="container mx-auto">
         <div className="lg:flex block justify-between gap-x-6 items-center">
           <Link to="/shopCategory/gloves" className="block w-full">
-            <div className="p-6 flex justify-between items-center border rounded-md hover:shadow-md duration-300 w-full lg:my-0 my-2">
+            <div className="lg:py-6 md:py-5 py-3 lg:px-6 md:px-5 px-1 flex justify-between items-center border rounded-md hover:shadow-md duration-300 w-full lg:my-0 my-2">
               <img src={care1} alt="Care_Image" />
               <div className="text-left pl-3">
                 <h4 className="text-xl font-bold mb-2">Covid Essentials</h4>
@@ -44,7 +44,7 @@ const PromoBannar = () => {
           </Link>
 
           <Link to="/shopCategory/medicalItems" className="block w-full">
-            <div className="p-6 flex justify-between items-center border rounded-md hover:shadow-md duration-300 w-full lg:my-0 my-2">
+            <div className="lg:py-6 md:py-5 py-3 lg:px-6 md:px-5 px-1 flex justify-between items-center border rounded-md hover:shadow-md duration-300 w-full lg:my-0 my-2">
               <img src={care2} alt="Care_Image" />
               <div className="text-left pl-3">
                 <h4 className="text-xl font-bold mb-2">Covid Essentials</h4>
@@ -69,7 +69,7 @@ const PromoBannar = () => {
           </Link>
 
           <Link to="/shopCategory/medicine" className="block w-full">
-            <div className="p-6 flex justify-between items-center border rounded-md hover:shadow-md duration-300 w-full lg:my-0 my-2">
+            <div className="lg:py-6 md:py-5 py-3 lg:px-6 md:px-5 px-1 flex justify-between items-center border rounded-md hover:shadow-md duration-300 w-full lg:my-0 my-2">
               <img src={care3} alt="Care_Image" />
               <div className="text-left pl-3">
                 <h4 className="text-xl font-bold mb-2">Covid Essentials</h4>

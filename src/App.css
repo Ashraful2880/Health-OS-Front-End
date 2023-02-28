@@ -41,10 +41,10 @@ input[type="number"] {
 }
 @keyframes openMegaMenu {
   0% {
-    margin-top: -50%;
+    transform: translateY(-100%);
   }
   100% {
-    margin-top: 0;
+    transform: translateY(0px);
   }
 }
 
@@ -118,20 +118,6 @@ input[type="number"] {
 
 /* Custom Animation */
 
-/* .trans-animation2 {
-  animation: trans-2 1s ease infinite alternate;
-}
-
-@keyframes trans-2 {
-  0% {
-    transform: translateY(0px);
-  }
-
-  100% {
-    transform: translateY(-25px);
-  }
-}
- */
 .trans-animation {
   animation: trans 3s ease infinite alternate;
 }

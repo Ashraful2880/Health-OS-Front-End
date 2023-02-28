@@ -33,9 +33,9 @@ const ShopByCategory = () => {
       {/* Product Category */}
 
       {productCategory?.length > 0 ? (
-        <button className="w-full grid lg:grid-cols-9 md:grid-cols-5 grid-cols-3 gap-5 place-content-center place-items-center lg:px-0 px-4">
+        <button className="w-full grid lg:grid-cols-9 md:grid-cols-5 grid-cols-3 gap-x-5 place-content-center place-items-center lg:px-0 px-5">
           {productCategory?.map((singleProduct) => (
-            <button onClick={() => setSearch(singleProduct?.link)}>
+            <button onClick={() => setSearch(singleProduct?._id)}>
               <Link
                 to={`/shopCategory/${singleProduct?.link}`}
                 className="overflow-hidden"

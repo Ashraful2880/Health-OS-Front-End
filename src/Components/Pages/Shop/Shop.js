@@ -38,7 +38,7 @@ const Shop = () => {
       {/* Category Area */}
       <div className="mt-6 mb-5">
         {productCategory?.length > 0 ? (
-          <div className="w-full grid lg:grid-cols-9 md:grid-cols-5 grid-cols-3 gap-5 place-content-center place-items-center lg:px-0 px-4">
+          <div className="w-full grid lg:grid-cols-9 md:grid-cols-5 grid-cols-3 gap-x-5 place-content-center place-items-center lg:px-0 px-4">
             {productCategory?.map((singleProduct) => (
               <button
                 onClick={() => handleSearch(singleProduct?.link)}

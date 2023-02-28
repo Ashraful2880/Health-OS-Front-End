@@ -7,24 +7,24 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-SwiperCore.use([Autoplay,Navigation]);
+SwiperCore.use([Autoplay, Navigation]);
 
 const Bannar = () => {
   return (
-    <div className="h-[78vh] overflow-hidden">
+    <div className="lg:h-[78vh] md:h-[70vh] h-[65vh] overflow-hidden">
       <Swiper
         cssMode={true}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
-        modules={[Autoplay,Navigation]}
-        navigation={true} 
+        modules={[Autoplay, Navigation]}
+        navigation={true}
         className="mySwiper"
       >
         {/* Slider-01 */}
 
         <SwiperSlide className="slider-bg">
           <div className="slider-bg"></div>
-          <div className="absolute left-[300px] top-[165px] text-left">
-            <div className="text-6xl font-bold text-white">
+          <div className="absolute lg:left-[300px] md:left-[180px] left-[50px] lg:top-[165px] md:top-[100px] top-[50px] text-left">
+            <div className="lg:text-6xl md:text-5xl text-4xl font-bold text-white">
               <h1>Digital</h1>
               <h1 className="my-3">Blood Pressure</h1>
               <h1>Monitor</h1>
@@ -45,8 +45,8 @@ const Bannar = () => {
 
         <SwiperSlide className="slider-bg2">
           <div className="slider-bg2"></div>
-          <div className="absolute left-[300px] top-[165px] text-left">
-            <div className="text-6xl font-bold text-white">
+          <div className="absolute lg:left-[300px] md:left-[180px] left-[50px] lg:top-[165px] md:top-[100px] top-[50px] text-left">
+            <div className="lg:text-6xl md:text-5xl text-4xl font-bold text-white">
               <h1>Medical</h1>
               <h1 className="my-3">First Aid New</h1>
               <h1> Kit</h1>
@@ -67,8 +67,8 @@ const Bannar = () => {
 
         <SwiperSlide className="slider-bg3">
           <div className="slider-bg3"></div>
-          <div className="absolute left-[300px] top-[165px] text-left">
-            <div className="text-6xl font-bold text-white">
+          <div className="absolute lg:left-[300px] md:left-[180px] left-[50px] lg:top-[165px] md:top-[100px] top-[50px] text-left">
+            <div className="lg:text-6xl md:text-5xl text-4xl font-bold text-white">
               <h1>Digital</h1>
               <h1 className="my-3">New Glucometer</h1>
               <h1>Service</h1>

@@ -1,23 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  FaHome,
-  FaUser,
-  FaUsers,
-  FaUsersCog,
-  FaUserEdit,
-  FaEnvelope,
-} from "react-icons/fa";
-import { GoLaw } from "react-icons/go";
-import { BiLogOutCircle, BiUserPlus, BiReceipt } from "react-icons/bi";
-import { BsListCheck, BsCardChecklist } from "react-icons/bs";
-import {
-  MdManageAccounts,
-  MdAppRegistration,
-  MdMiscellaneousServices,
-} from "react-icons/md";
-import { RiTeamLine, RiListCheck, RiFileListLine } from "react-icons/ri";
-import { IoIosCreate } from "react-icons/io";
+import { FaHome, FaEnvelope } from "react-icons/fa";
+import { BiReceipt } from "react-icons/bi";
 
 const MobileMenu = ({ setMobileOpen }) => {
   return (

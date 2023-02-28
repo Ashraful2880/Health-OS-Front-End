@@ -20,10 +20,10 @@ const WishList = () => {
 
   return (
     <div className="container mx-auto min-h-screen">
-      <h1 className="lg:text-3xl sm:text-sm font-bold pt-7 pb-3 lg:text-left text-center">
+      <h1 className="lg:text-3xl md:text-2xl text-xl font-bold pt-7 pb-3 lg:text-left text-center">
         Products You Have Added
       </h1>
-      <div className="lg:overflow-hidden overflow-x-scroll lg:w-3/4 w-full mb-4">
+      <div className="lg:overflow-hidden overflow-x-scroll lg:w-3/4 w-full mb-4 lg:px-0 px-4">
         <table className="w-full mr-2 border">
           <thead className=" divide-y border-b-2 border-t border-gray-300">
             <tr>

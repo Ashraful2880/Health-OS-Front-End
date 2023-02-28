@@ -67,10 +67,10 @@ const CartOverview = () => {
     <div className="container mx-auto mb-10 min-h-screen">
       {/* {cartItems?.length > 0 ? ( */}
       <>
-        <h1 className="lg:text-3xl sm:text-sm font-bold pt-7 pb-3 lg:text-left text-center">
+        <h1 className="lg:text-3xl md:text-2xl text-xl font-bold pt-7 pb-3 lg:text-left text-center">
           Products You Have Added
         </h1>
-        <div className="lg:flex block justify-between min-h-[55vh]">
+        <div className="lg:flex block justify-between min-h-[55vh] lg:px-0 px-4">
           <div className="lg:overflow-hidden overflow-x-scroll lg:w-3/4 w-full mb-4">
             <table className="w-full mr-2 border">
               <thead className=" divide-y border-b-2 border-t border-gray-300">

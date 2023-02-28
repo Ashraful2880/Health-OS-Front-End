@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { FiHeart, FiShoppingBag } from "react-icons/fi";
-import { FaAngleDoubleRight, FaAngleDown } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import MobileNav from "./MobileNav";
 import Navbar from "./Navbar";
@@ -12,16 +11,21 @@ const MainHeader = () => {
   const location = useLocation();
   const pathName = location?.pathname;
 
+  const totalPrice = items?.reduce(
+    (accumulator, currentValue) => accumulator + currentValue?.price,
+    0
+  );
+
   useEffect(() => {
     const myCartProduct = localStorage.getItem("cart");
     setItems(JSON.parse(myCartProduct));
-    // setChanges(changes + 1);
+    setChanges(changes + 1);
   }, [items, changes]);
 
   useEffect(() => {
     const wishListProduct = localStorage.getItem("wishList");
     setWishListItems(JSON.parse(wishListProduct));
-    // setChanges(changes + 1);
+    setChanges(changes + 1);
   }, [wishListItems, changes]);
 
   return (
@@ -39,7 +43,7 @@ const MainHeader = () => {
                 </div>
               </div>
 
-              <div className="lg:block sm:hidden md:hidden">
+              <div className="lg:block md:block hidden">
                 <div className="flex items-center gap-x-6">
                   <Link
                     to="/wishlist"
@@ -59,9 +63,11 @@ const MainHeader = () => {
                     </div>
                     <FiShoppingBag className="text-2xl" />
                   </Link>
-                  <p className="font-semibold hover:text-[#2563eb] duration-300 cursor-pointer">
-                    $0.00
-                  </p>
+                  <Link to="/cart">
+                    <p className="font-semibold hover:text-[#2563eb] duration-300 cursor-pointer">
+                      ${totalPrice}
+                    </p>
+                  </Link>
                 </div>
               </div>
             </div>
