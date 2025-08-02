@@ -2,7 +2,7 @@
 
 ## 🕰️ Project History
 
-- 🔹 Originally developed in: **2023**
+- 🔹 Originally developed in: **2022**
 - 🔹 Last updated/refactored in: **2025** (backend improvements and minor changes)
 
 A modern, responsive e-commerce web application built with React, Redux Toolkit, and Tailwind CSS. This project is designed for seamless shopping experiences, featuring dynamic product categories, banners, and a clean, user-friendly interface. Perfect for showcasing in your portfolio or as a foundation for a production-ready online store.
