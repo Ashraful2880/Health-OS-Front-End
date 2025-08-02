@@ -1,5 +1,10 @@
 # Health-OS Front-End
 
+## 🕰️ Project History
+
+- 🔹 Originally developed in: **2023**
+- 🔹 Last updated/refactored in: **2025** (backend improvements and minor changes)
+
 A modern, responsive e-commerce web application built with React, Redux Toolkit, and Tailwind CSS. This project is designed for seamless shopping experiences, featuring dynamic product categories, banners, and a clean, user-friendly interface. Perfect for showcasing in your portfolio or as a foundation for a production-ready online store.
 
 ## Features
@@ -69,22 +74,18 @@ Health-OS-Front-End/
 
 > Add screenshots/gifs here to showcase the UI and features.
 
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for improvements or bug fixes.
-
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ## Author
 
-- [Your Name](https://your-portfolio-link.com)
-- [@your-github-username](https://github.com/your-github-username)
+- [Name](Md. Ashraful Islam)
+- [Email](contact.ashraful1@gmail.com)
 
 ---
 
-> This project is part of my portfolio. Feel free to check out my other work!
+> This project is part of my portfolio. And Make it in 2022 Feel free to check out my other work!
 
 ### `Client Health OS`
 
